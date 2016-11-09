@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Mitt digitala kartarkiv
+    </string>
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Välkommen till mitt digitala kartarkiv!
+    </string>
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      På denna sida lägger jag in kartor, banor och vägval från mina orienteringslopp.
+    </string>
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Är du upphovsrättsinnehavare till en karta som inte borde publiceras här? &lt;a href="mailto:%userEmail%"&gt;Skicka e-post&lt;/a&gt;.
+    </string>
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Kartor, banor och vägval från mina orienteringslopp.
+    </string>
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string>
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+  </customizable>
+
+  <nonCustomizable>  
+    <!-- general ****************************************************************************************************** -->
+  
+    <!--  date format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATE_FORMAT">
+      Y-m-d
+    </string>
+    <!-- date and time format to use, PHP format string (Y, m, d, H, i, s can be used) -->
+    <string key="DATETIME_FORMAT">
+      Y-m-d H:i
+    </string>
+    <!-- day names, semi-colon separated -->
+    <string key="DAY_NAMES">
+      söndag;måndag;tisdag;onsdag;torsdag;fredag;lördag
+    </string>
+    <!-- month names, semi-colon separated -->
+    <string key="MONTH_NAMES">
+      januari;februari;mars;april;maj;juni;juli;augusti;september;oktober;november;december
+    </string>
+    <string key="RSS_FEED">
+      RSS-flöde
+    </string>
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string>
+    <string key="NAME">
+      Namn
+    </string>
+    <string key="DATE">
+      Datum
+    </string>
+    <string key="ORGANISER">
+      Arrangör
+    </string>
+    <string key="COUNTRY">
+      Land
+    </string>
+    <string key="DISCIPLINE">
+      Distans
+    </string>
+    <string key="RELAY_LEG">
+      Sträcka
+    </string>
+    <string key="RELAY_LEG_LONG">
+      Stafettsträcka
+    </string>
+    <string key="RELAY_LEG_LOWERCASE">
+      sträcka
+    </string>
+    <string key="MAP_AREA_NAME">
+      Karta/område
+    </string>
+    <string key="RESULTS">
+      Resultat
+    </string>
+    <string key="COMMENT">
+      Kommentar
+    </string>
+    <string key="LOGIN">
+      Logga in
+    </string>
+    <string key="LOGOUT">
+      Logga ut
+    </string>
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Felaktigt användarnamn och/eller lösenord.
+    </string>
+    <string key="USERNAME">
+      Användarnamn
+    </string>
+    <string key="PASSWORD">
+      Lösenord
+    </string>
+    <string key="YES">
+      Ja
+    </string>
+    <string key="NO">
+      Nej
+    </string>
+
+    <!-- topbar ****************************************************************************************************** -->
+    <string key="DOMA_FOR_X">
+      Digitalt kartarkiv för %s
+    </string>
+    <string key="ALL_USERS">
+      Alla användare
+    </string>
+    <string key="ADMIN_LOGIN">
+      Administratörsinloggning
+    </string>
+    <string key="ADMIN_LOGOUT">
+      Administratörsutloggning
+    </string>
+    
+    
+    <!-- index.php ****************************************************************************************************** -->
+    <string key="NO_MAPS">
+      Inga kartor är publicerade.
+    </string>
+    <string key="SELECT_YEAR">
+      År
+    </string>
+    <string key="SELECT_CATEGORY">
+      Kategori
+    </string>
+    <string key="ALL_YEARS">
+      [alla år]
+    </string>
+    <string key="ALL_CATEGORIES">
+      [alla kategorier]
+    </string>
+    <string key="NO_MATCHING_MAPS">
+      Det finns inga kartor som matchar sökningen.
+    </string>
+    <string key="VIEWS">
+      visningar
+    </string>
+
+    <!-- show_map.php ****************************************************************************************************** -->
+    <string key="BACK">
+      Tillbaka
+    </string>
+    <string key="PREVIOUS">
+      Föregående
+    </string>
+    <string key="NEXT">
+      Nästa
+    </string>
+
+    <!-- edit_map.php ****************************************************************************************************** -->
+    <string key="ADD_MAP">
+      Lägg till karta
+    </string>
+    <string key="EDIT_MAP">
+      Redigera karta
+    </string>
+    <string key="EDIT_MAP_X">
+      Redigera karta: %s
+    </string>
+    <string key="MAP_DATE_FORMAT">
+      åååå-mm-dd, och om du vill tt:mm:ss
+    </string>
+    <string key="LINK_TO_RESULT_LIST">
+      Länk till resultatlista
+    </string>
+    <string key="MAP_IMAGE_FILE">
+      Kartans bildfil
+    </string>
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Lämna tomt för att behålla befintlig karta.
+    </string>
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Miniatyrbildfil
+    </string>
+    <string key="THUMBNAIL_INFO">
+      Storlek %d x %d pixlar, lämna tomt för automatisk generering. Miniatyrbilder kan på grund av minnesrestriktioner på servern i vissa fall inte skapas för stora kartbilder.
+    </string>
+    <string key="CONFIRM_DELETION">
+      Bekräfta borttagning
+    </string>
+    <string key="SAVE">
+      Spara
+    </string>
+    <string key="DELETE">
+      Ta bort
+    </string>
+    <string key="CANCEL">
+      Avbryt
+    </string>
+    <string key="NO_MAP_FILE_ENTERED">
+      Ingen bildfil för kartan har angetts.
+    </string>
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Filformatet för kartbildfilen &lt;em&gt;%s&lt;/em&gt; är felaktigt. Endast jpeg-, png- och gif-formaten stöds.
+    </string>
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Filformatet för miniatyrbildfilen &lt;em&gt;%s&lt;/em&gt; är felaktigt. Endast jpeg-, png- och gif-formaten stöds.
+    </string>
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Kartbildfilen &lt;em&gt;%s&lt;/em&gt; kunde inte laddas upp.
+    </string>
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Miniatyrbildfilen &lt;em&gt;%s&lt;/em&gt; kunde inte laddas upp.
+    </string>
+    <string key="NO_MAP_NAME_ENTERED">
+      Inget kartnamn har angetts.
+    </string>
+    <string key="NO_DATE_ENTERED">
+      Inget datum har angetts.
+    </string>
+    <string key="INVALID_DATE">
+      Datumet är felaktigt. Skriv in ett datum på formen åååå-mm-dd.
+    </string>
+    <string key="CATEGORY">
+      Kategori
+    </string>
+    <string key="CATEGORY_TOOLTIP">
+      Den kategori som kartan tillhör. Du kan skapa nya kategorier i din användarprofil.
+    </string>
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Miniatyrbilden kunde inte skapas. Orsaken kan vara att det inte fanns tillräckligt med serverminne tillgängligt. På denna server kan miniatyrbilder inte skapas för kartbilder större än ungefär %s pixlar. Öka om möjligt värdet på memory_limit-parametern i php.ini.&lt;br /&gt;En standardminiatyrbild skapades istället. Använd en mindre kartbildfil, eller ladda upp en miniatyrbild manuellt. 
+    </string>
+    
+    <!-- users.php ****************************************************************************************************** -->
+    <string key="NO_OF_MAPS">
+      Kartor
+    </string>
+    <string key="EDIT">
+      Redigera
+    </string>
+    <string key="ADMIN_LOGIN_INFO">
+      Användarnamn och lösenord refererar till inställningarna i config.php-filen.
+    </string>
+    <string key="VISIBLE">
+      Synlig
+    </string>
+    <string key="LOGIN_AS">
+      Logga in som
+    </string>
+    <string key="LOGIN_AS_X">
+      Logga in som %s
+    </string>
+    <string key="LAST_MAP">
+      Senaste kartan
+    </string>
+    <string key="NO_USERS_CREATED">
+      Inga användare har skapats än.
+    </string>
+    <string key="CREATE_THE_FIRST_USER">
+      Klicka här för att skapa den första användaren.
+    </string>
+    <string key="MAP">
+      Karta
+    </string>
+    <string key="UPDATED">
+      Uppdaterad
+    </string>
+    <string key="USERS">
+      Användare
+    </string>
+    <string key="LAST_MAPS">
+      Senaste kartorna
+    </string>
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Du kan &lt;a href="enter_public_creation_code.php"&gt;skapa ditt eget digitala kartarkiv&lt;/a&gt; genom att ange åtkomstkoden som du får av &lt;a href="mailto:%adminEmail%"&gt;administratören&lt;/a&gt;.
+    </string>
+
+    <!-- edit_user.php ****************************************************************************************************** -->
+    <string key="ADD_USER">
+      Skapa ny användare
+    </string>
+    <string key="EDIT_USER_X">
+      Redigera användare: %s
+    </string>
+    <string key="FIRST_NAME">
+      Förnamn
+    </string>
+    <string key="LAST_NAME">
+      Efternamn
+    </string>
+    <string key="EMAIL">
+      E-post
+    </string>
+    <string key="USERNAME_EXISTS">
+      Det finns redan en användare med det angivna användarnamnet. Välj ett annat användarnamn.
+    </string>
+    <string key="NO_USERNAME_ENTERED">
+      Inget användarnamn har angetts.
+    </string>
+    <string key="NO_FIRST_NAME_ENTERED">
+      Inget förnamn har angetts.
+    </string>
+    <string key="NO_LAST_NAME_ENTERED">
+      Inget efternamn har angetts.
+    </string>
+    <string key="NO_EMAIL_ENTERED">
+      Ingen e-postadress har angetts.
+    </string>
+    <string key="INVALID_EMAIL">
+      E-postadressen är ogiltig.
+    </string>
+    <string key="NO_PASSWORD_ENTERED">
+      Ett lösenord måste skrivas in för en ny användare.
+    </string>
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Huruvida en arrangör ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Huruvida ett land ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Huruvida en distans ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Huruvida en stafettsträcka ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Huruvida namnet på kartan eller området ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Huruvida en länk till en resultatlista ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Huruvida en kommentar kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string>
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Rubriken för din sida. Visas i webbläsarfönstrets rubrikrad och i RSS-flödet.
+    </string>
+    <string key="CAPTION_DESCRIPTION">
+      Rubriken som visas högst upp på din startsida.
+    </string>
+    <string key="INTRO_DESCRIPTION">
+      Beskrivningen av din sida som visas under rubriken.
+    </string>
+    <string key="FOOTER_DESCRIPTION">
+      Texten som visas längst ner på sidan.
+    </string>
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      Beskrivningen av din sida som visas i RSS-flödet.
+    </string>
+    <string key="USERNAME_DESCRIPTION">
+      Ditt användarnamn som, tillsammans med lösenordet, identifierar dig.
+    </string>
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Användarnamnet måste vara unikt.
+    </string>
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Skriv in ett temporärt initialt lösenord.
+    </string>
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Lämna tomt för att behålla befintligt lösenord.
+    </string>
+    <string key="PASSWORD_DESCRIPTION">
+      Ditt lösenord som, tillsammans med användarnamnet, identifierar dig. Lämna tomt för att behålla befintligt lösenord.
+    </string>
+    <string key="FIRST_NAME_DESCRIPTION">
+      Ditt förnamn.
+    </string>
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Användarens förnamn.
+    </string>
+    <string key="LAST_NAME_DESCRIPTION">
+      Ditt efternamn.
+    </string>
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Användarens efternamn.
+    </string>
+    <string key="EMAIL_DESCRIPTION">
+      Din e-postadress.
+    </string>
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Användarens e-postadress.
+    </string>
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Visa det här arkivet för allmänheten.
+    </string>
+    <string key="ADMIN_ADD_USER_INFO">
+      Skriv in den nya användarens uppgifter.
+    </string>
+    <string key="ADMIN_EDIT_USER_INFO">
+      Redigera användarens uppgifter.
+    </string>
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Redigera din användarprofil
+    </string>
+    <string key="ADD_USER_PROFILE_TITLE">
+      Skapa ny användarprofil
+    </string>
+    <string key="PERSONAL_DETAILS_TITLE">
+      Personuppgifter
+    </string>
+    <string key="PERSONAL_DETAILS_INFO">
+      Skriv in dina personuppgifter.
+    </string>
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Skriv in användarens personuppgifter.
+    </string>
+    <string key="MAP_CATEGORIES_TITLE">
+      Kartkategorier
+    </string>
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Ange de kategorier som användarens kartor kommer att delas in i.
+    </string>
+    <string key="MAP_CATEGORIES_INFO">
+      Ange de kategorier som dina kartor kommer att delas in i.
+    </string>
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Texter och inställningar
+    </string>
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Texterna som visas på användarens sida, och inställningar för vilka uppgifter som ska kopplas till varje karta.
+    </string>
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Texterna som visas på din sida, och inställningar för vilka uppgifter som ska kopplas till varje karta.
+    </string>
+    <string key="USER_PROFILE">
+      Användarprofil
+    </string>
+    <string key="REQUIRED_FIELDS_INFO">
+      Obligatoriska uppgifter är markerade med %s.
+    </string>
+    <string key="MAP_CATEGORIES">
+      Kartkategorier
+    </string>
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Tävling;Träning
+    </string>
+    <string key="DEFAULT_CATEGORY">
+      standard
+    </string>
+    <string key="ADD_CATEGORY">
+      Skapa ny kategori
+    </string>
+    <string key="DELETE_CATEGORY">
+      Ta bort kategori
+    </string>
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Kan inte ta bort kategorin %s eftersom den fortfarande innehåller %d kartor. Ta bort de ingående kartorna först.
+    </string>
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Det måste alltid finnas minst en kategori.
+    </string>
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Ett namn för kategorin måste anges.
+    </string>
+
+    <!-- create.php ****************************************************************************************************** -->
+    <string key="SITE_ALREADY_CREATED">
+      Sajten har redan skapats.
+    </string>
+    <string key="TOO_OLD_PHP_VERSION">
+      Du behöver PHP version 5.0.0 eller högre. Aktuell version är %s.
+    </string>
+    <string key="MYSQL_ERROR_X">
+      MySQL-fel: %s
+    </string>
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Sajten skapades utan fel!
+    </string>
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Sajten skapades utan problem. Redigera config.php-filen för att ändra sajtens konfiguration.
+    </string>
+    <string key="GOTO_START_PAGE">
+      Gå till startsidan
+    </string>
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Fel när sajten skapades
+    </string>
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Sajten kunde inte skapas. Notera felmeddelandena här under och gör nödvändiga justeringar i config.php-file och/eller i databasen.
+    </string>
+    <string key="ERRORS_TRY_AGAIN">
+      Försök igen
+    </string>
+
+    <!-- enter_public_creation_code.php ****************************************************************************************************** -->
+    <string key="PUBLIC_CREATION_CODE">
+      Skriv in åtkomstkod
+    </string>
+    <string key="PROCEED">
+      Fortsätt
+    </string>
+    <string key="INVALID_CODE">
+      Felaktig kod.
+    </string>
+
+    <!-- email sending ****************************************************************************************************** -->
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA-administratören
+    </string>
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Ditt digitala kartarkiv har skapats!
+    </string>
+    <string key="NEW_USER_EMAIL_BODY">
+Hej %s,
+
+Detta är ett automatgenererat e-postmeddelande som bekräftar att ett digitalt kartarkiv har skapats för dig på %s.
+
+Din startsida:     %s
+Ditt användarnamn: %s
+Ditt lösenord:     %s
+    </string>
+    <string key="SEND_CONFIRMATION_EMAIL">
+      E-postbekräftelse
+    </string>
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      Skicka e-post med användarinformation till den nya användaren
+    </string>
+    <string key="ADMIN_EMAIL_ERROR">
+      E-postmeddelandet kunde inte skickas. Kontrollera dina SMTP-inställningar i php.ini och administratörens e-postadress i config.php (aktuell adress är %s).
+    </string>
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Skicka nytt lösenord
+    </string>
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Glömt lösenordet? Ingen fara, ett nytt lösenord kan skickas till e-postadressen i din användarprofil: %s.
+    </string>
+    <string key="SEND_NEW_PASSWORD">
+      Skicka ett nytt lösenord
+    </string>
+    <string key="EMAIL_ERROR">
+      E-postmeddelandet kunde inte skickas. Kontakta administratören.
+    </string>
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Nytt lösenord för ditt digitala kartarkiv
+    </string>
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+Hej %s,
+
+Detta är ett automatgenererat e-postmeddelande som innehåller ny lösenordsinformation för ditt digitala kartarkiv på %s.
+
+Din startsida:     %s
+Ditt användarnamn: %s
+Ditt nya lösenord: %s
+    </string>
+    <string key="NEW_PASSWORD_SENT">
+      Ett nytt lösenord har skickats till %s.
+    </string>
+    <string key="FORGOT_PASSWORD">
+      Jag har glömt mitt lösenord
+    </string>
+
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Filförmatet för den blanka kartfilen &lt;em&gt;%s&lt;/em&gt; är felaktigt. Endast jpeg, png och gif stöds.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Den blanka kartfilen &lt;em&gt;%s&lt;/em&gt; kunde inte laddas upp.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Bildfil för blank karta
+    </string> 
+    <string key="MAP_INFO">
+      Karta med vägval.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Karta utan vägval. Ej obligatorisk.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Visningsläge
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Lista
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Översiktskarta
+    </string> 
+    <string key="INFORMATION">
+      Information
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Visa vägval
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Dölj vägval
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Klicka på kartan för att visa/dölja vägval
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...eller klicka någonstans på kartan...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Visa översiktskarta
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Dölj översiktskarta
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...för Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Huruvida avverkad sträcka ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Huruvida avverkad tid ska kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Huruvida maxpuls kunna ska kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Huruvida genomsnittlig ska puls kunna kopplas till en karta; 1 för att koppla, 0 för att inte koppla.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Huruvida besökare ska kunna kommentera kartor; 1 för att tillåta, 0 för att neka.
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Huruvida besökarnas kommentarer ska döljas som standard; 1 för att dölja, 0 för att visa.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Huruvida nya besökarkommentarer ska skickas med e-post; 1 för att skicka, 0 för att inte skicka.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Tid
+    </string> 
+    <string key="DISTANCE">
+      Sträcka
+    </string> 
+    <string key="AVGHR">
+      Genomsnittlig puls
+    </string> 
+    <string key="MAXHR">
+      Maxpuls
+    </string>   
+    <string key="LANGUAGE">
+      Språk
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Visa kommentarer
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Dölj kommentarer
+    </string> 
+    <string key="POST_COMMENTS">
+      Lägg till kommentar
+    </string> 
+    <string key="MISSING_COMMENT">
+      Textfälten för namn och kommentar måste fyllas i!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Vill du ta bort den här kommentaren?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - ny kommentar
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Hej, 
+
+En ny kommentar har lagts till i din digitala kartpärm.
+
+Karta:     %s 
+Länk:      %s
+
+Namn:      %s 
+E-post:    %s
+Kommentar: %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Senast kommenterade kartorna
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Kommentarer
+    </string> 
+    <string key="COMMENT_FROM">
+      Senast kommentarad av 
+    </string> 
+    <string key="KMZ">
+      KML
+    </string>
+    <string key="PROTECTED_UNTIL">
+      Dold till
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Tidpunkt då kartan är tillgänglig för andra än dig på formatet åååå-mm-dd tt:mm:ss. Lämna tomt för att inte skydda kartan. Denna funktion kan till exempel användas för att ladda upp kartor för en träning i förväg och göra dem tillgängliga för träningsdeltagarna direkt efter att träningen är genomförd.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Tidpunkten att dölja kartan till är felaktig. Skriv in en tidpunkt på formen åååå-mm-dd tt:mm:ss eller lämna fältet tomt.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Kartan är dold för andra till och med %s.
+    </string>
+    <string key="SHOW_ALL">
+      alla
+    </string>
+    <string key="SELECT_FILTER">
+      Filter
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+  </nonCustomizable>  
+</strings>

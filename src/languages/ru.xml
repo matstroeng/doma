@@ -1,0 +1,786 @@
+﻿<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Мой архив карт спортивного ориентирования
+    </string> 
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Заходи в мой архив спортивных карт!
+    </string> 
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      На этом сайте я храню карты, дистанции и пути с мероприятий по спортивному ориентированию, в которых я участвовал.
+    </string> 
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Если Вы владелец прав на карту, которая не должна быть здесь опубликована, &lt;a href=&quot;mailto:%userEmail%&quot;&gt;напишите мне Email&lt;/a&gt;.
+    </string> 
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Карты, дистанции и пути с мероприятий по ориентированию, в которых я принял участие
+    </string> 
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string>
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+</customizable>
+
+  <nonCustomizable>
+    <!--  general ****************************************************************************************************** --> 
+    <!--  date format to use, PHP format string --> 
+    <string key="DATE_FORMAT">
+      d/m/Y
+    </string> 
+    <!--  date and time format to use, PHP format string --> 
+    <string key="DATETIME_FORMAT">
+      d/m/Y H:i
+    </string> 
+    <!--  day names, semi-colon separated --> 
+    <string key="DAY_NAMES">
+     Воскресенье;Понедельник;Вторник;Среда;Четверг;Пятница;Суббота
+    </string> 
+    <!--  month names, semi-colon separated --> 
+    <string key="MONTH_NAMES">
+      Января;Февраля;Марта;Апреля;Мая;Июня;Июля;Августа;Сентября;Октября;Ноября;Декабря
+    </string> 
+    <string key="RSS_FEED">
+      RSS feed
+    </string> 
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string> 
+    <string key="NAME">
+      Имя
+    </string> 
+    <string key="DATE">
+      Дата
+    </string> 
+    <string key="ORGANISER">
+      Организатор
+    </string> 
+    <string key="COUNTRY">
+      Страна
+    </string> 
+    <string key="DISCIPLINE">
+      Дисциплина
+    </string> 
+    <string key="RELAY_LEG">
+      Этап
+    </string> 
+    <string key="RELAY_LEG_LONG">
+      Этап эстафеты
+    </string> 
+    <string key="RELAY_LEG_LOWERCASE">
+      этап
+    </string> 
+    <string key="MAP_AREA_NAME">
+      Карта/область
+    </string> 
+    <string key="RESULTS">
+      Результаты
+    </string> 
+    <string key="COMMENT">
+      Комментарии
+    </string> 
+    <string key="LOGIN">
+      Войти
+    </string> 
+    <string key="LOGOUT">
+      Выйти
+    </string> 
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Неправильное имя и/или пароль.
+    </string> 
+    <string key="USERNAME">
+      Имя пользователя
+    </string> 
+    <string key="PASSWORD">
+      Пароль
+    </string> 
+    <string key="YES">
+      Да
+    </string> 
+    <string key="NO">
+      Нет
+    </string> 
+    <string key="REALAVG">
+      Pace
+    </string> 
+    <string key="PROJECTEDDISTANCE">
+      Прогнозируемое расстояние
+    </string> 
+    <string key="PROJECTEDDISTANCEFORMAT">
+      Только номер, формат: x.xx (например 7.95)
+    </string> 
+    <string key="CLIMBING">
+      Набор высоты
+    </string> 
+    <string key="CLIMBINGFORMAT">
+      Только номер: xxx (например 395)
+    </string> 
+    <string key="FIXDISTANCE">
+      Значение в поле Прогнозируемое расстояние не вписывается в требуемый формат. Формат: x.xx (например 7.95) - десятичная точка обязательна
+    </string> 
+    <string key="FIXCLIMBING">
+      Значение в поле Набор высоты не укладывается в требуемый формат. Формат: xxx (например 395)
+    </string> 
+
+    <!--  topbar ****************************************************************************************************** --> 
+    <string key="DOMA_FOR_X">
+      Архив спортивных карт. Пользователь: %s
+    </string> 
+    <string key="ALL_USERS">
+      Все пользователи
+    </string> 
+    <string key="ADMIN_LOGIN">
+      Войти администратору
+    </string> 
+    <string key="ADMIN_LOGOUT">
+      Выйти администратору
+    </string> 
+
+    <!--  index.php ****************************************************************************************************** --> 
+    <string key="NO_MAPS">
+      Нет опубликованных карт.
+    </string> 
+    <string key="SELECT_YEAR">
+      Год
+    </string> 
+    <string key="SELECT_CATEGORY">
+      Категория
+    </string> 
+    <string key="ALL_YEARS">
+      [все годы]
+    </string> 
+    <string key="ALL_CATEGORIES">
+      [все категории]
+    </string> 
+    <string key="NO_MATCHING_MAPS">
+      По выбранному критерию карт не найдено.
+    </string> 
+    <string key="VIEWS">
+      просмотров
+    </string> 
+
+    <!--  show_map.php ****************************************************************************************************** --> 
+    <string key="BACK">
+      назад
+    </string> 
+    <string key="PREVIOUS">
+      Назад
+    </string> 
+    <string key="NEXT">
+      Вперёд
+    </string> 
+
+    <!--  edit_map.php ****************************************************************************************************** --> 
+    <string key="ADD_MAP">
+      Добавить карту
+    </string> 
+    <string key="EDIT_MAP">
+      Редактировать карту
+    </string> 
+    <string key="EDIT_MAP_X">
+      Редактирование карты: %s
+    </string> 
+    <string key="MAP_DATE_FORMAT">
+      дд/мм/гггг, и дополнительно чч:мм:сс
+    </string> 
+    <string key="LINK_TO_RESULT_LIST">
+      Ссылка на лист результатов
+    </string> 
+    <string key="MAP_IMAGE_FILE">
+      Файл карты с путём (jpeg, png и gif)
+    </string> 
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Оставьте поле пустым, чтобы осталась карта, введённая ранее.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Файл иконки карты
+    </string> 
+    <string key="THUMBNAIL_INFO">
+      Размер %d x %d пикселей, оставьте поле пустым, чтобы иконка создалась автоматически. Большие карты могут не обрабатываться корректно из-за лимитов сервера.
+    </string> 
+    <string key="CONFIRM_DELETION">
+      Подтвердите удаление
+    </string> 
+    <string key="SAVE">
+      Сохранить
+    </string> 
+    <string key="DELETE">
+      Удалить
+    </string> 
+    <string key="CANCEL">
+      Отменить
+    </string> 
+    <string key="NO_MAP_FILE_ENTERED">
+      Файлы изображений не отмечены.
+    </string> 
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Формат файла изображения карты &lt;em&gt;%s&lt;/em&gt; не поддерживается. Поддерживаются только jpeg, png и gif форматы.
+    </string> 
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Формат файла изображения иконки &lt;em&gt;%s&lt;/em&gt; не поддерживается. Поддерживаются только jpeg, png и gif форматы.
+    </string> 
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Файл карты &lt;em&gt;%s&lt;/em&gt; не может быть загружен.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Файл иконки &lt;em&gt;%s&lt;/em&gt; не может быть загружен.
+    </string> 
+    <string key="NO_MAP_NAME_ENTERED">
+      Не введено имя карты.
+    </string> 
+    <string key="NO_DATE_ENTERED">
+      Не введена дата.
+    </string> 
+    <string key="INVALID_DATE">
+      Дата не корректна. Пожалуйста введите дату в формате дд/мм/гггг.
+    </string> 
+    <string key="CATEGORY">
+      Категория
+    </string> 
+    <string key="CATEGORY_TOOLTIP">
+      Вы можете создавать новые категории в профиле пользователя.
+    </string> 
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Иконка не создана. Причиной может быть нехватка памяти сервера. На этом сервере, иконки не могут быть автоматически созданы для изображений размером больше, чем %s пикселей. Вместо этого создана уменьшённая карта. Попробуйте использовать файл меньшего разрешения или создайте иконку сами и загрузите вручную. Можно изменить параметр  memory_limit в php.ini. 
+    </string> 
+
+    <!--  users.php ****************************************************************************************************** --> 
+    <string key="NO_OF_MAPS">
+      Карты
+    </string> 
+    <string key="EDIT">
+      Редактировать
+    </string> 
+    <string key="ADMIN_LOGIN_INFO">
+      Имя и пароль согласно установкам в config.php.
+    </string> 
+    <string key="VISIBLE">
+      Видно всем
+    </string> 
+    <string key="LOGIN_AS">
+      Войти как 
+    </string> 
+    <string key="LOGIN_AS_X">
+      Войти как %s
+    </string> 
+    <string key="LAST_MAP">
+      Последняя карта
+    </string> 
+    <string key="NO_USERS_CREATED">
+      Пользователи не созданы.
+    </string> 
+    <string key="CREATE_THE_FIRST_USER">
+      Нажмите чтобы создать первого пользователя.
+    </string> 
+    <string key="MAP">
+      Карта
+    </string> 
+    <string key="UPDATED">
+      Загружено
+    </string> 
+    <string key="USERS">
+      Пользователи
+    </string> 
+    <string key="LAST_MAPS">
+      Последние карты
+    </string> 
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Вы можете &lt;a href=&quot;enter_public_creation_code.php&quot;&gt;создать свой архив карт &lt;/a&gt; введя код, полученный от &lt;a href=&quot;mailto:%adminEmail%&quot;&gt;администратора&lt;/a&gt;.
+    </string> 
+
+    <!--  edit_user.php ****************************************************************************************************** --> 
+    <string key="ADD_USER">
+      Создать нового пользователя
+    </string> 
+    <string key="EDIT_USER_X">
+      Редактировать пользователя: %s
+    </string> 
+    <string key="FIRST_NAME">
+      Имя
+    </string> 
+    <string key="LAST_NAME">
+      Фамилия
+    </string> 
+    <string key="EMAIL">
+      Email
+    </string> 
+    <string key="USERNAME_EXISTS">
+      There already exists a user with the given user name. Please select a different user name.
+    </string> 
+    <string key="NO_USERNAME_ENTERED">
+      No user name has been entered.
+    </string> 
+    <string key="NO_FIRST_NAME_ENTERED">
+      No first name has been entered.
+    </string> 
+    <string key="NO_LAST_NAME_ENTERED">
+      No last name has been entered.
+    </string> 
+    <string key="NO_EMAIL_ENTERED">
+      No email address has been entered.
+    </string> 
+    <string key="INVALID_EMAIL">
+      The email address is invalid.
+    </string> 
+    <string key="NO_PASSWORD_ENTERED">
+      A password must be entered for a new user.
+    </string> 
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Whether to associate an organiser with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Whether to associate a country with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Whether to associate an event discipline with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Whether to associate a relay leg with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Whether to associate a map or area name with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Whether to associate a result list link with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Whether to associate a comment with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="PAGE_TITLE_DESCRIPTION">
+      The title of your page. Displayed in the browser window title bar and in the RSS feed.
+    </string> 
+    <string key="CAPTION_DESCRIPTION">
+      The caption displayed at the top of your start page.
+    </string> 
+    <string key="INTRO_DESCRIPTION">
+      The description of your page displayed under the caption.
+    </string> 
+    <string key="FOOTER_DESCRIPTION">
+      The text displayed at the bottom of the page.
+    </string> 
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      The description of your page as displayed in the RSS feed.
+    </string> 
+    <string key="USERNAME_DESCRIPTION">
+      Your user name that together with the password identifies you.
+    </string> 
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      The user name needs to be unique.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Enter a temporary initial password.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Leave empty to keep the existing password.
+    </string> 
+    <string key="PASSWORD_DESCRIPTION">
+      Your password that together with your user name identifies you. Leave empty to keep the existing password.
+    </string> 
+    <string key="FIRST_NAME_DESCRIPTION">
+      Your first name.
+    </string> 
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      The first name of the user.
+    </string> 
+    <string key="LAST_NAME_DESCRIPTION">
+      Your last name.
+    </string> 
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      The last name of the user.
+    </string> 
+    <string key="EMAIL_DESCRIPTION">
+      Your email address.
+    </string> 
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      The user's email address.
+    </string> 
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Make this archive publicly visible and accessible.
+    </string> 
+    <string key="ADMIN_ADD_USER_INFO">
+      Enter the details for the new user.
+    </string> 
+    <string key="ADMIN_EDIT_USER_INFO">
+      Edit the details for the user.
+    </string> 
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Редактировать Ваш профиль пользователя
+    </string> 
+    <string key="ADD_USER_PROFILE_TITLE">
+      Создать новый профиль пользователя
+    </string> 
+    <string key="PERSONAL_DETAILS_TITLE">
+      Персональные данные
+    </string> 
+    <string key="PERSONAL_DETAILS_INFO">
+      Введите Ваши персональные данные.
+    </string> 
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Введите персональные данные пользователя.
+    </string> 
+    <string key="MAP_CATEGORIES_TITLE">
+      Категории карт
+    </string> 
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Укажите категории, к которым должны принадлежать пользовательские карты.
+    </string> 
+    <string key="MAP_CATEGORIES_INFO">
+      Укажите категории, к которым должны принадлежать Ваши карты.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Тексты и установки
+    </string> 
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Тексты, которые отображаются на пользовательской странице, и установки относящиеся к картам.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Тексты, которые отображаются на Вашей странице, и установки относящиеся к картам.
+    </string> 
+    <string key="USER_PROFILE">
+      Профиль пользователя
+    </string> 
+    <string key="REQUIRED_FIELDS_INFO">
+      Обязательно заполнять поля со знаком %s.
+    </string> 
+    <string key="MAP_CATEGORIES">
+      Категории карт
+    </string> 
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Соревнование;Тренировка
+    </string> 
+    <string key="DEFAULT_CATEGORY">
+      По умолчанию
+    </string> 
+    <string key="ADD_CATEGORY">
+      Создать новую категорию
+    </string> 
+    <string key="DELETE_CATEGORY">
+      Удалить категорию
+    </string> 
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Нельзя удалить категорию %s потому что её используют карты в количестве %d. Сначала удалите эти карты.
+    </string> 
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Должна быть как минимум одна категория карт.
+    </string> 
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Имя категории карт должно быть введено.
+    </string> 
+
+    <!--  create.php ****************************************************************************************************** --> 
+    <string key="SITE_ALREADY_CREATED">
+      The site has already been created.
+    </string> 
+    <string key="TOO_OLD_PHP_VERSION">
+      You need PHP version 5.0.0 or higher. Current version is %s.
+    </string> 
+    <string key="MYSQL_ERROR_X">
+      MySQL error: %s
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Site successfully created!
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      The site was successfully created. Edit the config.php file to change the configuration of the site.
+    </string> 
+    <string key="GOTO_START_PAGE">
+      Go to the start page
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Error when creating site
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      The site could not be created. Check the error messages below and make necessary adjustments in the config.php file and/or in the database.
+    </string> 
+    <string key="ERRORS_TRY_AGAIN">
+      Try again
+    </string> 
+
+    <!--  enter_public_creation_code.php ******************************************************************************************** --> 
+    <string key="PUBLIC_CREATION_CODE">
+      Enter access code
+    </string> 
+    <string key="PROCEED">
+      Proceed
+    </string> 
+    <string key="INVALID_CODE">
+      Invalid code.
+    </string> 
+
+    <!--  email sending ****************************************************************************************************** --> 
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      Orienteering Archive DOMA Administrator
+    </string> 
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Your digital orienteering map archive has been created!
+    </string> 
+    <string key="NEW_USER_EMAIL_BODY">
+
+Hi %s, 
+
+This is an auto-generated email confirming that a digital orienteering map archive has been created for you at %s.
+
+Your start page: %s 
+Your user name:  %s 
+Your password:   %s
+
+Consider the password as being temporary. For security reasons, please change it to another password.
+      
+Здравствуйте %s, 
+
+Это письмо отправлено автоматически, и содержит новый пароль к Вашему архиву карт для спортивного ориентирования %s. 
+
+Ваша страница:   %s 
+Ваше имя:    %s 
+Ваш пароль: %s 
+
+Этот пароль временный, для целей безопасности измените его самостоятельно.
+
+   
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL">
+      Email подтверждение
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      Send email with user account information to the new user
+    </string> 
+    <string key="ADMIN_EMAIL_ERROR">
+      The email could not be sent. Check your email SMTP settings in php.ini and the admin email address in config.php (the current address is %s).
+    </string> 
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Send new password
+    </string> 
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Забыли пароль? Это не беда, можно отправить новый пароль на Ваш адрес: %s.
+    </string> 
+    <string key="SEND_NEW_PASSWORD">
+      Отправить новый пароль
+    </string> 
+    <string key="EMAIL_ERROR">
+      Сообщение не отправлено. Свяжитесь с администратором.
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      New password for your digital orienteering map archive
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+
+Hi %s, 
+
+This is an auto-generated email containing new password information for your digital orienteering map archive at %s. 
+
+Your start page:   %s 
+Your user name:    %s 
+Your new password: %s 
+
+Consider the password as being temporary. For security reasons, please change it to another password.
+
+      
+Здравствуйте  %s, 
+
+Это письмо отправлено автоматически, и содержит новый пароль к Вашему архиву карт для спортивного ориентирования %s. 
+
+Ваша страница:   %s 
+Ваше имя:    %s 
+Новый пароль: %s 
+
+Этот пароль временный, для целей безопасности измените его самостоятельно.
+    
+    </string> 
+    <string key="NEW_PASSWORD_SENT">
+      Новый пароль был отправлен %s.
+    </string> 
+    <string key="FORGOT_PASSWORD">
+      Я забыл пароль
+    </string>
+    
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Формат файла карты без пути &lt;em&gt;%s&lt;/em&gt; не совместим. Поддерживаются только форматы jpeg, png и gif.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Файл карты без пути &lt;em&gt;%s&lt;/em&gt; не загружен .
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Файл карты без пути
+    </string> 
+    <string key="MAP_INFO">
+      Карта, где имеется линия Вашего пути.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Карта без линии пути. Не обязательна.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Режим отображения
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Лист
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Общая карта
+    </string> 
+    <string key="INFORMATION">
+      Информация
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Показать путь
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Скрыть путь
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Нажмите на карту чтобы включить/выключить Ваш путь
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...или просто щёлкните по карте...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Показать Карту Google
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Спрятать карту Google
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...for Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Whether to associate distance with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Whether to associate elapsed time with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Whether to associate maximal heart rate with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Whether to associate average heart rate with a map; 1 to associate, 0 to skip.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Whether to allow visitors to post comments to a map; 1 to allow, 0 to disallow.
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Whether to show comments collapsed as default on map page; 1 to collapse, 0 to show.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Whether new vistor comments should be sent by e-mail; 1 to send, 0 to not send.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Время
+    </string> 
+    <string key="DISTANCE">
+      Длина пути
+    </string> 
+    <string key="AVGHR">
+      Average HR
+    </string> 
+    <string key="MAXHR">
+      Maximum HR
+    </string> 
+    <string key="LANGUAGE">
+      Язык/Language
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Показать комментарии 
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Спрятать комментарии 
+    </string> 
+    <string key="POST_COMMENTS">
+      Отправить новый комментарий 
+    </string> 
+    <string key="MISSING_COMMENT">
+      Должны быть введены имя и комментарий!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Вы действительно хотите удалить этот комментарий?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - New comment
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Hi, 
+
+A new comment was created in your map archive.
+
+Map:  %s 
+Link: %s
+
+Comment's content
+Name:   %s 
+Email:  %s
+Text:   %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Последние коменнтарии к картам
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Комментарии
+    </string> 
+    <string key="COMMENT_FROM">
+      Последний комментарий сделал 
+    </string> 
+    <string key="KMZ">
+      Файл KML для Google Earth
+    </string> 
+    <string key="PROTECTED_UNTIL">
+      Скрыть карту до определённого срока
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Время, когда карта должна отображаться посетителям, должно быть в формате dd/mm/yyyy hh:mm:ss. Оставьте поле пустым чтобы не прятать карту. Эта функция используется для того чтобы загружать карты будущих мероприятий, чтобы делать их доступными к просмотру после окончания соревнований.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Время отображения скрытой карты неправильно. Введите время в формате dd/mm/yyyy hh:mm:ss или оставьте поле пустым.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Карта не доступна пользователям до  %s.
+    </string>
+    <string key="SHOW_ALL">
+      Все
+    </string>
+    <string key="SELECT_FILTER">
+      Фильтр
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+   </nonCustomizable>
+</strings>

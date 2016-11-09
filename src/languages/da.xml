@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Mit digitale o-kortarkiv
+    </string>
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Velkommen til mit digitale o-kortarkiv!
+    </string>
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      På denne side finder du kort, baner og vejvalg fra mine orienteringsløb.
+    </string>
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Har du ophavsret til et kort som ikke burde publiceres her? &lt;a href="mailto:%userEmail%"&gt;Send en e-post&lt;/a&gt;.
+    </string>
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Kort, baner og vejvalg fra mine orienteringsløb.
+    </string>
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string>
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string>
+    <!-- new strings in 3.0 --><!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+  </customizable>
+  <nonCustomizable>
+    <!--  date format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATE_FORMAT">
+      d-m-Y
+    </string>
+    <!--  date and time format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATETIME_FORMAT">
+      d-m-Y H:i
+    </string>
+    <string key="DAY_NAMES">
+      Søndag;Mandag;Tirsdag;Onsdag;Torsdag;Fredag;Lørdag
+    </string>
+    <string key="MONTH_NAMES">
+      Januar;Februar;Marts;April;Maj;Juni;Juli;August;September;Oktober;November;December
+    </string>
+    <string key="RSS_FEED">
+      RSS-feed
+    </string>
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string>
+    <string key="NAME">
+      Navn
+    </string>
+    <string key="DATE">
+      Dato
+    </string>
+    <string key="ORGANISER">
+      Arrangør
+    </string>
+    <string key="COUNTRY">
+      Land
+    </string>
+    <string key="DISCIPLINE">
+      Disciplin
+    </string>
+    <string key="RELAY_LEG">
+      Etape
+    </string>
+    <string key="RELAY_LEG_LONG">
+      Stafettur
+    </string>
+    <string key="RELAY_LEG_LOWERCASE">
+      etape
+    </string>
+    <string key="MAP_AREA_NAME">
+      Kort/område
+    </string>
+    <string key="RESULTS">
+      Resultat
+    </string>
+    <string key="COMMENT">
+      Kommentar
+    </string>
+    <string key="LOGIN">
+      Log ind
+    </string>
+    <string key="LOGOUT">
+      Log ud
+    </string>
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Forkert brugernavn og/eller password.
+    </string>
+    <string key="USERNAME">
+      Brugernavn
+    </string>
+    <string key="PASSWORD">
+      Password
+    </string>
+    <string key="YES">
+      Ja
+    </string>
+    <string key="NO">
+      Nej
+    </string>
+    <string key="DOMA_FOR_X">
+      Digitalt kortarkiv for %s
+    </string>
+    <string key="ALL_USERS">
+      Alle brugere
+    </string>
+    <string key="ADMIN_LOGIN">
+      Administrator log in
+    </string>
+    <string key="ADMIN_LOGOUT">
+      Administrator log ud
+    </string>
+    <string key="NO_MAPS">
+      Ingen publicerede kort.
+    </string>
+    <string key="SELECT_YEAR">
+      År
+    </string>
+    <string key="SELECT_CATEGORY">
+      Kategori
+    </string>
+    <string key="ALL_YEARS">
+      [alle år]
+    </string>
+    <string key="ALL_CATEGORIES">
+      [alle kategorier]
+    </string>
+    <string key="NO_MATCHING_MAPS">
+      Det findes ingen kort som matcher søgningen.
+    </string>
+    <string key="VIEWS">
+      visninger
+    </string>
+    <string key="BACK">
+      Tilbage
+    </string>
+    <string key="PREVIOUS">
+      Forrige
+    </string>
+    <string key="NEXT">
+      Næste
+    </string>
+    <string key="ADD_MAP">
+      Tilføj kort
+    </string>
+    <string key="EDIT_MAP">
+      Rediger kort
+    </string>
+    <string key="EDIT_MAP_X">
+      Rediger kort: %s
+    </string>
+    <string key="MAP_DATE_FORMAT">
+      dd-mm-åååå, og om du vil tt:mm:ss
+    </string>
+    <string key="LINK_TO_RESULT_LIST">
+      Link til resultatlisten
+    </string>
+    <string key="MAP_IMAGE_FILE">
+      Kortbilledfil
+    </string>
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Lad stå tomt for at beholde det eksisterende kort.
+    </string>
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Miniaturebilledfil
+    </string>
+    <string key="THUMBNAIL_INFO">
+      Størrelse %d x %d pixels, lad stå tomt for automatisk generering. Miniaturebilleder kan på grund av hukommelsesgrænser på serveren i visse fald ikke skabes for store kortbilleder.
+    </string>
+    <string key="CONFIRM_DELETION">
+      Bekræft sletning
+    </string>
+    <string key="SAVE">
+      Gem
+    </string>
+    <string key="DELETE">
+      Slet
+    </string>
+    <string key="CANCEL">
+      Annuller
+    </string>
+    <string key="NO_MAP_FILE_ENTERED">
+      Ingen kortbilledfil er angivet.
+    </string>
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Filformatet for kortbilledfilen &lt;em&gt;%s&lt;/em&gt; er forkert. Kun jpeg-, png- och gif-formaterne understøttes.
+    </string>
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Filformatet for kortbilledfilen &lt;em&gt;%s&lt;/em&gt; er forkert. Kun jpeg-, png- och gif-formaterne understøttes.
+    </string>
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Kortbilledfilen &lt;em&gt;%s&lt;/em&gt; kunne ikke uploades.
+    </string>
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Miniaturebilledfilen &lt;em&gt;%s&lt;/em&gt; kunne ikke uploades.
+    </string>
+    <string key="NO_MAP_NAME_ENTERED">
+      Kortnavn er ikke angivet.
+    </string>
+    <string key="NO_DATE_ENTERED">
+      Dato er ikke angivet.
+    </string>
+    <string key="INVALID_DATE">
+      Dato er angivet forkert. Skriv dato på formen åååå-mm-dd.
+    </string>
+    <string key="CATEGORY">
+      Kategori
+    </string>
+    <string key="CATEGORY_TOOLTIP">
+      Den kategori som kortet tilhører. Du kan skabe nye kategorier i din brugerprofil.
+    </string>
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Miniaturebilledet kunne ikke skabes. Årsagen kan være at der ikke er tilstrækkelig hukommelse på serveren.  På denne server kan der ikke skabes større kortbilleder end ca. %s piksler. Forøg om muligt værdien på memory_limit-parameteren i php.ini.&lt;br /&gt;Et standardminiaturebillede blev lagt ind i stedet for. Brug en mindre kortbilledfil eller upload miniaturebilledet manuelt.
+    </string>
+    <string key="NO_OF_MAPS">
+      Kort
+    </string>
+    <string key="EDIT">
+      Rediger
+    </string>
+    <string key="ADMIN_LOGIN_INFO">
+      Brugernavn og password refererer til indstillingerne i config.php-filen.
+    </string>
+    <string key="VISIBLE">
+      Synlig
+    </string>
+    <string key="LOGIN_AS">
+      Log ind som
+    </string>
+    <string key="LOGIN_AS_X">
+      Log ind som %s
+    </string>
+    <string key="LAST_MAP">
+      Seneste kort
+    </string>
+    <string key="NO_USERS_CREATED">
+      Ingen brugere er oprettet.
+    </string>
+    <string key="CREATE_THE_FIRST_USER">
+      Klik her for at oprette den første bruger.
+    </string>
+    <string key="MAP">
+      Kort
+    </string>
+    <string key="UPDATED">
+      Opdateret
+    </string>
+    <string key="USERS">
+      Brugere
+    </string>
+    <string key="LAST_MAPS">
+      De seneste kort
+    </string>
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Du kan &lt;a href="enter_public_creation_code.php"&gt;oprette dit eget digitale kortarkiv&lt;/a&gt; ved op give adgangskoden som du får af &lt;a href="mailto:%adminEmail%"&gt;administratoren&lt;/a&gt;.
+    </string>
+    <string key="ADD_USER">
+      Tilføj bruger
+    </string>
+    <string key="EDIT_USER_X">
+      Rediger brugere: %s
+    </string>
+    <string key="FIRST_NAME">
+      Fornavn
+    </string>
+    <string key="LAST_NAME">
+      Efternavn
+    </string>
+    <string key="EMAIL">
+      E-post
+    </string>
+    <string key="USERNAME_EXISTS">
+      Det findes allerede en bruger med det brugernavnet. Vælg et andet brugernavn.
+    </string>
+    <string key="NO_USERNAME_ENTERED">
+      Du skal opgive et brugernavn.
+    </string>
+    <string key="NO_FIRST_NAME_ENTERED">
+      Du skal opgive et fornavn.
+    </string>
+    <string key="NO_LAST_NAME_ENTERED">
+      Du skal opgive et efternavn.
+    </string>
+    <string key="NO_EMAIL_ENTERED">
+      Du skal opgive en e-postadresse.
+    </string>
+    <string key="INVALID_EMAIL">
+      E-postadressen er ugyldig.
+    </string>
+    <string key="NO_PASSWORD_ENTERED">
+      Du skal skrive et password for nye brugere.
+    </string>
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Hvorvidt en arrangør skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Hvorvidt et land skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Hvorvidt en disciplin skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Hvorvidt en stafettur skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Hvorvidt navnet på kortet eller området skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Hvorvidt et link til en resultatliste skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Hvorvidt en kommentar skal kunne kobles til et kort; 1 for at koble, 0 for ikke at koble.
+    </string>
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Titlen på din side. Vises i netbrowserens tittellinje og i RSS-feedet.
+    </string>
+    <string key="CAPTION_DESCRIPTION">
+      Titlen som vises øverst på din side.
+    </string>
+    <string key="INTRO_DESCRIPTION">
+      Beskrivelse af din side. Vises under titlen.
+    </string>
+    <string key="FOOTER_DESCRIPTION">
+      Teksten som vises på bunden af din side.
+    </string>
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      Beskrivelse af din side. Vises i RSS-feedet.
+    </string>
+    <string key="USERNAME_DESCRIPTION">
+      Dit brugernavn som sammen med password identificerer dig.
+    </string>
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Brugernavnet skal være unikt.
+    </string>
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Angiv et midlertidig password.
+    </string>
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Lad være tomt for at beholde eksisterende password.
+    </string>
+    <string key="PASSWORD_DESCRIPTION">
+      Dit password som sammen med brugernavnet identificerer dig. Lad stå tomt for at beholde eksisterende password.
+    </string>
+    <string key="FIRST_NAME_DESCRIPTION">
+      Dit fornavn.
+    </string>
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Brugerens fornavn.
+    </string>
+    <string key="LAST_NAME_DESCRIPTION">
+      Dit efternavn.
+    </string>
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Brugerens efternavn.
+    </string>
+    <string key="EMAIL_DESCRIPTION">
+      Din e-postadresse.
+    </string>
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Brugerens e-postadresse.
+    </string>
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Vis dette kortarkiv offentligt.
+    </string>
+    <string key="ADMIN_ADD_USER_INFO">
+      Angiv den nye brugers detaljer.
+    </string>
+    <string key="ADMIN_EDIT_USER_INFO">
+      Rediger brugerens detaljer.
+    </string>
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Rediger din brugerprofil.
+    </string>
+    <string key="ADD_USER_PROFILE_TITLE">
+      Opret ny brugerprofil.
+    </string>
+    <string key="PERSONAL_DETAILS_TITLE">
+      Personoplysninger.
+    </string>
+    <string key="PERSONAL_DETAILS_INFO">
+      Angiv dine personoplysninger.
+    </string>
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Angiv brugerens personoplysninger
+    </string>
+    <string key="MAP_CATEGORIES_TITLE">
+      Kortkategorier
+    </string>
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Angiv de kategorier som brugerens kort skal inddeles i.
+    </string>
+    <string key="MAP_CATEGORIES_INFO">
+      Angiv de kategorier som dine kort skal inddeles i.
+    </string>
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Tekster og indstillinger.
+    </string>
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Teksterne som vises på brugerens side, og indstillinger for hvilke oplysninger som skal kobles til hvert kort.
+    </string>
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Teksterne som vises på din side, og indstillinger for hvilke oplysninger som skal kobles til hvert kort.
+    </string>
+    <string key="USER_PROFILE">
+      Brugerprofil
+    </string>
+    <string key="REQUIRED_FIELDS_INFO">
+      Obligatoriske oplysninger er markeret med %s.
+    </string>
+    <string key="MAP_CATEGORIES">
+      Kortkategorier
+    </string>
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Konkurrence;Træning
+    </string>
+    <string key="DEFAULT_CATEGORY">
+      standard
+    </string>
+    <string key="ADD_CATEGORY">
+      Opret ny kategori
+    </string>
+    <string key="DELETE_CATEGORY">
+      Fjern kategori
+    </string>
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Kan ikke fjerne kategorien %s eftersom den fortsat indeholder %d kort. Fjern kortene først.
+    </string>
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Der skal altid findes mindst én kategori.
+    </string>
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Et navn for kategorien skal angives.
+    </string>
+    <string key="SITE_ALREADY_CREATED">
+      Siden er allerede oprettet.
+    </string>
+    <string key="TOO_OLD_PHP_VERSION">
+      Du behøver PHP version 5.0.0 eller nyere. Din version er %s.
+    </string>
+    <string key="MYSQL_ERROR_X">
+      MySQL-fejl: %s
+    </string>
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Siden oprettet uden fejl!
+    </string>
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Siden oprettet uden problemer. Rediger config.php-filen for at ændre sidens konfiguration.
+    </string>
+    <string key="GOTO_START_PAGE">
+      Gå til startsiden
+    </string>
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Der opstod en fejl da siden blev oprettet.
+    </string>
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Siden kunne ikke oprettes. Noter fejlmeddelelserne nedenfor og foretag de nødvendige justeringer i config.php-filen og/eller i databasen.
+    </string>
+    <string key="ERRORS_TRY_AGAIN">
+      Forsøg igen
+    </string>
+    <string key="PUBLIC_CREATION_CODE">
+      Skriv adgangskoden
+    </string>
+    <string key="PROCEED">
+      Fortsæt
+    </string>
+    <string key="INVALID_CODE">
+      Forkert kode.
+    </string>
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA-administratoren
+    </string>
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Dit digitale kortarkiv er oprettet!
+    </string>
+    <string key="NEW_USER_EMAIL_BODY">
+Hej %s,  
+
+Dette er en automatisk genereret e-postmeddelelse som bekræfter at et digitalt kortarkiv er oprettet til dig på %s.
+
+Din startside:  %s 
+Dit brugernavn: %s 
+Dit password:   %s  
+    </string>
+    <string key="SEND_CONFIRMATION_EMAIL">
+      E-postbekræftelse
+    </string>
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      Send e-post med brugerinformation til den nye bruger
+    </string>
+    <string key="ADMIN_EMAIL_ERROR">
+      E-postmeddelelsen kunne ikke sendes. Kontroller dine SMTP-indstillinger i php.ini og administratorens e-postadresse i config.php (gældende adresse er %s).
+    </string>
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Send nyt password
+    </string>
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Glemt dit passwordet? Ingen fare, et nyt password kan sendes til e-postadressen i din brugerprofil: %s.
+    </string>
+    <string key="SEND_NEW_PASSWORD">
+      Send et nyt password
+    </string>
+    <string key="EMAIL_ERROR">
+      E-postmeddelelsen kunne ikke sendes. Kontakt administratoren.
+    </string>
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Nyt password for dit digitale kortarkiv
+    </string>
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+Hej %s,
+
+Dette er en automatisk genereret e-postmeddelelse som indeholder ny information om dit digitale kortarkiv på %s.
+
+Din startside:    %s 
+Dit brugernavn:   %s 
+Dit nye password: %s 
+    </string>
+    <string key="NEW_PASSWORD_SENT">
+      Et nyt password er sendt til %s.
+    </string>
+    <string key="FORGOT_PASSWORD">
+      Jeg har glemt mit password
+    </string>
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Filformatet for den blanke kortfil &lt;em&gt;%s&lt;/em&gt; er ugyldigt. Kun jpeg, png and gif formaterne understøttes.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Den blanke kortfil &lt;em&gt;%s&lt;/em&gt; kunne ikke uploades.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Billedfil for blankt kort
+    </string> 
+    <string key="MAP_INFO">
+      Kort med vejvalg.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Kort uden vejvalg - ikke påkrævet.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Visningsindstilling
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Liste
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Oversigtskort
+    </string> 
+    <string key="INFORMATION">
+      Information
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Vis vejvalg
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Skjul vejvalg
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Klik på kortet for at slå vejvalg til/fra
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...eller klik hvorsomhelst på kortet...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Vis oversigtskort
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Skjul oversigtskort
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...for Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Hvorvidt distance skal forbindes med et kort; 1 for at forbinde, 0 for at ophæve.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Hvorvidt tid skal forbindes med et kort; 1 for at forbinde, 0 for at ophæve.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Hvorvidt maxpuls skal forbindes med et kort; 1 for at forbinde, 0 for at ophæve.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Hvorvidt gennemsnitspuls skal forbindes med et kort; 1 for at forbinde, 0 for at ophæve.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Hvorvidt besøgende skal kunne skrive kommentarer til kort; 1 for at tillade, 0 for at nægte.
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Hvorvidt besøgendes kommentarer skal skjules på kortsiden; 1 for at skjule, 0 for at vise.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Hvorvidt nye kommentarer fra besøgende skal sendes som e-post; 1 for at sende, 0 for ikke at sende.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Tid
+    </string> 
+    <string key="DISTANCE">
+      Distance
+    </string> 
+    <string key="AVGHR">
+      Gennemsnitspuls
+    </string> 
+    <string key="MAXHR">
+      Maxpuls
+    </string> 
+    <string key="LANGUAGE">
+      Sprog
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Vis kommentarer
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Skjul kommentarer
+    </string> 
+    <string key="POST_COMMENTS">
+      Indsæt ny kommentar
+    </string> 
+    <string key="MISSING_COMMENT">
+      Navn og kommentar skal angives!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Ønsker du virkelig at slette denne kommentar?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - ny kommentar
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Hej, 
+
+Der er indsat en ny kommentar i dit kortarkiv.
+
+Kort:  %s 
+Link: %s
+
+Comment's content
+Navn:   %s 
+E-post:  %s
+tekst:   %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Seneste kommenterede kort
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Kommentarer
+    </string> 
+    <string key="COMMENT_FROM">
+      Senest kommenteret af
+    </string> 
+    <string key="KMZ">
+      KMZ
+    </string> 
+    <string key="PROTECTED_UNTIL">
+      Skjult indtil
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Tidspunktet hvor kortet vil blive tilgængeligt for andre besøgende end dig selv, angivet i dd-mm-åååå tt:mm:ss format. Efterlad feltet tomt for ikke at skjule kortet. DEnne funktion kan bruges til at uploade kort før et løb og gøre dem tilgængelige umiddelbart efter løbet.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Det angivne tidspunkt for kortets offentliggørelse er ugyldigt. Angiv tidpunktet i formatet dd-mm-åååå tt:mm:ss eller efterlad feltet tomt.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Kortet er skjult for andre til og med %s.
+    </string>
+    <string key="SHOW_ALL">
+      alle
+    </string>
+    <string key="SELECT_FILTER">
+      Filter
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+  </nonCustomizable>
+</strings>

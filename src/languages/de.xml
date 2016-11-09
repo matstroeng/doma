@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Mein digitales Orientierungslaufkartenarchiv
+    </string> 
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Willkommen bei meinem digitalen Orientierungslaufkartenarchiv!
+    </string> 
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      Auf dieser Seite werde ich Karten, Strecken und Routenwahlen von meinen Orientierungsläufen veröffentlichen.
+    </string> 
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Sind Sie der Urheber einer Karte, die hier nicht veröffentlicht werden soll? &lt;a href="mailto:%userEmail%"&gt;Mailen Sie mir&lt;/a&gt;.
+    </string> 
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Karten, Strecken und Routenwahlen von meinen Orientierungsläufen.
+    </string> 
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string> 
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+  </customizable>
+
+  <nonCustomizable>
+    <!--  general ****************************************************************************************************** --> 
+    <!--  date format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATE_FORMAT">
+      d.m.Y
+    </string> 
+    <!--  date and time format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATETIME_FORMAT">
+      d.m.Y H:i
+    </string> 
+    <!--  day names, semi-colon separated --> 
+    <string key="DAY_NAMES">
+      Sonntag;Montag;Dienstag;Mittwoch;Donnerstag;Freitag;Samstag
+    </string> 
+    <!--  month names, semi-colon separated --> 
+    <string key="MONTH_NAMES">
+      Jänner;Februar;März;April;Mai;Juni;Juli;August;September;Oktober;November;Dezember
+    </string> 
+    <string key="RSS_FEED">
+      RSS Feed
+    </string> 
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string> 
+    <string key="NAME">
+      Name
+    </string> 
+    <string key="DATE">
+      Datum
+    </string> 
+    <string key="ORGANISER">
+      Veranstalter
+    </string> 
+    <string key="COUNTRY">
+      Land
+    </string> 
+    <string key="DISCIPLINE">
+      Disziplin
+    </string> 
+    <string key="RELAY_LEG">
+      Strecke
+    </string> 
+    <string key="RELAY_LEG_LONG">
+      Staffelstrecke
+    </string> 
+    <string key="RELAY_LEG_LOWERCASE">
+      Strecke
+    </string> 
+    <string key="MAP_AREA_NAME">
+      Karte/Gebiet
+    </string> 
+    <string key="RESULTS">
+      Ergebnisse
+    </string> 
+    <string key="COMMENT">
+      Kommentar
+    </string> 
+    <string key="LOGIN">
+      Anmelden
+    </string> 
+    <string key="LOGOUT">
+      Abmelden
+    </string> 
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Ungültiger Benutzername und/oder Passwort.
+    </string> 
+    <string key="USERNAME">
+      Benutzername
+    </string> 
+    <string key="PASSWORD">
+      Passwort
+    </string> 
+    <string key="YES">
+      Ja
+    </string> 
+    <string key="NO">
+      Nein
+    </string> 
+
+    <!--  topbar ****************************************************************************************************** --> 
+    <string key="DOMA_FOR_X">
+      Digitales Orientierungslaufkartenarchiv von %s
+    </string> 
+    <string key="ALL_USERS">
+      Alle Benutzer
+    </string> 
+    <string key="ADMIN_LOGIN">
+      Als Administrator anmelden
+    </string> 
+    <string key="ADMIN_LOGOUT">
+      Administrator abmelden
+    </string> 
+
+    <!--  index.php ****************************************************************************************************** --> 
+    <string key="NO_MAPS">
+      Keine Karten veröffentlicht.
+    </string> 
+    <string key="SELECT_YEAR">
+      Jahr
+    </string> 
+    <string key="SELECT_CATEGORY">
+      Kategorie
+    </string> 
+    <string key="ALL_YEARS">
+      [alle Jahre]
+    </string> 
+    <string key="ALL_CATEGORIES">
+      [alle Kategorien]
+    </string> 
+    <string key="NO_MATCHING_MAPS">
+      Keine Karten mit diesen Suchkriterien gefunden.
+    </string> 
+    <string key="VIEWS">
+      mal gesehen
+    </string> 
+
+    <!--  show_map.php ****************************************************************************************************** --> 
+    <string key="BACK">
+      Zurück
+    </string> 
+    <string key="PREVIOUS">
+      Vorige
+    </string> 
+    <string key="NEXT">
+      Nächste
+    </string> 
+
+    <!--  edit_map.php ****************************************************************************************************** --> 
+    <string key="ADD_MAP">
+      Karte hinzufügen
+    </string> 
+    <string key="EDIT_MAP">
+      Karte bearbeiten
+    </string> 
+    <string key="EDIT_MAP_X">
+      Karte bearbeiten: %s
+    </string> 
+    <string key="MAP_DATE_FORMAT">
+      TT.MM.JJJJ, optional HH:MM:SS
+    </string> 
+    <string key="LINK_TO_RESULT_LIST">
+      Link zur Ergebnisliste
+    </string> 
+    <string key="MAP_IMAGE_FILE">
+      Kartendatei
+    </string> 
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Leer lassen um bestehende Karte beizubehalten.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Vorschaudatei
+    </string> 
+    <string key="THUMBNAIL_INFO">
+      Größe: %d x %d Pixel, leer lassen um automatisch zu erzeugen. Vorschaubilder von großen Dateien werden auf Grund von Serverbeschränkungen eventuell nicht erzeugt.
+    </string> 
+    <string key="CONFIRM_DELETION">
+      Löschen bestätigen
+    </string> 
+    <string key="SAVE">
+      Speichern
+    </string> 
+    <string key="DELETE">
+      Löschen
+    </string> 
+    <string key="CANCEL">
+      Abbrechen
+    </string> 
+    <string key="NO_MAP_FILE_ENTERED">
+      Keine Kartendatei angegeben.
+    </string> 
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Das Format der Kartendatei &lt;em&gt;%s&lt;/em&gt; ist ungültig. Erlaubt sind JPEG, PNG und GIF.
+    </string> 
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Das Format der Vorschaudatei &lt;em&gt;%s&lt;/em&gt; ist ungültig. Erlaubt sind JPEG, PNG und GIF.
+    </string> 
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Die Kartendatei &lt;em&gt;%s&lt;/em&gt; konnte nicht hochgeladen werden.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Die Vorschaudatei &lt;em&gt;%s&lt;/em&gt; konnte nicht hochgeladen werden.
+    </string> 
+    <string key="NO_MAP_NAME_ENTERED">
+      Kein Kartenname angegeben.
+    </string> 
+    <string key="NO_DATE_ENTERED">
+      Kein Datum angegeben.
+    </string> 
+    <string key="INVALID_DATE">
+      Das Datum ist ungültig. Bitte das Format TT.MM.JJJJ beachten.
+    </string> 
+    <string key="CATEGORY">
+      Kategorie
+    </string> 
+    <string key="CATEGORY_TOOLTIP">
+      Kategorie der Karte. Neue Kategorien können im Profil angelegt werden.
+    </string> 
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Das Vorschaubild konnte nicht erzeugt werden. Dies könnte an einer Speicherbeschränkung am Server liegen. Auf diesem Server können keine Vorschaubilder von Bildern mit mehr als %s Pixel erzeugt werden. Bitte erhöhe den Wert von memory_limit in der php.ini.&lt;br /&gt;Es wurde ein standardmäßiges Vorschaubild erzeugt. Versuche eine kleine Kartendatei oder ein eigenes Vorschaubild hochzuladen.
+    </string> 
+
+    <!--  users.php ****************************************************************************************************** --> 
+    <string key="NO_OF_MAPS">
+      Karten
+    </string> 
+    <string key="EDIT">
+      Bearbeiten
+    </string> 
+    <string key="ADMIN_LOGIN_INFO">
+      Benutzername und Passwort sind in der Datei config.php angegeben.
+    </string> 
+    <string key="VISIBLE">
+      Sichtbar
+    </string> 
+    <string key="LOGIN_AS">
+      Anmelden als
+    </string> 
+    <string key="LOGIN_AS_X">
+      Anmelden als %s
+    </string> 
+    <string key="LAST_MAP">
+      Letzte Karte
+    </string> 
+    <string key="NO_USERS_CREATED">
+      Noch keine Benutzer angelegt.
+    </string> 
+    <string key="CREATE_THE_FIRST_USER">
+      Klicke hier um den ersten User anzulegen.
+    </string> 
+    <string key="MAP">
+      Karte
+    </string> 
+    <string key="UPDATED">
+      Aktualisiert
+    </string> 
+    <string key="USERS">
+      Benutzer
+    </string> 
+    <string key="LAST_MAPS">
+      Letzte Karten
+    </string> 
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Du kannst &lt;a href="enter_public_creation_code.php"&gt;dein eigenes digitales Orientierungslaufkartenarchiv&lt;/a&gt; anlegen. Fordere dazu den Zugangscode vom &lt;a href="mailto:%adminEmail%"&gt;Administrator&lt;/a&gt; an.
+    </string> 
+
+    <!--  edit_user.php ****************************************************************************************************** --> 
+    <string key="ADD_USER">
+      Neuen Benutzer anlegen
+    </string> 
+    <string key="EDIT_USER_X">
+      Benutzer bearbeiten: %s
+    </string> 
+    <string key="FIRST_NAME">
+      Vorname
+    </string> 
+    <string key="LAST_NAME">
+      Nachname
+    </string> 
+    <string key="EMAIL">
+      E-Mail
+    </string> 
+    <string key="USERNAME_EXISTS">
+      Ein Benutzer mit diesem Benutzernamen besteht bereits, bitte wähle einen anderen Benutzernamen.
+    </string> 
+    <string key="NO_USERNAME_ENTERED">
+      Kein Benutzername angegeben.
+    </string> 
+    <string key="NO_FIRST_NAME_ENTERED">
+      Kein Vorname angegeben.
+    </string> 
+    <string key="NO_LAST_NAME_ENTERED">
+      Kein Nachname angegeben.
+    </string> 
+    <string key="NO_EMAIL_ENTERED">
+      Keine E-Mail-Adresse angegeben.
+    </string> 
+    <string key="INVALID_EMAIL">
+      Die E-Mail-Adresse ist ungültig.
+    </string> 
+    <string key="NO_PASSWORD_ENTERED">
+      Kein Passwort angegeben.
+    </string> 
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Gibt an ob ein Veranstalter bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Gibt an ob ein Land bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Gibt an ob eine Disziplin bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Gibt an ob eine Staffelstrecke bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Gibt an ob eine Karte/ein Gebiet bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Gibt an ob ein Link zur Ergebnisliste bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Gibt an ob ein Kommentar bei einer Karte angegeben werden kann; 1 = ja, 0 = nein.
+    </string> 
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Der Titel der Seite. Wird in der Titelleiste des Browsers und im RSS Feed angezeigt.
+    </string> 
+    <string key="CAPTION_DESCRIPTION">
+      Der Titel, der auf der Startseite angezeigt wird.
+    </string> 
+    <string key="INTRO_DESCRIPTION">
+      Die Beschreibung der Seite. Wird unterhalb des Titels angezeigt.
+    </string> 
+    <string key="FOOTER_DESCRIPTION">
+      Der Text, der am Ende der Seite angezeigt wird.
+    </string> 
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      Beschreibung der Seite für den RSS Feed.
+    </string> 
+    <string key="USERNAME_DESCRIPTION">
+      Dein Benutzername, welcher dich zusammen mit deinem Passwort identifiziert.
+    </string> 
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Der Benutzername muss einzigartig sein.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Gib ein vorübergehendes initiales Password an.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Leer lassen um das bestehende Passwort beizubehalten.
+    </string> 
+    <string key="PASSWORD_DESCRIPTION">
+      Dein Passwort, welches dich zusammen mit deinem Benutzernamen identifiziert. Leer lassen um das bestehende Passwort beizubehalten.
+    </string> 
+    <string key="FIRST_NAME_DESCRIPTION">
+      Dein Vorname.
+    </string> 
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Der Vorname des Benutzers.
+    </string> 
+    <string key="LAST_NAME_DESCRIPTION">
+      Dein Nachname.
+    </string> 
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Der Nachname des Benutzers.
+    </string> 
+    <string key="EMAIL_DESCRIPTION">
+      Deine E-Mail-Adresse.
+    </string> 
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Die E-Mail-Adresse des Benutzers.
+    </string> 
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Archiv öffentlich sichtbar und zugänglich machen.
+    </string> 
+    <string key="ADMIN_ADD_USER_INFO">
+      Gib die Details des neuen Benutzers an.
+    </string> 
+    <string key="ADMIN_EDIT_USER_INFO">
+      Bearbeite die Details des Benutzers.
+    </string> 
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Bearbeite dein Profil
+    </string> 
+    <string key="ADD_USER_PROFILE_TITLE">
+      Neues Benutzerprofil anlegen
+    </string> 
+    <string key="PERSONAL_DETAILS_TITLE">
+      Persönliche Details
+    </string> 
+    <string key="PERSONAL_DETAILS_INFO">
+      Gib deine persönlichen Details ein.
+    </string> 
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Gib die persönlichen Details des Benutzers ein.
+    </string> 
+    <string key="MAP_CATEGORIES_TITLE">
+      Kartenkategorien
+    </string> 
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Gib die Kategorien an, in die die Karten des Benutzers eingeteilt werden.
+    </string> 
+    <string key="MAP_CATEGORIES_INFO">
+      Gib die Kategorien an, in die deine Karten eingeteilt werden.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Texte und Einstellungen
+    </string> 
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Die Texte, die auf der Seite des Benutzers angezeigt werden, und Einstellungen für die Details jeder Karte.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Die Texte, die auf deiner Seite angezeigt werden, und Einstellungen für die Details jeder Karte.
+    </string> 
+    <string key="USER_PROFILE">
+      Benutzerprofil
+    </string> 
+    <string key="REQUIRED_FIELDS_INFO">
+      Verpflichtende Felder sind mit %s markiert.
+    </string> 
+    <string key="MAP_CATEGORIES">
+      Kartenkategorien
+    </string> 
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Wettkampf;Training
+    </string> 
+    <string key="DEFAULT_CATEGORY">
+      standard
+    </string> 
+    <string key="ADD_CATEGORY">
+      Neue Kategorien hinzufügen
+    </string> 
+    <string key="DELETE_CATEGORY">
+      Kategorie löschen
+    </string> 
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Kategorie %s kann nicht gelöscht werden, da sie noch %d Karten enthält. Bitte lösche diese Karten zuerst.
+    </string> 
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Es muss mindestens eine Kategorie bestehen bleiben.
+    </string> 
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Bitte gib einen Namen für die Kategorie an.
+    </string> 
+
+    <!--  create.php ****************************************************************************************************** --> 
+    <string key="SITE_ALREADY_CREATED">
+      Die Seite wurde bereits erzeugt.
+    </string> 
+    <string key="TOO_OLD_PHP_VERSION">
+      Du benötigst PHP 5.0.0 oder höher. Deine aktuelle Version ist %s.
+    </string> 
+    <string key="MYSQL_ERROR_X">
+      MySQL Fehler: %s
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Seite wurde erfolgreich erzeugt!
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Die Seite wurde erfolgreich erzeugt. Bearbeite die config.php um die Einstellungen der Seite zu ändern.
+    </string> 
+    <string key="GOTO_START_PAGE">
+      Gehe zur Startseite
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Fehler beim Erzeugen der Seite
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Die Seite konnte nicht erzeugt werden. Überprüfe die Fehler unterhalb und mache erforderliche Änderungen in der config.php und/oder Datenbank.
+    </string> 
+    <string key="ERRORS_TRY_AGAIN">
+      Nochmal versuchen
+    </string> 
+
+    <!--  enter_public_creation_code.php ******************************************************************************************** --> 
+    <string key="PUBLIC_CREATION_CODE">
+      Zugangscode eingeben
+    </string> 
+    <string key="PROCEED">
+      Fortfahren
+    </string> 
+    <string key="INVALID_CODE">
+      Ungültiger Code.
+    </string> 
+
+    <!--  email sending ****************************************************************************************************** --> 
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA Administrator
+    </string> 
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Dein digitales Orientierungslaufkartenarchiv wurde erzeugt!
+    </string> 
+    <string key="NEW_USER_EMAIL_BODY">
+Hallo %s! 
+
+Dies ist ein automatisches E-Mail zur Bestätigung, dass ein digitales Orientierungslaufkartenarchiv für dich bei %s erzeugt wurde.
+
+Deine Startseite:  %s 
+Dein Benutzername: %s 
+Dein Passwort:     %s
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL">
+      E-Mail Bestätigung
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      E-Mail mit Zugangsdaten an den neuen Benutzer senden
+    </string> 
+    <string key="ADMIN_EMAIL_ERROR">
+      E-Mail konnte nicht gesendet werden. Bitte überprüfe die SMTP Einstellungen in der php.ini und die Administrator E-Mail-Adresse in der config.php (die aktuelle ist %s).
+    </string> 
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Neues Passwort senden
+    </string> 
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Passwort vergessen? Keine Panik, ein neues Passwort kann dir auf deine in deinem Profil angegebene E-Mail-Adresse gesendet werden: %s.
+    </string> 
+    <string key="SEND_NEW_PASSWORD">
+      Ein neues Passwort senden
+    </string> 
+    <string key="EMAIL_ERROR">
+      E-Mail konnte nicht gesendet werden. Bitte kontaktiere den Administrator.
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Neues Passwort für dein digitales Orientierungslaufkartenarchiv
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+Hallo %s! 
+
+Dies ist ein automatisches E-Mail mit deinem neuen Passwort für dein digitales Orientierungslaufkartenarchiv bei %s. 
+
+Deine Startseite:    %s 
+Dein Benutzername:   %s 
+Dein neues Passwort: %s
+    </string> 
+    <string key="NEW_PASSWORD_SENT">
+      Ein neues Passwort wurde an %s gesendet.
+    </string> 
+    <string key="FORGOT_PASSWORD">
+      Ich habe mein Passwort vergessen
+    </string> 
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Das Dateiformat der leeren Karte &lt;em&gt;%s&lt;/em&gt; ist ungültig. Nur JPEG, PNG und GIF werden unterstützt.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Die Datei der leeren Karte &lt;em&gt;%s&lt;/em&gt; konnte nicht hochgeladen werden.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Datei der leeren Karte
+    </string> 
+    <string key="MAP_INFO">
+      Karte, auf der deine Route eingezeichnet ist.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Karte ohne Route. Nicht verpflichtend.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Anzeigemodus
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Liste
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Übersichtskarte
+    </string> 
+    <string key="INFORMATION">
+      Information
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Routenwahlen zeigen
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Routenwahlen verstecken
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Klicke auf die Karte um Routenwahlen ein/-auszuschalten
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...oder klicke irgendwo auf die Karte...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Übersichtskarte anzeigen
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Übersichtskarte verstecken
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...für Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Distanz mit der Karte verknüpfen; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Laufzeit mit der Karte verknüpfen; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Maximalpuls mit der Karte verknüpfen; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Durchschnittspuls mit der Karte verknüpfen; 1 = ja, 0 = nein.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Kommentare von Besuchern erlauben; 1 = ja, 0 = nein.
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Kommentare standardmäßig eingeklappt auf der Kartenseite anzeigen; 1 = ja, 0 = nein.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Besucherkommentare per E-Mail senden; 1 = ja, 0 = nein.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Zeit
+    </string> 
+    <string key="DISTANCE">
+      Distanz
+    </string> 
+    <string key="AVGHR">
+      Durchschnittspuls
+    </string> 
+    <string key="MAXHR">
+      Maximalpuls
+    </string> 
+    <string key="LANGUAGE">
+      Sprache
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Kommentare zeigen
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Kommentare verstecken
+    </string> 
+    <string key="POST_COMMENTS">
+      Kommentar veröffentlichen
+    </string> 
+    <string key="MISSING_COMMENT">
+      Name und Kommentar müssen eingegeben werden!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Kommentar wirklich löschen?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - Neues Kommentar
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Hallo, 
+
+In deinem Kartenarchiv wurde ein neues Kommentar veröffentlicht.
+
+Karte: %s 
+Link:  %s
+
+Kommentar
+Name:   %s 
+E-Mail: %s
+Text:   %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Zuletzt kommentierte Karten
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Kommentare
+    </string> 
+    <string key="COMMENT_FROM">
+      Letztes Kommentar von
+    </string> 
+    <string key="KMZ">
+      KMZ
+    </string> 
+    <string key="PROTECTED_UNTIL">
+      Verstecken bis
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Zeitpunkt im Format tt.mm.jjjj hh:mm:ss, an dem die Karte für Besucher angezeigt werden soll. Leer lassen um die Karte sofort anzuzeigen. Diese Funktion kann dazu verwendet werden um Karten einer Veranstaltung im Vorhinein hochzuladen und diese direkt nach der Veranstaltung den Teilnehmern zur Verfügung zu stellen.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Der angegebene Zeitpunkt, bis zu dem die Karte versteckt bleiben soll, ist ungültig. Gib einen Zeitpunkt im Format tt.mm.jjjj hh:mm:ss an oder lass das Feld leer.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Die Karte ist bis %s für Besucher versteckt.
+    </string>
+    <string key="SHOW_ALL">
+      alle
+    </string>
+    <string key="SELECT_FILTER">
+      Filter
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+  </nonCustomizable>
+</strings>

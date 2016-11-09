@@ -1,0 +1,949 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* GENERAL ******************************************************************************/
+
+html, body, form, select, input, textarea, table, thead, tbody, tfoot, tr, th, td
+{
+  font-family: "Trebuchet MS", Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+form, div
+{
+  padding: 0;
+  margin: 0;
+}
+
+/* headers and paragraphs */
+h1
+{
+  margin: 0 0 0.7em 0;
+  font-size: 180%;
+  font-weight: bold;
+}
+
+h2
+{
+  font-size: 135%;
+  font-weight: bold;
+}
+
+h2, h3, h4, h5, h6
+{
+  padding: 0;
+  margin: 1em 0 0.7em 0;
+}
+
+p
+{
+  padding: 0;
+  margin: 0 0 0.7em 0;
+  line-height: 19px;
+}
+
+i
+{
+  font-style: italic;
+}
+
+/* links */
+a, a:visited
+{
+  color: #3f3fff;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: #0000ff; 
+  text-decoration: underline;
+} 
+
+a img
+{
+  border: 0;
+}
+
+/* tables */
+table
+{
+  border-collapse: collapse;
+  border: 1px solid #9f9f9f;
+}
+
+thead
+{
+  background-color: #9f9f9f;
+  font-weight: bold;
+  text-align: left;
+}
+
+td, th
+{
+  padding: 0.5em 1em;
+  text-align: left;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+}
+
+tr.odd
+{
+
+}
+
+tr.even
+{
+  background-color: #efefef;
+}
+
+/* miscellaneous */
+span.separator
+{
+  margin: 0 0.5em;
+}
+
+ul.error
+{
+  color: #ff0000;
+  margin-bottom: 1em;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.fullWidth
+{
+  width: 100%;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.loadingIcon
+{
+  margin: 4em auto;
+  text-align: center;
+  background-image: url(gfx/loading_icon.gif);
+  height: 32px;
+  width: 32px;
+  display: block;
+  text-align: center;
+}
+
+/* LAYOUT ******************************************************************************/
+body
+{
+  margin: 1em;
+  background: #000040;
+  text-align: center;
+  color: #000000;
+}
+
+#wrapper
+{
+  width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#content
+{
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+
+#content form
+{
+  padding: 2em;
+}
+
+/* top bar */
+#topbar
+{
+  background-color: #c7c7ff;
+  border-radius: 5px 5px 0 0;
+  font-size: 80%;
+}
+
+#topbar .left
+{
+  position: relative;
+  float: left;
+  padding: 0.5em 1em;
+  line-height: 15px;
+}
+
+#topbar .right
+{
+  position: relative;
+  float: right;
+  padding: 0.5em 1em;
+  line-height: 15px;
+}
+
+#topbar #languages 
+{
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  left: -0.75em;
+  position: absolute;
+  top: 2em;
+  width: 12em;
+  z-index: 1000;
+  display: none;
+}
+
+#topbar #languages a
+{
+  display: block;
+  padding: 0.25em 0.5em;
+}
+
+#topbar #languages img,
+#topbar #currentLanguage img
+{
+  padding: 0 0.5em 2px 0.25em;
+  vertical-align: middle;
+}
+
+#topbar #currentLanguage
+{
+  position: relative;
+  cursor: pointer;
+  background: url(gfx/dropdown_arrow.png) top right no-repeat;
+  padding-right: 15px;
+  border: 1px solid #9595bf;
+}
+
+#topbar #currentLanguage:hover
+{
+  background-color: #d5d5ff;
+}
+
+/* FORM ELEMENTS ******************************************************************************/
+
+form.wide div.container
+{
+  clear: both;
+  position: relative;
+}
+
+form.wide label
+{
+  float: left;
+  position: relative;
+  width: 15em;
+  margin: 0.3em 0 0.9em 0;
+}
+
+form.wide .buttons
+{
+  margin: 1em 0 0 15em;
+}
+
+form.wide textarea
+{
+  position: relative;
+  margin-bottom: 0.5em;
+  height: 8em;
+  width: 35em;
+}
+
+form.wide input.text, form.wide input.password, form.wide select
+{
+  width: 35em;
+}
+
+input.submit
+{
+  border-width: 1px;
+  border-top-color: #9f9f9f;
+  border-bottom-color: #3f3f3f;
+  border-left-color: #9f9f9f;
+  border-right-color: #3f3f3f;
+  padding: 0.2em 1em;
+  margin: 0 1em 0 0;
+  background: #ecebe6 url(gfx/button_background.png) repeat-x;
+}
+
+input.submit:active, input.submit:active:hover 
+{
+  background: #dbdae8 url(gfx/button_background_active.png) repeat-x;
+  background-position: bottom left;
+}
+
+input.submit:hover
+{
+  border-top-color: #3f3f3f;
+  border-bottom-color: #9f9f9f;
+  border-left-color: #3f3f3f;
+  border-right-color: #9f9f9f;
+  background: #dbdae8 url(gfx/button_background_hover.png) repeat-x;
+}
+
+form.wide .tooltip
+{
+  width: 20em;
+}
+
+form.wide h2
+{
+  clear: left;
+  margin: 1.5em 0 0.7em 0;
+  padding-bottom: 0.2em;
+  border-bottom: 1px dashed #7f7f7f;
+}
+
+form.wide h2 + p
+{
+  margin-bottom: 0.7em;
+}
+
+.tooltip
+{
+  border: 1px solid #000000;
+  position: absolute;
+  z-index: 100;
+  background: #ffffdd;
+  padding: 0.5em;
+  right: 0;
+  top: 0;
+  font-size: 80%;
+}
+
+.required
+{
+  color: #ff0000;
+}
+
+/* index.php ******************************************************************************/
+
+#indexBody #content form
+{
+  padding-bottom: 1em;
+}
+
+#intro
+{
+  margin: 0 0 1em 11em; 
+}
+
+#intro h1
+{
+  margin-top: 0;
+}
+
+#logo
+{
+  float: left;
+  margin-bottom: 1.5em;
+  display: block;
+}
+
+#rssIcon
+{
+  float: right;
+  position: relative;
+  z-index: 100;
+}
+
+/* Select category and year bar */
+#selectCategoryAndYear
+{
+  background-color: #c7c7ff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1em;
+  height: 1%; /* holly hack */
+  padding: 0.5em;
+}
+
+#selectCategoryAndYear label
+{
+  margin-left: 1em;
+}
+
+#indexBody #filter
+{
+  width: 4em;
+}
+
+#indexBody .hideOverviewMap
+{
+  display: none;
+}
+
+/* map thumbnail and info */
+.map
+{
+  margin-bottom: 1em;
+  clear: both;
+  background-color: #efefef;
+  border: 1px solid #eaeaea;
+  height: 1%; /* holly hack */
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.map .thumbnail
+{
+  margin-right: 2em;
+  float: left;
+  height: 1%; /* holly hack */
+}
+
+.map .thumbnail a
+{
+  display: block;
+}
+
+.map .thumbnail img
+{
+  border: 1px solid #7f7f7f;
+  display: block;
+  border-radius: 5px;
+}
+
+.map .thumbnail img:hover
+{
+  border: 1px solid #0000ff;
+}
+
+.info 
+{
+  line-height: 18px;
+}
+
+.map .info .name
+{
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.map .info .protected
+{
+  font-size: 80%;
+  font-style: italic;
+  color: #7f7f7f;
+}
+
+.map .date, .map .category, .map .organiser, .map .discipline, .map.resultListUrl
+{
+
+}
+
+.map .info .admin
+{
+  font-size: 80%;
+}
+
+.map .comment
+{
+  clear: both;
+  padding-top: 0.5em;
+}
+
+.map .bottom
+{
+  clear: both;
+}
+
+/* map comment */
+.indent
+{
+  margin-left: 1em;
+  line-height: 18px;
+}
+
+img.button
+{
+  float: left;
+  position: relative;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* footer */
+#footer
+{
+  font-size: 80%;
+  color: #7f7f7f;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+#footer a
+{
+  color: #7f7fff;
+}
+
+.map .googleMapsContainer
+{
+  padding-top: 1em;
+  display: none;
+}
+
+/* overview map, one single map */
+.map .singleOverviewMap
+{
+  width: 100%;
+  height: 300px;
+  clear: both;
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* overview map, all maps */
+#overviewMap
+{
+  width: 100%;
+  height: 500px;
+  clear: both;
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+}
+
+/* overview map, show map page */
+#showMapBody #overviewMapContainer > div
+{
+  width: 1080px;
+  height: 500px;
+  clear: both;
+  border: 1px solid #7f7f7f;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* overview map, show map page */
+#usersBody #overviewMapContainer
+{
+  margin-top: 1em;
+}
+
+#usersBody #overviewMap
+{
+  margin-top: 1em;
+}
+
+#usersBody #hideOverviewMap
+{
+  display: none;
+}
+
+.pointer
+{
+  cursor: pointer;  
+}
+
+.gmInfoWindow
+{
+  line-height: 20px;
+}
+
+.gmInfoWindow .mapName
+{
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 0.5em;
+}
+
+.gmInfoWindow .thumbnail a
+{
+  display: block;
+}
+
+.gmInfoWindow .thumbnail img
+{
+  border: 1px solid #7f7f7f;
+  display: block;
+}
+
+.gmInfoWindow .thumbnail img:hover
+{
+  border: 1px solid #0000ff;
+}
+
+/* show_map.php ******************************************************************************/
+
+#showMapBody #content form
+{
+  padding: 0;
+  min-height: 60px;
+}
+
+#showMapBody #content #mapInfo
+{
+  padding: 1em 1em 1em 2em;
+}
+
+#showMapBody #navigation
+{
+  background-color: #e7e7ff;
+  border-top: 1px solid #a7a7ff;
+  border-bottom: 1px solid #c7c7ff;
+  font-size: 80%;
+}
+
+#showMapBody #navigation .left
+{
+  position: relative;
+  float: left;
+  padding: 0.5em 1em;
+  line-height: 15px;
+}
+
+#showMapBody #navigation .right
+{
+  position: relative;
+  float: right;
+  padding: 0.5em 1em;
+  line-height: 15px;
+}
+
+#showMapBody #mapImage
+{
+  border-width: 0;
+  margin: 3em auto;
+  clear: both;
+  display: block;
+}
+
+#showMapBody #mapImage.toggleable
+{
+  cursor: pointer;
+}
+
+#showMapBody #hiddenMapImage
+{
+  display: none;
+}
+
+#showMapBody #name
+{
+  font-size: 130%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  float: left;
+  width: 62%;
+}
+
+#showMapBody #propertyContainer
+{
+  width: 90%;
+  float: left;
+  margin-bottom: 0.5em;
+}
+
+#showMapBody .property
+{
+  float: left;
+  position: relative;
+  margin-bottom: 0.5em;
+  margin-right: 2em;
+  line-height: 20px;
+}
+
+#showMapBody .property .caption
+{
+  font-weight: normal;
+}
+
+#showMapBody #comment
+{
+  clear: both;
+  margin: 0.5em 0;
+  line-height: 19px;
+}
+
+#showMapBody #gmap
+{
+  width: 180px;
+  float: right;
+  position: relative;
+  text-align: right;
+}
+
+#showMapBody #gmap img
+{
+  border-radius: 5px;
+}
+
+#showMapBody #wrapper
+{
+  position: relative;
+}
+
+#showMapBody #top_menu
+{
+  width: 1080px;
+  position: relative;
+}
+
+#showMapBody #previousAndNext
+{
+  float: right;
+  font-size: 80%;
+  text-align: right;
+  margin-right: 1em;
+  width: 30%;
+  line-height: 15px;
+}
+
+#showMapBody #zoomButtonDiv
+{
+  float: right;
+}
+
+#showMapBody #showSecondImage
+{
+  display: none;
+}
+
+#showMapBody #hideOverviewMap
+{
+  display: none;
+}
+
+.zoomButton
+{
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  display: block;
+  margin-bottom: 6px;
+  background-position: 0 0;
+}
+
+#zoomIn
+{
+  background-image: url(gfx/zoom_out.png);
+}
+
+#zoomOut
+{
+  background-image: url(gfx/zoom_in.png);
+}
+
+.zoomButton:hover
+{
+  background-position: 27px 0;
+}
+
+/* edit_user.php *******************************************************************************************************/
+
+#categoryContainer
+{
+  display: inline;
+  float: left;
+  position: relative;
+}
+
+#categoryContainer .category
+{
+  clear: both;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+#categoryContainer input.text, #categoryContainer #allCategoriesText
+{
+  width: 15em;
+  display: block;
+  float: left;
+}
+
+#categoryContainer #allCategoriesText
+{
+  margin: 0.25em 0.5em 1em 0;
+}
+
+#categoryContainer label
+{
+  width: auto;
+  margin: 0 1em 0 0;
+  float: none;
+}
+
+
+/* users.php *******************************************************************************************************/
+
+.hoverThumbnailContainer
+{
+  position: relative;
+}
+
+.hoverThumbnail
+{
+  position: absolute;
+  z-index: 100;
+  /*padding: 0.5em; */
+  border: 1px solid #7f7f7f;
+  background: #ffffff;
+  top: 2em;
+  border-radius: 5px;
+}
+
+.hoverThumbnail img
+{
+  display: block;
+}
+
+.selectNumber
+{
+  float: right; 
+  font-size: 75%; 
+  font-weight: normal; 
+  vertical-align: bottom; 
+  padding-top: 0.5em;  
+}
+
+/* comments *******************************************************************************************************/
+.commentBox
+{
+  background-color: #e7e7ff;
+  border-top: 1px solid #a7a7ff;
+  padding: 1em 2em;
+  line-height: 15px;
+  border-radius: 0 0 5px 5px;
+}
+
+.commentBox #commentBoxHeader
+{
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.commentBox input
+{
+  border: 1px solid #cccccc;
+}
+
+.commentBox input
+{
+  width: 20em;
+}
+
+.commentBox  #userEmailLabel
+{
+  padding-left: 2em;  
+}
+
+.commentBox #userDetails
+{
+  margin-bottom: 0.5em;
+}
+
+.commentBox textarea
+{
+  width: 100%;
+  height: 4em;
+  border: 1px solid #cccccc;
+  margin-bottom: 0.5em;
+}
+
+.commentPanel	
+{
+	background-color: #e7e7ff;
+  border-top: 1px solid #a7a7ff;
+  padding: 1em 2em;
+}
+
+.postedTime 
+{
+  color:#666666;
+  padding-top: 0.5em;
+}
+
+.commentName 
+{
+  font-weight: bold;
+}
+
+
+/* tooltip for overview maps *******************************************************************************************************/
+#tt 
+{ 
+  position:absolute; 
+  display:block; 
+  background-color:#666; 
+  border-top: 1px solid #888; 
+  border-left: 1px solid #888; 
+  border-right: 1px solid #444; 
+  border-bottom: 1px solid #444; 
+  color:#fff; 
+  padding: 1em; 
+  border-radius: 5px; 
+}
+
+#tt > div 
+{ 
+  text-align: left; 
+  line-height: 130%; 
+}
+
+#tt > div + div 
+{ 
+  margin-top: 0.5em; 
+}
+
+#tt img 
+{ 
+  border-radius: 5px;
+  border-top: 1px solid #444;
+  border-left: 1px solid #444;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888; 
+}

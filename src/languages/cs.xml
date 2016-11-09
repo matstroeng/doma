@@ -1,0 +1,764 @@
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Můj digitální archív orienťáckých map
+    </string> 
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Vítejte v mém digitálním archívu orienťáckých map!
+    </string> 
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      Na této stánce budu publikovat mapy, tratě a postupy ze závodů, které jsem absolvoval.
+    </string> 
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+	  Jsi vlastníkem práv na mapu, která by zde neměla být publikována? &lt;a href=&quot;mailto:%userEmail%&quot;&gt;Napiš mi&lt;/a&gt;.
+    </string> 
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Mapy, tratě a postupy ze závodů, které jsem absolvoval.
+    </string> 
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string> 
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+  </customizable>
+
+  <nonCustomizable>
+    <!--  general ****************************************************************************************************** --> 
+    <!--  date format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATE_FORMAT">
+      d.m.Y
+    </string> 
+    <!--  date and time format to use, PHP format string (Y, m, d, H, i, s can be used) --> 
+    <string key="DATETIME_FORMAT">
+      d.m.Y H:i
+    </string> 
+    <!--  day names, semi-colon separated --> 
+    <string key="DAY_NAMES">
+      Neděle;Pondělí;Úterý;Středa;Čtvrtek;Pátek;Sobota
+    </string> 
+    <!--  month names, semi-colon separated --> 
+    <string key="MONTH_NAMES">
+      leden;únor;březen;duben;květen;červen;červenec;srpen;září;říjen;listopad;prosinec
+    </string> 
+    <string key="RSS_FEED">
+      RSS kanál
+    </string> 
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string> 
+    <string key="NAME">
+      Jméno
+    </string> 
+    <string key="DATE">
+      Datum
+    </string> 
+    <string key="ORGANISER">
+      Pořadatel
+    </string> 
+    <string key="COUNTRY">
+      Země
+    </string> 
+    <string key="DISCIPLINE">
+      Disciplína
+    </string> 
+    <string key="RELAY_LEG">
+      Úsek
+    </string> 
+    <string key="RELAY_LEG_LONG">
+      Úsek štafet
+    </string> 
+    <string key="RELAY_LEG_LOWERCASE">
+      úsek
+    </string> 
+    <string key="MAP_AREA_NAME">
+      Mapa/oblast
+    </string> 
+    <string key="RESULTS">
+      Výsledky
+    </string> 
+    <string key="COMMENT">
+      Komentář
+    </string> 
+    <string key="LOGIN">
+      Přihlásit
+    </string> 
+    <string key="LOGOUT">
+      Odhlásit
+    </string> 
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Špatné jméno a/nebo heslo.
+    </string> 
+    <string key="USERNAME">
+      Jméno
+    </string> 
+    <string key="PASSWORD">
+      Heslo
+    </string> 
+    <string key="YES">
+      Ano
+    </string> 
+    <string key="NO">
+      Ne
+    </string> 
+    <string key="REALAVG">
+      Průměr
+    </string> 
+    <string key="PROJECTEDDISTANCE">
+      Délka
+    </string> 
+    <string key="PROJECTEDDISTANCEFORMAT">
+      Pouze číslo, formát čísla: x.xx (např. 7.95)
+    </string> 
+    <string key="CLIMBING">
+      Převýšení
+    </string> 
+    <string key="CLIMBINGFORMAT">
+      Pouze číslo: xxx (např. 395)
+    </string> 
+    <string key="FIXDISTANCE">
+      Hodnota v poli Délka neodpovídá požadovanému formátu. Formát čísla: x.xx (např. 7.95) - požadována je desetinná tečka
+    </string> 
+    <string key="FIXCLIMBING">
+      Hodnota v poli Převýšení neodpovídá požadovanému formátu. Formát čísla: xxx (např. 395)
+    </string> 
+
+    <!--  topbar ****************************************************************************************************** --> 
+    <string key="DOMA_FOR_X">
+      Digitalní archív orienťáckých map pro %s
+    </string> 
+    <string key="ALL_USERS">
+      Všichni uživatelé
+    </string> 
+    <string key="ADMIN_LOGIN">
+      Přihlášení administrátora
+    </string> 
+    <string key="ADMIN_LOGOUT">
+      Odhlášení administrátora
+    </string> 
+
+    <!--  index.php ****************************************************************************************************** --> 
+    <string key="NO_MAPS">
+      Žádná mapa nebyla publikována.
+    </string> 
+    <string key="SELECT_YEAR">
+      Rok
+    </string> 
+    <string key="SELECT_CATEGORY">
+      Kategorie
+    </string> 
+    <string key="ALL_YEARS">
+      [všechny]
+    </string> 
+    <string key="ALL_CATEGORIES">
+      [všechny]
+    </string> 
+    <string key="NO_MATCHING_MAPS">
+      Žádné mapy nevyhovují podmínkám vyhledávání.
+    </string> 
+    <string key="VIEWS">
+      pohledy
+    </string> 
+
+    <!--  show_map.php ****************************************************************************************************** --> 
+    <string key="BACK">
+      Zpět
+    </string> 
+    <string key="PREVIOUS">
+      Předchozí
+    </string> 
+    <string key="NEXT">
+      Další
+    </string> 
+
+    <!--  edit_map.php ****************************************************************************************************** --> 
+    <string key="ADD_MAP">
+      Přidej mapu
+    </string> 
+    <string key="EDIT_MAP">
+      Edituj mapu
+    </string> 
+    <string key="EDIT_MAP_X">
+      Edituj mapu: %s
+    </string> 
+    <string key="MAP_DATE_FORMAT">
+      dd.mm.rrrr, a nepovinně hh:mm:ss
+    </string> 
+    <string key="LINK_TO_RESULT_LIST">
+      Odkaz na výsledky
+    </string> 
+    <string key="MAP_IMAGE_FILE">
+      Soubor obrázku mapy
+    </string> 
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Nech prázdné pro ponechání existující mapy.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Soubor obrázku náhledu
+    </string> 
+    <string key="THUMBNAIL_INFO">
+      Velikost %d x %d pixelů, nech prázdné pro automatické vygenerování. Velké mapy nemusí mít vygenrován náhled kvůli paměťovým omezením serveru.
+    </string> 
+    <string key="CONFIRM_DELETION">
+      Potvrď smazání
+    </string> 
+    <string key="SAVE">
+      Ulož
+    </string> 
+    <string key="DELETE">
+      Smaž
+    </string> 
+    <string key="CANCEL">
+      Zrušit
+    </string> 
+    <string key="NO_MAP_FILE_ENTERED">
+      Žádný soufor obrázku mapy nebyl specifikován.
+    </string> 
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Formát souboru obrázku mapy &lt;em&gt;%s&lt;/em&gt; je neplatný. Pouze jpeg, png a gif formáty jsou podporovány.
+    </string> 
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Formát souboru obrázku náhledu &lt;em&gt;%s&lt;/em&gt; je neplatný. Pouze jpeg, png a gif formáty jsou podporovány.
+    </string> 
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Soubor obrázku mapy &lt;em&gt;%s&lt;/em&gt; nemohl být nahrán.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Soubor obrázku náhledu &lt;em&gt;%s&lt;/em&gt; nemohl být nahrán.
+    </string> 
+    <string key="NO_MAP_NAME_ENTERED">
+      Nebylo zadán název mapy.
+    </string> 
+    <string key="NO_DATE_ENTERED">
+      Nebylo zadáno datum.
+    </string> 
+    <string key="INVALID_DATE">
+      Datum je neplatné. Zadejte datum ve formátu rrrr-mm-dd.
+    </string> 
+    <string key="CATEGORY">
+      Kategorie
+    </string> 
+    <string key="CATEGORY_TOOLTIP">
+      Kategorie, do které mapa patří. Nové kategorie můžete vytvořit ve svém profilu.
+    </string> 
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Náhled nemohl být vytvořen. Důvodem mohl být nedostatek paměti na serveru. Na tomto serveru nemohou být automaticky vygenerovány náhledy pro obrázky větší než přibližně %s pixelů. Prosím zvyšte hodnotu parametru memory_limit v php.ini.&lt;br /&gt;Místo toho byl vytvořen Standardní náhled. Zkus použít menší obrázek mapy nebo nahrát náhled ručně.
+    </string> 
+
+    <!--  users.php ****************************************************************************************************** --> 
+    <string key="NO_OF_MAPS">
+      Mapy
+    </string> 
+    <string key="EDIT">
+      Edituj
+    </string> 
+    <string key="ADMIN_LOGIN_INFO">
+      Jmeno a heslo odpovídá nastavení v souboru config.php.
+    </string> 
+    <string key="VISIBLE">
+      Viditelné
+    </string> 
+    <string key="LOGIN_AS">
+      Přihlásit jako
+    </string> 
+    <string key="LOGIN_AS_X">
+      Přihlásit jako %s
+    </string> 
+    <string key="LAST_MAP">
+      Poslední mapa
+    </string> 
+    <string key="NO_USERS_CREATED">
+      Zatím nebyl vytvořen zádný uživatel.
+    </string> 
+    <string key="CREATE_THE_FIRST_USER">
+      Klekni zde pro vytvoření prvního uživatele.
+    </string> 
+    <string key="MAP">
+      Mapa
+    </string> 
+    <string key="UPDATED">
+      Aktualizováno
+    </string> 
+    <string key="USERS">
+      Uživatelé
+    </string> 
+    <string key="LAST_MAPS">
+      Poslední mapy
+    </string> 
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Můžeš &lt;a href=&quot;enter_public_creation_code.php&quot;&gt;vytvořit svůj vlastní digitální archív orienťáckých map&lt;/a&gt; zadáním přistupového kódu poskytnutého &lt;a href=&quot;mailto:%adminEmail%&quot;&gt;administrátorem&lt;/a&gt;.
+    </string> 
+
+    <!--  edit_user.php ****************************************************************************************************** --> 
+    <string key="ADD_USER">
+      Vytvoř nového uživatele
+    </string> 
+    <string key="EDIT_USER_X">
+      Edituj uživatele: %s
+    </string> 
+    <string key="FIRST_NAME">
+      Jméno
+    </string> 
+    <string key="LAST_NAME">
+      Příjmení
+    </string> 
+    <string key="EMAIL">
+      Email
+    </string> 
+    <string key="USERNAME_EXISTS">
+      Uživatel se zadaným jménem už existuje. Vyber jiné jméno.
+    </string> 
+    <string key="NO_USERNAME_ENTERED">
+      Jmené nebylo zadáno.
+    </string> 
+    <string key="NO_FIRST_NAME_ENTERED">
+      Jméno nebylo zadáno.
+    </string> 
+    <string key="NO_LAST_NAME_ENTERED">
+      Příjmení nebylo zadáno.
+    </string> 
+    <string key="NO_EMAIL_ENTERED">
+      Email adresa nebyla zadána.
+    </string> 
+    <string key="INVALID_EMAIL">
+      Email adresa je neplatná.
+    </string> 
+    <string key="NO_PASSWORD_ENTERED">
+      MUsí být zadáno heslo pro nového uživatele.
+    </string> 
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Zda přiřadit pořadatele k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Zda přiřadit zemi k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Zda přiřadit disciplínu k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Zda přiřadit štafetový úsek k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Zda přiřadit mapu/název oblasti k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Zda přiřadit odkaz na výsledky k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Zda přiřadit komentář k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Titulek tvé stránky. Zobrazen v okně prohlížeče a v RSS kanálu.
+    </string> 
+    <string key="CAPTION_DESCRIPTION">
+      Hlavička zobrazena nahoře úvodní stránky.
+    </string> 
+    <string key="INTRO_DESCRIPTION">
+      Popis stránky pod hlavičkou.
+    </string> 
+    <string key="FOOTER_DESCRIPTION">
+      Text zobrazený na konci stránky.
+    </string> 
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      Popis stránky zobrazující se v RSS kanálu.
+    </string> 
+    <string key="USERNAME_DESCRIPTION">
+      Uživatelské jméno, které tě spolu s heslem identifikuje.
+    </string> 
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Uživatelské jméno musí být unikátní.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Zadej dočasné úvodní heslo.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Nech prázdné pro ponechání dosavadního hesla.
+    </string> 
+    <string key="PASSWORD_DESCRIPTION">
+      Heslo, které tě spolu s uživatelským jménem identifikuje. Nech prázdné pro ponechání dosavadního hesla.
+    </string> 
+    <string key="FIRST_NAME_DESCRIPTION">
+      Jméno.
+    </string> 
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Jméno uživatele.
+    </string> 
+    <string key="LAST_NAME_DESCRIPTION">
+      Příjmení.
+    </string> 
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Příjmení uživatele.
+    </string> 
+    <string key="EMAIL_DESCRIPTION">
+      Email adresa.
+    </string> 
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Uživatelova email adresa.
+    </string> 
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Udělej archív veřejně viditelný a dostupný.
+    </string> 
+    <string key="ADMIN_ADD_USER_INFO">
+      Zadej detaily nového uživatele.
+    </string> 
+    <string key="ADMIN_EDIT_USER_INFO">
+      Edituj detaily uživatele.
+    </string> 
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Edituj svůj uživatelský profil
+    </string> 
+    <string key="ADD_USER_PROFILE_TITLE">
+      Vytvoř nový uživatelský profil
+    </string> 
+    <string key="PERSONAL_DETAILS_TITLE">
+      Osobní detaily
+    </string> 
+    <string key="PERSONAL_DETAILS_INFO">
+      Zadej své osobní detaily.
+    </string> 
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Zadej uživatelovy osobní detaily.
+    </string> 
+    <string key="MAP_CATEGORIES_TITLE">
+      Kategorie map
+    </string> 
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Specifikuj kategorie, do kterých budou uživatelovy mapy rozděleny.
+    </string> 
+    <string key="MAP_CATEGORIES_INFO">
+      Specifikuj kategorie, do kterých budou tvé mapy rozděleny.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Texty a nastavení
+    </string> 
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Text zobrazený na uživatelových stránkách a nastavení, která data přiřadit ke každé mapě.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Text zobrazený na tvých stránkách a nastavení, která data přiřadit ke každé mapě.
+    </string> 
+    <string key="USER_PROFILE">
+      Uživatelský profil
+    </string> 
+    <string key="REQUIRED_FIELDS_INFO">
+      Povinná pole jsou označena %s.
+    </string> 
+    <string key="MAP_CATEGORIES">
+      Kategorie map
+    </string> 
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Závody;Tréninky
+    </string> 
+    <string key="DEFAULT_CATEGORY">
+      výchozí
+    </string> 
+    <string key="ADD_CATEGORY">
+      Vytvoř novou kategorii
+    </string> 
+    <string key="DELETE_CATEGORY">
+      Smaž kategorii
+    </string> 
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Nemohu smazat mapovou kategorii %s, protože stále obsahuje %d map. Prosím smažte nejprve tyto mapy.
+    </string> 
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Vždy musí existovat alespoň jedna mapová kategorie.
+    </string> 
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Musí být zadán název mapové kategorie.
+    </string> 
+
+    <!--  create.php ****************************************************************************************************** --> 
+    <string key="SITE_ALREADY_CREATED">
+      Web již byl vytvořen.
+    </string> 
+    <string key="TOO_OLD_PHP_VERSION">
+      Je třeba PHP verze 5.0.0 a vyšší. Aktuální verze je %s.
+    </string> 
+    <string key="MYSQL_ERROR_X">
+      MySQL chyba: %s
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Web úspěšně vytvořen!
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Web byl úspěšně vytvořen. Edituj soubor config.php pro změnu nastavení webu.
+    </string> 
+    <string key="GOTO_START_PAGE">
+      Jdi na úvodní stránku
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Chyba při vytváření webu
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Web nemohl být vytcořen. Zkontrolujte chybová hlášení a prověďtě nezbytné úpravy v souboru config.php a/nebo v databázi.
+    </string> 
+    <string key="ERRORS_TRY_AGAIN">
+      Zkus znovu
+    </string> 
+
+    <!--  enter_public_creation_code.php ******************************************************************************************** --> 
+    <string key="PUBLIC_CREATION_CODE">
+      Zadej přístupový kód
+    </string> 
+    <string key="PROCEED">
+      Zpracováno
+    </string> 
+    <string key="INVALID_CODE">
+      Chybný kód.
+    </string> 
+
+    <!--  email sending ****************************************************************************************************** --> 
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA Administrator
+    </string> 
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Tvůj digitální archív orienťáckých map byl vytvořen!
+    </string> 
+    <string key="NEW_USER_EMAIL_BODY">
+      
+Ahoj %s, 
+
+Tohle je automaticky generovaný email potvrzující, že ti byl vytvořen digitální archív orienťáckých map na %s.
+
+Tvá výchozí stránka: %s 
+Tvé uživatelské jméno:  %s 
+Tvé heslo:   %s
+
+Pokládej heslo za dočasné. Z bezpečnostních důvodů si jej změň.
+    
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL">
+      Emailové potvrzení
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      Pošli email s informacemi o uživatelském účtu novému uživateli
+    </string> 
+    <string key="ADMIN_EMAIL_ERROR">
+      Email nemohl být poslán. Zkontrolujte nastavení SMTP v souboru php.ini a email adresu administrátora v souboru config.php (stávající adresa je %s).
+    </string> 
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Pošli nové heslo
+    </string> 
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Zapomněl jsi heslo? Nepanikař, nové ti bude zasláno na emailovou adresu nastavenou v tvém uživatelském profilu: %s.
+    </string> 
+    <string key="SEND_NEW_PASSWORD">
+      Pošli nové heslo
+    </string> 
+    <string key="EMAIL_ERROR">
+      Email nemohl být odeslán. Prosím kontaktujte administrátora.
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Nové heslo pro tvůj digitální archív orienťáckých map
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+      
+Ahoj %s, 
+
+Tohle je automaticky generovaný email obsahující nové heslo pro tvůj digitální archív orienťáckých map na %s. 
+
+Tvá výchozí stránka:   %s 
+Tvé uživatelské jméno:    %s 
+Tvé nové heslo: %s 
+
+Pokládej heslo za dočasné. Z bezpečnostních důvodů si jej změň.
+    
+    </string> 
+    <string key="NEW_PASSWORD_SENT">
+      Nové heslo bylo nastaveno na %s.
+    </string> 
+    <string key="FORGOT_PASSWORD">
+      Zapomněl jsem své heslo
+    </string> 
+
+	<!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Formát mapy bez postupů &lt;em&gt;%s&lt;/em&gt; není platný. Pouze formáty jpeg, png a gif jsou podporovány.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Mapa bez postupů &lt;em&gt;%s&lt;/em&gt; nemohla být nahrána.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Mapa bez postupů
+    </string> 
+    <string key="MAP_INFO">
+      Mapa s postupy.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Mapa bez postupů. Není povinná.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Zobrazení
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Seznam
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Google mapy
+    </string> 
+    <string key="INFORMATION">
+      Informace
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Zobrazit postupy
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Skrýt postupy
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Klikni na mapu pro zapnutí/vypnutí postupů
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...nebo stačí pouze kdekoliv na mapě kliknout myší...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Zobrazit náhled na Google mapě
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Skýt náhled na Google mapě
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...pro Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Zda přiřadit délku k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Zda přiřadit čas k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Zda přiřadit maximální TF k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Zda přiřadit průměrnou TF k mapě; 1 přiřadit, 0 přeskočit.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Čas
+    </string> 
+    <string key="DISTANCE">
+      Skutečná délka
+    </string> 
+    <string key="AVGHR">
+      Prům. tepy
+    </string> 
+    <string key="MAXHR">
+      Max. tepy
+    </string> 
+    <string key="LANGUAGE">
+      Jazyk
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Zobrazit komentáře
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Skrýt komentáře
+    </string> 
+    <string key="POST_COMMENTS">
+      Napiš komentář
+    </string> 
+    <string key="MISSING_COMMENT">
+      Pole Jméno a samotný text komentáře je nutno vyplnit!
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Povolit návštěvníkům vytvářet komentáře
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Zobrazit komentáře automaticky sbalené
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Dostávat komentáře emailem
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Opravdu chcete smazat tento komentář?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      Digitalni archiv orientackych map - novy komentar
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Ahoj, 
+
+K mapam ve Tvem archivu byl vlozen novy komentar.
+
+Mapa:  %s 
+Odkaz: %s
+
+Obsah komentare
+Jmeno:  %s 
+Email:  %s
+Text:   %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Naposledy komentované mapy
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Počet komentářů
+    </string> 
+    <string key="COMMENT_FROM">
+      Poslední komentář od
+    </string> 
+    <string key="KMZ">
+      Otevřít v Google Earth
+    </string>
+    <string key="PROTECTED_UNTIL">
+      Skryto do
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Datum a čas, odkdy bude mapa dostupná ostatním uživatelům, zadej ve formátu dd.mm.rrrr hh:mm:ss. Ponech prázdné, pokud nechceš mapu skrýt. Tato vlastnost může být použita pro nahrání mapy před závodem tak, aby byla v určitý čas ihned dostupná všem účastníkům.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Datum a čas, dokdy má být mapa skryta není platný. Zadej hodnotu ve formátu dd.mm.rrrr hh:mm:ss nebo ponechej pole prázdné.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Mapa je pro ostatní skryta do %s.
+    </string>    
+    <string key="SHOW_ALL">
+      vše
+    </string>
+    <string key="SELECT_FILTER">
+      Filtr
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+  </nonCustomizable>
+</strings>

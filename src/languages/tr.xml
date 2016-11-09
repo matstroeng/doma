@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Dijital orienteering harita arsivim
+    </string> 
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Dijital orienteering harita arsivime hos geldiniz!
+    </string> 
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      Bu sitede katildigim orienteering etkinliklerindeki haritalari, dersleri ve rota seçimlerini yayinlayacagim.
+    </string> 
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Burada yayinlanmamasi gereken bir haritanin telif hakki sahibi misiniz ? &lt;a href="mailto:%userEmail%"&gt;e-posta gönderin&lt;/a&gt;.
+    </string> 
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Katildigim orienteering etkinliklerindeki haritalar, dersler ve rota seçimlerim.
+    </string> 
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string> 
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->  
+  </customizable>
+
+  <nonCustomizable>
+    <!--  general ****************************************************************************************************** --> 
+    <!--  date format to use, PHP format string --> 
+    <string key="DATE_FORMAT">
+      d/m/Y
+    </string> 
+    <!--  date and time format to use, PHP format string --> 
+    <string key="DATETIME_FORMAT">
+      d/m/Y H:i
+    </string> 
+    <!--  day names, semi-colon separated --> 
+    <string key="DAY_NAMES">
+      Pazar;Pazartesi;Sali;Çarsamba;Persembe;Cuma;Cumartesi
+    </string> 
+    <!--  month names, semi-colon separated --> 
+    <string key="MONTH_NAMES">
+      Ocak;Subat;Mart;Nisan;Mayis;Haziran;Temmuz;Agustos;Eylül;Ekim;Kasim;Aralik
+    </string> 
+    <string key="RSS_FEED">
+      RSS akis
+    </string> 
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string> 
+    <string key="NAME">
+      Ad
+    </string> 
+    <string key="DATE">
+      Tarih
+    </string> 
+    <string key="ORGANISER">
+      Organizasyon
+    </string> 
+    <string key="COUNTRY">
+      Ülke
+    </string> 
+    <string key="DISCIPLINE">
+      Disiplin
+    </string> 
+    <string key="RELAY_LEG">
+      Ayak
+    </string> 
+    <string key="RELAY_LEG_LONG">
+      Ayak
+    </string> 
+    <string key="RELAY_LEG_LOWERCASE">
+      ayak
+    </string> 
+    <string key="MAP_AREA_NAME">
+      Harita/bölge
+    </string> 
+    <string key="RESULTS">
+      Sonuçlar
+    </string> 
+    <string key="COMMENT">
+      Yorum
+    </string> 
+    <string key="LOGIN">
+      Giris
+    </string> 
+    <string key="LOGOUT">
+      Çikis
+    </string> 
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Geçersiz kullanici adi ve/veya sifre.
+    </string> 
+    <string key="USERNAME">
+      Kullanici adi
+    </string> 
+    <string key="PASSWORD">
+      Sifre
+    </string> 
+    <string key="YES">
+      Evet
+    </string> 
+    <string key="NO">
+      Hayir
+    </string> 
+    <string key="REALAVG">
+      Adimlamak
+    </string> 
+    <string key="PROJECTEDDISTANCE">
+      Tahmini mesafe
+    </string> 
+    <string key="PROJECTEDDISTANCEFORMAT">
+      Sadece sayi, format: x.xx (örnek 7.95)
+    </string> 
+    <string key="CLIMBING">
+      Tirmanma
+    </string> 
+    <string key="CLIMBINGFORMAT">
+      Sadece sayi: xxx (örnek 395)
+    </string> 
+    <string key="FIXDISTANCE">
+      Tahmini mesafe degeri istenen biçime uymuyor. Biçim: x.xx (örnek 7.95) - ondalik nokta gerekli
+    </string> 
+    <string key="FIXCLIMBING">
+      Tirmanma degeri istenen biçime uymuyor. Biçim: xxx (Örnek 395)
+    </string> 
+
+    <!--  topbar ****************************************************************************************************** --> 
+    <string key="DOMA_FOR_X">
+      Dijital Orienteering Harita Arsivi : %s
+    </string> 
+    <string key="ALL_USERS">
+      Tüm kullanicilar
+    </string> 
+    <string key="ADMIN_LOGIN">
+      Yönetici girisi
+    </string> 
+    <string key="ADMIN_LOGOUT">
+      Yönetici çikis
+    </string> 
+
+    <!--  index.php ****************************************************************************************************** --> 
+    <string key="NO_MAPS">
+      Yayinlanan harita yok.
+    </string> 
+    <string key="SELECT_YEAR">
+      Yil
+    </string> 
+    <string key="SELECT_CATEGORY">
+      Kategori
+    </string> 
+    <string key="ALL_YEARS">
+      [tüm yillar]
+    </string> 
+    <string key="ALL_CATEGORIES">
+      [tüm kategoriler]
+    </string> 
+    <string key="NO_MATCHING_MAPS">
+      Arama kriterlerine uygun harita bulunamadi.
+    </string> 
+    <string key="VIEWS">
+      izleme
+    </string> 
+
+    <!--  show_map.php ****************************************************************************************************** --> 
+    <string key="BACK">
+      &lt;&lt; Geri
+    </string> 
+    <string key="PREVIOUS">
+      Önceki
+    </string> 
+    <string key="NEXT">
+      Sonraki
+    </string> 
+
+    <!--  edit_map.php ****************************************************************************************************** --> 
+    <string key="ADD_MAP">
+      Harita ekle
+    </string> 
+    <string key="EDIT_MAP">
+      Harita düzenle
+    </string> 
+    <string key="EDIT_MAP_X">
+      Harita düzenle: %s
+    </string> 
+    <string key="MAP_DATE_FORMAT">
+      dd/mm/yyyy, ve opsiyonel hh:mm:ss
+    </string> 
+    <string key="LINK_TO_RESULT_LIST">
+      Sonuç listesi baglantisi
+    </string> 
+    <string key="MAP_IMAGE_FILE">
+      Harita resim dosyasi
+    </string> 
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Önceki haritayi korumak için bos birakin.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Minyatür resim dosyasi
+    </string> 
+    <string key="THUMBNAIL_INFO">
+      Boyut %d x %d piksel, Otomatik olusturulmasi için bos birakin. Büyük harita görüntüleri sunucu bellegi kisitlamalari nedeniyle minyatür olmayabilir.
+    </string> 
+    <string key="CONFIRM_DELETION">
+      Silme islemini onaylayin
+    </string> 
+    <string key="SAVE">
+      Kayit
+    </string> 
+    <string key="DELETE">
+      Sil
+    </string> 
+    <string key="CANCEL">
+      Iptal
+    </string> 
+    <string key="NO_MAP_FILE_ENTERED">
+      Belirtilen harita dosyasi yok.
+    </string> 
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Harita dosyasi formati &lt;em&gt;%s&lt;/em&gt; geçersiz. Sadece jpeg, png and gif formatlari desteklenmektedir.
+    </string> 
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+    Minyatür resim dosyasi formati &lt;em&gt;%s&lt;/em&gt; geçersiz. Sadece jpeg, png and gif formatlari desteklenmektedir.
+    </string> 
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Harita dosyasi &lt;em&gt;%s&lt;/em&gt; yüklenemedi.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Minyatür resim dosyasi &lt;em&gt;%s&lt;/em&gt; yüklenemedi.
+    </string> 
+    <string key="NO_MAP_NAME_ENTERED">
+      Harita adi girisi zorunludur.
+    </string> 
+    <string key="NO_DATE_ENTERED">
+      Tarih girisi zorunludur.
+    </string> 
+    <string key="INVALID_DATE">
+      Geçersiz tarih. Lütfen dd/mm/yyyy formatinda giris yapiniz.
+    </string> 
+    <string key="CATEGORY">
+      Kategori
+    </string> 
+    <string key="CATEGORY_TOOLTIP">
+      Haritanin ait oldugu kategori. Kullanici profilinizde yeni kategoriler olusturabilirsiniz.
+    </string> 
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Minyatür resim olusturulamadi. Sebep olarak sunucuda yeterli bellek olmayabilir. Bu sunucuda, yaklasik %s pikselden daha büyük minyatür resimler olusturulamaz. Lütfen php.ini dosyasindaki memory_limit parametresini arttiriniz.&lt;br /&gt;Standart bir minyatür resim kuruldu. Daha küçük bir harita görüntüsü kullanmayi deneyin veya elle küçük bir resim yükleyin.
+    </string> 
+
+    <!--  users.php ****************************************************************************************************** --> 
+    <string key="NO_OF_MAPS">
+      Haritalar
+    </string> 
+    <string key="EDIT">
+      Düzenle
+    </string> 
+    <string key="ADMIN_LOGIN_INFO">
+      Kullanici adi ve sifresi için config.php dosyasindaki ayarlara bakin.
+    </string> 
+    <string key="VISIBLE">
+      Görünür
+    </string> 
+    <string key="LOGIN_AS">
+      Oturum aç
+    </string> 
+    <string key="LOGIN_AS_X">
+      Oturum aç : %s
+    </string> 
+    <string key="LAST_MAP">
+      Son harita
+    </string> 
+    <string key="NO_USERS_CREATED">
+      Henüz hiçbir kullanici olusturulmamis.
+    </string> 
+    <string key="CREATE_THE_FIRST_USER">
+      Ilk kullaniciyi olusturmak için buraya tiklayin.
+    </string> 
+    <string key="MAP">
+      Harita
+    </string> 
+    <string key="UPDATED">
+      Güncelleme
+    </string> 
+    <string key="USERS">
+      Kullanicilar
+    </string> 
+    <string key="LAST_MAPS">
+      Son haritalar
+    </string> 
+    <string key="PUBLIC_CREATE_USER_INFO">
+      You can &lt;a href="enter_public_creation_code.php"&gt;create your own digital orienteering map archive&lt;/a&gt; by entering the access code provided by the &lt;a href="mailto:%adminEmail%"&gt;administrator&lt;/a&gt;.
+    </string> 
+
+    <!--  edit_user.php ****************************************************************************************************** --> 
+    <string key="ADD_USER">
+      Yeni kullanici olustur
+    </string> 
+    <string key="EDIT_USER_X">
+      Düzenlenen kullanici: %s
+    </string> 
+    <string key="FIRST_NAME">
+      Ad
+    </string> 
+    <string key="LAST_NAME">
+      Soyad
+    </string> 
+    <string key="EMAIL">
+      E-posta
+    </string> 
+    <string key="USERNAME_EXISTS">
+    Verilen kullanici adi ile bir kullanici zaten mevcut. Lütfen farkli bir kullanici adi seçin.
+    </string> 
+    <string key="NO_USERNAME_ENTERED">
+      Kullanici adi alanini giriniz.
+    </string> 
+    <string key="NO_FIRST_NAME_ENTERED">
+      Adi alanini giriniz.
+    </string> 
+    <string key="NO_LAST_NAME_ENTERED">
+      Soyadi alanini giriniz.
+    </string> 
+    <string key="NO_EMAIL_ENTERED">
+      E-posta alanini giriniz.
+    </string> 
+    <string key="INVALID_EMAIL">
+      E-posta adresi geçersiz.
+    </string> 
+    <string key="NO_PASSWORD_ENTERED">
+      Yeni kullanici için bir sifre girisi zorunludur.
+    </string> 
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Organizasyon bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Ülke bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Disiplin bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Ayak bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Bölge bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Sonuç listesi baglantisi bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Yorum bilgisini harita ile ilskilendirmek ve göstermek için 1, diger durmda 0 girin.
+    </string> 
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Sayfanizin basligi. Tarayici penceresinin baslik kisminda ve RSS akisinda gösterilir.
+    </string> 
+    <string key="CAPTION_DESCRIPTION">
+      Baslangiç sayfanizin üstünde gösterilecek baslik.
+    </string> 
+    <string key="INTRO_DESCRIPTION">
+      Sayfanizin basliginin altinda gösterilecek açiklama.
+    </string> 
+    <string key="FOOTER_DESCRIPTION">
+      Sayfanizin altinda gösterilecek metin.
+    </string> 
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      RSS akisinda gösterilecek açiklama.
+    </string> 
+    <string key="USERNAME_DESCRIPTION">
+      Kullanici adiniz sifrenizle birlikte sizi tanimlar.
+    </string> 
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Kullanici adi benzersiz olmalidir.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Geçici bir baslangiç sifresi giriniz.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Önceki sifrenizi korumak için bos birakiniz.
+    </string> 
+    <string key="PASSWORD_DESCRIPTION">
+      Kullanici adiniz sifrenizle birlikte sizi tanimlar. Önceki sifrenizi korumak için bos birakiniz.
+    </string> 
+    <string key="FIRST_NAME_DESCRIPTION">
+      Adiniz.
+    </string> 
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Kullanicinin adi.
+    </string> 
+    <string key="LAST_NAME_DESCRIPTION">
+      Soyadiniz.
+    </string> 
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Kullanicinin soyadi.
+    </string> 
+    <string key="EMAIL_DESCRIPTION">
+      E-posta adresiniz.
+    </string> 
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Kullanicinine-posta adresi.
+    </string> 
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Bu arsivi görüntülenebilir ve erisilebilir yap.
+    </string> 
+    <string key="ADMIN_ADD_USER_INFO">
+      Yeni kullanici bilgilerini girin.
+    </string> 
+    <string key="ADMIN_EDIT_USER_INFO">
+      Kullanici için bilgileri düzenleyin.
+    </string> 
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Kullanici profilinizi düzenleyin
+    </string> 
+    <string key="ADD_USER_PROFILE_TITLE">
+      Yeni kullanici profili olustur
+    </string> 
+    <string key="PERSONAL_DETAILS_TITLE">
+      Kisisel bilgiler
+    </string> 
+    <string key="PERSONAL_DETAILS_INFO">
+      Kisisel bilgilerinizi girin.
+    </string> 
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Kullanicinin kisisel bilgilerini girin.
+    </string> 
+    <string key="MAP_CATEGORIES_TITLE">
+      Harita kategorileri
+    </string> 
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Kullanicinin haritalari ayristiracagi kategorileri belirleyin.
+    </string> 
+    <string key="MAP_CATEGORIES_INFO">
+      Haritalari ayristiracaginiz kategorilerinizi belirleyin.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Metinler ve ayarlar
+    </string> 
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Kullanici sayfalarinda görüntülenecek metinler, ve hangi bilgilerin haritalarla iliskilendirilecegini belirleyen ayarlar.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Sayfalarda görüntülenecek metinler, ve hangi bilgilerin haritalarla iliskilendirilecegini belirleyen ayarlar.
+    </string> 
+    <string key="USER_PROFILE">
+      Kullanici profili
+    </string> 
+    <string key="REQUIRED_FIELDS_INFO">
+      Girisi zorunlu alanlar %s ile isaretlenmistir.
+    </string> 
+    <string key="MAP_CATEGORIES">
+      Harita kategorileri
+    </string> 
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Yarisma;Antrenman
+    </string> 
+    <string key="DEFAULT_CATEGORY">
+      varsayilan
+    </string> 
+    <string key="ADD_CATEGORY">
+      Yeni kategori olustur
+    </string> 
+    <string key="DELETE_CATEGORY">
+      Kategoriyi sil
+    </string> 
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      %s harita kategorisi silinemez. Bu kategoride %d harita var. Lütfen önce bu haritalari silin.
+    </string> 
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      En az bir kategori olmasi zorunlu.
+    </string> 
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Kategori ismi girisi zorunlu.
+    </string> 
+
+    <!--  create.php ****************************************************************************************************** --> 
+    <string key="SITE_ALREADY_CREATED">
+      Bu site zaten yaratilmistir.
+    </string> 
+    <string key="TOO_OLD_PHP_VERSION">
+      PHP sürüm 5.0.0 yada daha yüksek bir sürüme ihtyaciniz var. Geçerli sürüm %s.
+    </string> 
+    <string key="MYSQL_ERROR_X">
+      MySQL hatasi: %s
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Site basariyla yaratilmistir!
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Bu site basariyla yaratildi. Sitede degisiklik yapmak için config.php dosyasini kullanin.
+    </string> 
+    <string key="GOTO_START_PAGE">
+      Baslangiç sayfasina git
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Site olusturulurken hata olustu.
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Bu site yaratilamadi. Alttaki hata mesajini kontrol edin ve config.php dosyasi içerisinde yada veritabaninda degisiklik yapin.
+    </string> 
+    <string key="ERRORS_TRY_AGAIN">
+      Tekrar deneyin
+    </string> 
+
+    <!--  enter_public_creation_code.php ****************************************************************************************************** --> 
+    <string key="PUBLIC_CREATION_CODE">
+      Giris kodunu girin
+    </string> 
+    <string key="PROCEED">
+      islem yapiliyor
+    </string> 
+    <string key="INVALID_CODE">
+      geçersiz kod.
+    </string> 
+
+    <!--  email sending ****************************************************************************************************** --> 
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA Yöneticisi
+    </string> 
+    <string key="NEW_USER_EMAIL_SUBJECT">
+      Dijital orienteering harita arsiviniz olusturuldu!
+    </string> 
+    <string key="NEW_USER_EMAIL_BODY">
+Merhaba %s, &lt;br /&gt;
+&lt;br /&gt;
+Bu dogrulama mesaji olusturdugunuz %s dijital orienteering harita arsiviniz için otomatik olarak olusturulmustur. &lt;br /&gt;
+&lt;br /&gt;
+Baslangiç sayfaniz : %s &lt;br /&gt;
+Kullanici adiniz   : %s &lt;br /&gt;
+Kullanici Sifreniz : %s &lt;br /&gt;
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL">
+      E-posta dogrulama
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      Yeni kullanici için kullanici hesap bilgilerini e-posta gönder
+    </string> 
+    <string key="ADMIN_EMAIL_ERROR">
+      E-posta gönderilemedi. php.ini dosyasindaki SMTP ayarlarini ve config.php dosyasindaki yönetici e-posta adresini kontrol edin. (Su anki adres %s).
+    </string> 
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Yeni sifre gönder
+    </string> 
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Sifrenizi mi unuttunuz ? Panik yok, kullanici profilinizde belirttiginiz e-posta adresine (%s) yeni bir sifre gönderebiliriz.
+    </string> 
+    <string key="SEND_NEW_PASSWORD">
+      Yeni bir sifre gönder
+    </string> 
+    <string key="EMAIL_ERROR">
+      E-posta gönderilemedi. Lütfen yönetici ile irtibat kurunuz.
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Dijital orienteering harita arsiviniz için yeni sifre
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+Merhaba %s, &lt;br /&gt;
+&lt;br /&gt;
+Bu yeni sifrenizi içeren dogrulama mesaji sizin %s dijital orienteering harita arsiviniz için otomatik olarak olusturulmustur. &lt;br /&gt;
+&lt;br /&gt;
+Baslangiç sayfaniz : %s &lt;br /&gt;
+Kullanici adiniz   : %s &lt;br /&gt;
+Kullanici Sifreniz : %s &lt;br /&gt;
+    </string> 
+    <string key="NEW_PASSWORD_SENT">
+      %s için yeni bir sifre gönderildi.
+    </string> 
+    <string key="FORGOT_PASSWORD">
+      Sifremi unuttum
+    </string> 
+  
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Bos harita görüntü dosyasi &lt;em&gt;%s&lt;/em&gt; geçersiz. Sadece jpeg, png ve gif biçimindeki dosyalar desteklenmektedir.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Bos harita görüntü dosyasi &lt;em&gt;%s&lt;/em&gt; yüklenemedi.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Bos harita görüntü dosyasi
+    </string> 
+    <string key="MAP_INFO">
+      Rotanizin çizili oldugu harita dosyasi.
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Çizili rotasiz harita dosyasi. Gerekli degil.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Görüntü modu
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Liste
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Harita genel görünüm
+    </string> 
+    <string key="INFORMATION">
+      Bilgi
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Rotalari göster
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Rotalari gizle
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Harita üzerine tikla rota seçimini aç/kapa yapmak için
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...yada sadece harita üzerinde biryere tikla...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Tüm haritayi göster
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Tüm haritayi gizle
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...Google Earth için...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Bir harita ile mesafeyi iliskilendir; 1 iliskilendir, 0 geç.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Geçen zaman ile haritayi iliskilendir; 1 iliskilendir, 0 geç.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Maximum kalp atisini harita ile iliskilendir; 1 iliskilendir, 0 geç.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Ortalama kalp atisini harita ile iliskilendir; 1 iliskilendir, 0 geç.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Ziyaretçilerin haritaya yorum yapmasina izin ver; 1 izin ver, 0 izin verme.
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Harita sayfasinda yapilan yorumlarin katlayarak gösterilip gösterilmeyecegi; 1 katla, 0 göster.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Yeni ziyaretçi yorumlari e-posta ile gönderilmeli; 1 gönder, 0 gönderme.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Zaman
+    </string> 
+    <string key="DISTANCE">
+      Mesafe
+    </string> 
+    <string key="AVGHR">
+      Ortalama kalp atisi
+    </string> 
+    <string key="MAXHR">
+      Maximum kalp atisi
+    </string> 
+    <string key="LANGUAGE">
+      Dil
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Yorumlari göster
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Yorumlari gösterme
+    </string> 
+    <string key="POST_COMMENTS">
+      Yeni yorum gönder
+    </string> 
+    <string key="MISSING_COMMENT">
+      Isim ve yorum girilmesi gerekmekte!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Bu yorumu silmek istediginizden emin misiniz?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - yeni yorum
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Merhaba,&lt;br /&gt; 
+&lt;br /&gt;
+Yeni yorum harita arsivinizde açilmistir.&lt;br /&gt;
+&lt;br /&gt;
+Harita  : %s&lt;br /&gt; 
+Baglanti: %s&lt;br /&gt;
+&lt;br /&gt;
+Yorum içerigi&lt;br /&gt;
+Isim   : %s &lt;br /&gt;
+E-posta: %s&lt;br /&gt;
+Mesaj  : %s&lt;br /&gt;
+    </string>     
+    <string key="LAST_COMMENTS">
+      Son yorum yapilan haritalar
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Yorumlar
+    </string> 
+    <string key="COMMENT_FROM">
+      Son yorum yapan
+    </string> 
+    <string key="KMZ">
+      KML
+    </string> 
+    <string key="PROTECTED_UNTIL">
+      kadar gizli
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Harita disindaki ziyaretçiler için zaman geçerli olacak, dd/mm/yyyy hh:mm:ss biçiminde verilmistir. Haritayi gizlememek için bos birakin. Bu özellik, yarisma haritalarini önceden yüklemek için kullanilir ve yarisma tamamlandiktan hemen sonra yarismacilara sunmak için kullanilabilir.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Haritayi gizlemek için kullanilacak zaman. Gösterilen biçimde dd/mm/yyyy hh:mm:ss giris yapin yada bos birakin.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Harita baskalari için gizli bu zamana %s.
+    </string>
+    <string key="SHOW_ALL">
+      hepsi
+    </string>
+    <string key="SELECT_FILTER">
+      Filtre
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->  
+  </nonCustomizable>
+</strings>
