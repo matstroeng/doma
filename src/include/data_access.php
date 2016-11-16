@@ -5,9 +5,9 @@
   {
     public static function GetAllMaps($userID = 0, $requestingUserID = 0)
     {
-      $userID = mysql_real_escape_string($userID);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
       $where[] = "U.Visible=1";
       if($userID) $where[] = "M.UserID='$userID'";
       $where[] = "(M.ProtectedUntil IS NULL OR M.ProtectedUntil<='$now' OR U.ID='$requestingUserID')";
@@ -25,22 +25,22 @@
       $sql = "SELECT ID FROM `". DB_MAP_TABLE ."`";
       $rs = self::Query($sql);
       $ids = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $ids[] = $r["ID"];
       }
       return $ids;
     }
-    
+
     public static function GetMaps($userID = 0, $startDate = 0, $endDate = 0, $categoryID = 0, $filter = null, $count = 0, $orderBy = "date", $requestingUserID = 0)
     {
-      $userID = mysql_real_escape_string($userID);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $startDateString = mysql_real_escape_string(date("Y-m-d", $startDate));
-      $endDateString = mysql_real_escape_string(date("Y-m-d", $endDate));
-      $categoryID = mysql_real_escape_string($categoryID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $filter = mysql_real_escape_string($filter);
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $startDateString = mysqli_real_escape_string($GLOBALS["dbCon"], date("Y-m-d", $startDate));
+      $endDateString = mysqli_real_escape_string($GLOBALS["dbCon"], date("Y-m-d", $endDate));
+      $categoryID = mysqli_real_escape_string($GLOBALS["dbCon"], $categoryID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $filter = mysqli_real_escape_string($GLOBALS["dbCon"], $filter);
       $count = (int)$count;
 
       switch($orderBy)
@@ -70,11 +70,11 @@
 
     public static function GetCloseMaps($latitude, $longitude, $startTime, $endTime, $maxDistance, $orderBy = "closeness", $requestingUserID = 0)
     {
-      $startTimeString = mysql_real_escape_string(date("Y-m-d", $startTime));
-      $endTimeString = mysql_real_escape_string(date("Y-m-d", $endTime));
-      $maxDistance = mysql_real_escape_string($maxDistance);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
+      $startTimeString = mysqli_real_escape_string($GLOBALS["dbCon"], date("Y-m-d", $startTime));
+      $endTimeString = mysqli_real_escape_string($GLOBALS["dbCon"], date("Y-m-d", $endTime));
+      $maxDistance = mysqli_real_escape_string($GLOBALS["dbCon"], $maxDistance);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
 
       switch($orderBy)
       {
@@ -105,7 +105,7 @@
     {
       $rs = self::Query($sql);
       $maps = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $map = new Map();
         $r["ID"] = $r["MapID"];
@@ -130,16 +130,16 @@
 
     public static function GetMapByID($id, $requestingUserID = 0)
     {
-      $id = mysql_real_escape_string($id);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
       $sql = "SELECT M.*, M.ID AS MapID, M.Name AS MapName, C.*, C.Name AS CategoryName FROM `". DB_MAP_TABLE ."` M ".
              "LEFT JOIN `". DB_CATEGORY_TABLE ."` C ON C.ID=M.CategoryID ".
              "WHERE M.ID='$id' AND ".
              "(M.ProtectedUntil IS NULL OR M.ProtectedUntil<='$now' OR M.UserID='$requestingUserID')";
       $rs = self::Query($sql);
 
-      if($r = mysql_fetch_assoc($rs))
+      if($r = mysqli_fetch_assoc($rs))
       {
         $map = new Map();
         $r["ID"] = $r["MapID"];
@@ -157,19 +157,19 @@
 
     public static function GetYearsByUserIDAndCategoryID($userID, $categoryID, $requestingUserID = 0)
     {
-      $userID = mysql_real_escape_string($userID);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $categoryID = mysql_real_escape_string($categoryID);
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $categoryID = mysqli_real_escape_string($GLOBALS["dbCon"], $categoryID);
       $sql = "SELECT DISTINCT YEAR(Date) AS Year FROM `". DB_MAP_TABLE ."` ".
-             "WHERE UserID='$userID' AND ". 
+             "WHERE UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')".
              ($categoryID ? "AND CategoryID='$categoryID'" : "").
              "ORDER BY Date ASC";
       $rs = self::Query($sql);
 
       $years = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $years[] = $r["Year"];
       }
@@ -183,39 +183,39 @@
 
     public static function GetLastChangedTime($userID = 0, $requestingUserID = 0)
     {
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $userID = mysql_real_escape_string($userID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $sql = "SELECT MAX(LastChangedTime) AS LastChangedTime FROM `". DB_MAP_TABLE ."` ".
              "WHERE (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')".
              ($userID ? " AND UserID='$userID'" : "");
-      $r = mysql_fetch_assoc(self::Query($sql));
+      $r = mysqli_fetch_assoc(self::Query($sql));
       return Helper::StringToTime($r["LastChangedTime"], true);
     }
 
     public static function GetLastCreatedTime($userID = 0, $requestingUserID = 0)
     {
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $userID = mysql_real_escape_string($userID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $sql = "SELECT MAX(CreatedTime) AS LastCreatedTime FROM `". DB_MAP_TABLE ."` ".
              "WHERE (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')".
              ($userID ? " AND UserID='$userID'" : "");
-      $r = mysql_fetch_assoc(self::Query($sql));
+      $r = mysqli_fetch_assoc(self::Query($sql));
       return Helper::StringToTime($r["LastCreatedTime"], true);
     }
 
     public static function GetPreviousMap($userID, $mapID, $requestingUserID = 0)
     {
-      $mapID = mysql_real_escape_string($mapID);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $userID = mysql_real_escape_string($userID);
+      $mapID = mysqli_real_escape_string($GLOBALS["dbCon"], $mapID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $sql = "SELECT * FROM `". DB_MAP_TABLE ."` WHERE (Date<(SELECT Date FROM `". DB_MAP_TABLE ."` WHERE ID='$mapID') OR (Date=(SELECT Date FROM `". DB_MAP_TABLE ."` WHERE ID='$mapID') AND ID<'$mapID')) AND ".
              "UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID') ".
              "ORDER BY Date DESC, ID DESC";
-      if($r = mysql_fetch_assoc(self::Query($sql)))
+      if($r = mysqli_fetch_assoc(self::Query($sql)))
       {
         $map = new Map();
         $map->LoadFromArray($r);
@@ -226,16 +226,16 @@
 
     public static function GetNextMap($userID, $mapID, $requestingUserID = 0)
     {
-      $mapID = mysql_real_escape_string($mapID);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $userID = mysql_real_escape_string($userID);
+      $mapID = mysqli_real_escape_string($GLOBALS["dbCon"], $mapID);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $sql = "SELECT * FROM `". DB_MAP_TABLE ."` WHERE (Date>(SELECT Date FROM `". DB_MAP_TABLE ."` WHERE ID='$mapID') OR (Date=(SELECT Date FROM `". DB_MAP_TABLE ."` WHERE ID='$mapID') AND ID>'$mapID')) AND ".
              "UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID') ".
              "ORDER BY Date ASC, ID ASC";
-      $r = mysql_fetch_assoc(self::Query($sql));
-      if($r = mysql_fetch_assoc(self::Query($sql)))
+      $r = mysqli_fetch_assoc(self::Query($sql));
+      if($r = mysqli_fetch_assoc(self::Query($sql)))
       {
         $map = new Map();
         $map->LoadFromArray($r);
@@ -277,7 +277,7 @@
         @chmod($uploadFileName, 0777);
 
         $map->MapImage = "$baseFileName.$extension";
-        
+
         if(!$inputThumbnailImageFileName)
         {
           // auto-create thumbnail
@@ -346,10 +346,10 @@
       if($isNewMap) $map->CreatedTime = gmdate("Y-m-d H:i:s");
 
       $map->Save();
-      
+
       self::UnprotectMapIfNeeded($map);
       self::ProtectMapIfNeeded($map);
-      
+
       return true;
 
       if($isNewMap)
@@ -362,26 +362,26 @@
         Helper::LogUsage("addMap", $data);
       }
     }
-    
+
     public static function ProtectMapIfNeeded($map)
     {
-      if($map->ProtectedUntil != null && 
+      if($map->ProtectedUntil != null &&
          $map->ProtectedUntil > gmdate("Y-m-d H:i:s") &&
          strpos($map->MapImage, "_") === false)
       {
         // taking a tiny tiny risk here by not checking if file actually exists
-        $randomString = Helper::CreateRandomString(32);  
+        $randomString = Helper::CreateRandomString(32);
         $newMapImage = Helper::GetProtectedFileName($map->MapImage, $randomString);
         $newThumbnailImage = Helper::GetProtectedFileName($map->ThumbnailImage, $randomString);
         $newBlankMapImage = Helper::GetProtectedFileName($map->BlankMapImage, $randomString);
         self::RenameMapImageFiles($map, $newMapImage, $newThumbnailImage, $newBlankMapImage);
         $map->Save();
       }
-    }    
-    
+    }
+
     public static function UnprotectMapIfNeeded($map)
     {
-      if($map->ProtectedUntil != null && 
+      if($map->ProtectedUntil != null &&
          $map->ProtectedUntil <= gmdate("Y-m-d H:i:s") &&
          strpos($map->MapImage, "_") !== false)
       {
@@ -392,31 +392,31 @@
         $map->Save();
       }
     }
-    
+
     private static function RenameMapImageFiles($map, $newMapImage, $newThumbnailImage, $newBlankMapImage)
     {
       $uploadDir = Helper::LocalPath(MAP_IMAGE_PATH ."/");
       @chmod($uploadDir, 0777);
-      if($map->MapImage != null) 
+      if($map->MapImage != null)
       {
         @chmod($uploadDir . $map->MapImage, 0777);
         @chmod($uploadDir . $newMapImage, 0777);
-        if(@rename($uploadDir . $map->MapImage, $uploadDir . $newMapImage)) $map->MapImage = $newMapImage; 
+        if(@rename($uploadDir . $map->MapImage, $uploadDir . $newMapImage)) $map->MapImage = $newMapImage;
       }
-      if($map->ThumbnailImage != null) 
+      if($map->ThumbnailImage != null)
       {
         @chmod($uploadDir . $map->ThumbnailImage, 0777);
         @chmod($uploadDir . $newThumbnailImage, 0777);
         if(@rename($uploadDir . $map->ThumbnailImage, $uploadDir . $newThumbnailImage)) $map->ThumbnailImage = $newThumbnailImage;
       }
-      if($map->BlankMapImage != null) 
+      if($map->BlankMapImage != null)
       {
         @chmod($uploadDir . $map->BlankMapImage, 0777);
         @chmod($uploadDir . $newBlankMapImage, 0777);
         if(@rename($uploadDir . $map->BlankMapImage, $uploadDir . $newBlankMapImage)) $map->BlankMapImage = $newBlankMapImage;
       }
     }
-    
+
     public static function DeleteMapImage($map)
     {
       $uploadDir = Helper::LocalPath(MAP_IMAGE_PATH ."/");
@@ -437,18 +437,18 @@
 
     public static function IncreaseMapViews($map)
     {
-      $id = mysql_real_escape_string($map->ID);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $map->ID);
       $sql = "UPDATE `". DB_MAP_TABLE ."` SET Views=Views+1 WHERE ID='$id'";
       self::Query($sql);
     }
 
     public static function GetUserByID($id)
     {
-      $id = mysql_real_escape_string($id);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "SELECT * FROM `". DB_USER_TABLE ."` WHERE ID='$id'";
       $rs = self::Query($sql);
 
-      if($r = mysql_fetch_assoc($rs))
+      if($r = mysqli_fetch_assoc($rs))
       {
         $user = new User();
         $user->LoadFromArray($r);
@@ -465,9 +465,9 @@
       $sql = "SELECT ID FROM `". DB_USER_TABLE ."` WHERE Visible=1";
       $rs = self::Query($sql);
 
-      if(mysql_num_rows($rs) == 1)
+      if(mysqli_num_rows($rs) == 1)
       {
-        $r = mysql_fetch_assoc($rs);
+        $r = mysqli_fetch_assoc($rs);
         return $r["ID"];
       }
       return null;
@@ -475,12 +475,12 @@
 
     public static function GetUserByUsernameAndPassword($username, $password)
     {
-      $username = mysql_real_escape_string($username);
-      $password = mysql_real_escape_string(md5($password));
+      $username = mysqli_real_escape_string($GLOBALS["dbCon"], $username);
+      $password = mysqli_real_escape_string($GLOBALS["dbCon"], md5($password));
       $sql = "SELECT * FROM `". DB_USER_TABLE ."` WHERE Username='$username' AND Password='$password' AND Visible=1";
       $rs = self::Query($sql);
 
-      if($r = mysql_fetch_assoc($rs))
+      if($r = mysqli_fetch_assoc($rs))
       {
         $user = new User();
         $user->LoadFromArray($r);
@@ -494,11 +494,11 @@
 
     public static function GetUserByUsername($username)
     {
-      $username = mysql_real_escape_string($username);
+      $username = mysqli_real_escape_string($GLOBALS["dbCon"], $username);
       $sql = "SELECT * FROM `". DB_USER_TABLE ."` WHERE Username='$username'";
       $rs = self::Query($sql);
 
-      if($r = mysql_fetch_assoc($rs))
+      if($r = mysqli_fetch_assoc($rs))
       {
         $user = new User();
         $user->LoadFromArray($r);
@@ -512,24 +512,24 @@
 
     public static function UsernameExists($username, $excludeUserID)
     {
-      $username = mysql_real_escape_string(strtolower($username));
+      $username = mysqli_real_escape_string($GLOBALS["dbCon"], strtolower($username));
       if(!$excludeUserID) $excludeUserID = 0;
-      $excludeUserID = mysql_real_escape_string($excludeUserID);
+      $excludeUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $excludeUserID);
       $sql = "SELECT * FROM `". DB_USER_TABLE ."` WHERE LCASE(Username)='$username' AND NOT(ID='$excludeUserID')";
       $rs = self::Query($sql);
 
-      return (mysql_num_rows($rs) > 0);
+      return (mysqli_num_rows($rs) > 0);
     }
 
     public static function GetUserSettings($userID)
     {
-      $userID = mysql_real_escape_string($userID);
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $ret = array();
       $sql = "SELECT `Key`, `Value` FROM `". DB_USER_SETTING_TABLE ."` WHERE UserID='$userID'";
       $rs = self::Query($sql);
       $user = self::GetUserByID($userID);
 
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $r["Value"] = str_replace("%userEmail%", $user->Email, $r["Value"]);
         $ret[$r["Key"]] = $r["Value"];
@@ -549,7 +549,7 @@
       $rs = self::Query($sql);
 
       $users = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $user = new User();
         $user->LoadFromArray($r);
@@ -569,7 +569,7 @@
         self::DeleteMapImage($m);
         self::DeleteThumbnailImage($m);
       }
-      $id = mysql_real_escape_string($id);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "DELETE FROM `". DB_MAP_TABLE ."` WHERE UserID='$id'";
       self::Query($sql);
       $sql = "DELETE FROM `". DB_USER_SETTING_TABLE ."` WHERE UserID='$id'";
@@ -580,8 +580,8 @@
 
     public static function GetLastMapsForUsers($param = "date", $requestingUserID = 0)
     {
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
       switch($param)
       {
         case "lastChangedTime": $field = "LastChangedTime"; break;
@@ -595,7 +595,7 @@
              "ON a.ID=b.ID ".
              "WHERE a.`$field`=(SELECT MAX(`$field`) FROM `". DB_MAP_TABLE ."` WHERE UserID=b.UserID AND (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID'))";
       $rs = self::Query($sql);
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $map = new Map();
         $map->LoadFromArray($r);
@@ -648,15 +648,15 @@
 
     public static function SaveUserSettings($userID, $settings)
     {
-      $userID = mysql_real_escape_string($userID);
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       // first delete all settings for this user
       $sql = "DELETE FROM `". DB_USER_SETTING_TABLE ."` WHERE UserID='$userID'";
       self::Query($sql);
       // then insert new settings
       foreach($settings as $key => $value)
       {
-        $key = mysql_real_escape_string($key);
-        $value = mysql_real_escape_string($value);
+        $key = mysqli_real_escape_string($GLOBALS["dbCon"], $key);
+        $value = mysqli_real_escape_string($GLOBALS["dbCon"], $value);
         $sql = "INSERT INTO `". DB_USER_SETTING_TABLE ."` (`UserID`, `Key`, `Value`) ".
                "VALUES ('$userID', '$key', '$value')";
         self::Query($sql);
@@ -665,11 +665,11 @@
 
     public static function GetCategoryByID($id)
     {
-      $id = mysql_real_escape_string($id);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "SELECT * FROM `". DB_CATEGORY_TABLE ."` WHERE ID='$id'";
       $rs = self::Query($sql);
 
-      if($r = mysql_fetch_assoc($rs))
+      if($r = mysqli_fetch_assoc($rs))
       {
         $category = new Category();
         $category->LoadFromArray($r);
@@ -683,14 +683,14 @@
 
     public static function GetCategoriesByUserID($userID = 0)
     {
-      $userID = mysql_real_escape_string($userID);
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
       $sql = "SELECT * FROM `". DB_CATEGORY_TABLE ."` ".
              ($userID ? "WHERE UserID='$userID' " : "").
              "ORDER BY ID";
       $rs = self::Query($sql);
 
       $categories = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $category = new Category();
         $category->LoadFromArray($r);
@@ -702,10 +702,10 @@
     public static function GetCategoriesByUserIDAndYear($userID, $year, $requestingUserID = 0)
     {
       if($year == 0) return self::GetCategoriesByUserID($userID);
-      $userID = mysql_real_escape_string($userID);
-      $year = mysql_real_escape_string($year);
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
+      $userID = mysqli_real_escape_string($GLOBALS["dbCon"], $userID);
+      $year = mysqli_real_escape_string($GLOBALS["dbCon"], $year);
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
 
       $sql = "SELECT * FROM `". DB_CATEGORY_TABLE ."` ".
              "WHERE ID IN(SELECT DISTINCT(CategoryID) FROM `". DB_MAP_TABLE ."` WHERE UserID='$userID' AND YEAR(Date)='$year' AND (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')) ".
@@ -713,7 +713,7 @@
       $rs = self::Query($sql);
 
       $categories = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $category = new Category();
         $category->LoadFromArray($r);
@@ -725,7 +725,7 @@
     // returns false and doesn't delete when there are maps in the category
     public static function DeleteCategoryByID($id)
     {
-      $id = mysql_real_escape_string($id);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       if(self::NoOfMapsInCategory($id) == 0)
       {
         $sql = "DELETE FROM `". DB_CATEGORY_TABLE ."` WHERE ID='$id'";
@@ -738,10 +738,10 @@
     public static function NoOfMapsInCategory($id)
     {
       if(!$id) return 0;
-      $id = mysql_real_escape_string($id);
+      $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "SELECT COUNT(*) AS NoOfMaps FROM `". DB_MAP_TABLE ."` ".
              "WHERE CategoryID='$id'";
-      $r = mysql_fetch_assoc(self::Query($sql));
+      $r = mysqli_fetch_assoc(self::Query($sql));
 
       return $r["NoOfMaps"];
     }
@@ -757,10 +757,10 @@
 
     public static function GetSetting($key, $defaultValue)
     {
-      $key = mysql_real_escape_string($key);
+      $key = mysqli_real_escape_string($GLOBALS["dbCon"], $key);
       $sql = "SELECT `Value` FROM `". DB_SETTING_TABLE ."` WHERE `Key`='$key'";
       $rs = self::Query($sql);
-      if($r = @mysql_fetch_assoc($rs))
+      if($r = @mysqli_fetch_assoc($rs))
       {
         return $r["Value"];
       }
@@ -769,23 +769,24 @@
 
     public static function SetSetting($key, $value)
     {
-      $key = mysql_real_escape_string($key);
-      $value = mysql_real_escape_string($value);
+      $key = mysqli_real_escape_string($GLOBALS["dbCon"], $key);
+      $value = mysqli_real_escape_string($GLOBALS["dbCon"], $value);
       $sql = "REPLACE INTO `". DB_SETTING_TABLE ."` (`Key`, `Value`) VALUES ('$key', '$value')";
       self::Query($sql);
     }
 
     private static function Query($sql)
     {
-      $result = @mysql_query($sql);
+      $result = @mysqli_query($GLOBALS["dbCon"], $sql);
       Helper::WriteToLog($sql);
-      if(mysql_error()) Helper::WriteToLog("MYSQL ERROR: ". mysql_error());
+	  $error = mysqli_error($GLOBALS["dbCon"]);
+      if($error) Helper::WriteToLog("MYSQL ERROR: ". $error);
       return $result;
     }
-    
+
     public static function GetCommentsByMapId($mapId)
     {
-      $mapId = mysql_real_escape_string($mapId);
+      $mapId = mysqli_real_escape_string($GLOBALS["dbCon"], $mapId);
       $sql = "SELECT C.* ".
              "FROM `". DB_COMMENT_TABLE ."` C ".
              "WHERE C.MapID='$mapId' ".
@@ -794,7 +795,7 @@
       $rs = self::Query($sql);
 
       $comments = array();
-      while($r = mysql_fetch_assoc($rs))
+      while($r = mysqli_fetch_assoc($rs))
       {
         $comment = new Comment();
         $comment->LoadFromArray($r);
@@ -806,8 +807,8 @@
     public static function GetLastComments($numberOfComments, $requestingUserID = 0)
     {
       $numberOfComments = (int)$numberOfComments;
-      $requestingUserID = mysql_real_escape_string($requestingUserID);
-      $now = mysql_real_escape_string(gmdate("Y-m-d H:i:s"));
+      $requestingUserID = mysqli_real_escape_string($GLOBALS["dbCon"], $requestingUserID);
+      $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
       $sql = "select distinct m.ID, m.UserID, m.Name, ".
       "(select concat(FirstName,' ',LastName) from `". DB_USER_TABLE ."` where id=m.userid) as user_flname, ".
       "(select UserName from `". DB_USER_TABLE ."` where id=m.userid) as user_name, ".
@@ -823,8 +824,8 @@
       $rs = self::Query($sql);
 
       $last_comments = array();
-      
-      while($r = mysql_fetch_assoc($rs))
+
+      while($r = mysqli_fetch_assoc($rs))
       {
         $last_comment = array();
         $last_comment["ID"]=$r["ID"];

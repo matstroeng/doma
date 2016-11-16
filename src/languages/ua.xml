@@ -1,19 +1,19 @@
-﻿<strings>
+<strings>
   <customizable>
     <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
-      My digital orienteering map archive
+      Мій архів карт спортивного орієнтування 
     </string> 
     <string key="CAPTION" description="CAPTION_DESCRIPTION">
-      Welcome to my digital orienteering map archive!
+      Заходь в мій архів спортивних карт!
     </string> 
     <string key="INTRO" description="INTRO_DESCRIPTION">
-      On this site I will publish maps, courses and route choices from orienteering events I have attended.
+      На цьому сайті я зберігаю карти, дистанції та шляхи з заходів спортивного орієнтування в який я приймав участь. 
     </string> 
     <string key="FOOTER" description="FOOTER_DESCRIPTION">
-      Are you the copyright owner of a map that should not be published here? &lt;a href=&quot;mailto:%userEmail%&quot;&gt;Email me&lt;/a&gt;.
+      Якщо ви власник прав на карту, яка неповинна була тут опублікована, &lt;a href=&quot;mailto:%userEmail%&quot;&gt;напишіть мені Email&lt;/a&gt;.
     </string> 
     <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
-      Maps, courses and routes from orienteering events I have attended.
+      Карти,дистанції і шляхи з заходів зі спортивного орієнтування,в яких я брав участь
     </string> 
     <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
       1
@@ -73,11 +73,11 @@
     </string> 
     <!--  day names, semi-colon separated --> 
     <string key="DAY_NAMES">
-      Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday
+     Неділя;Понеділок;Вівторок;Среда;Четвер;Пятниця;Субота
     </string> 
     <!--  month names, semi-colon separated --> 
     <string key="MONTH_NAMES">
-      January;February;March;April;May;June;July;August;September;October;November;December
+      Січеня;Лютого;Березня;Квітня;Травня;Червня;Липня;Серпня;Вересня;Жовтня;Листопада;Грудня
     </string> 
     <string key="RSS_FEED">
       RSS feed
@@ -86,259 +86,259 @@
       DOMA %s
     </string> 
     <string key="NAME">
-      Name
+      Імя
     </string> 
     <string key="DATE">
-      Date
+      Дата
     </string> 
     <string key="ORGANISER">
-      Organiser
+      Організатор
     </string> 
     <string key="COUNTRY">
-      Country
+      Країна
     </string> 
     <string key="DISCIPLINE">
-      Discipline
+      Дисципліна
     </string> 
     <string key="RELAY_LEG">
-      Leg
+      Етап
     </string> 
     <string key="RELAY_LEG_LONG">
-      Relay leg
+      Етап естафети
     </string> 
     <string key="RELAY_LEG_LOWERCASE">
-      leg
+      етап
     </string> 
     <string key="MAP_AREA_NAME">
-      Map/area
+      Карта/область
     </string> 
     <string key="RESULTS">
-      Results
+      Результати
     </string> 
     <string key="COMMENT">
-      Comment
+      Коментарі
     </string> 
     <string key="LOGIN">
-      Log in
+      Війти
     </string> 
     <string key="LOGOUT">
-      Log out
+      Вийти
     </string> 
     <string key="INVALID_USERNAME_OR_PASSWORD">
-      Invalid user name and/or password.
+      Неправильне імя /або пароль.
     </string> 
     <string key="USERNAME">
-      User name
+      Імя користувача
     </string> 
     <string key="PASSWORD">
-      Password
+      Пароль
     </string> 
     <string key="YES">
-      Yes
+      Так
     </string> 
     <string key="NO">
-      No
+      Ні
     </string> 
     <string key="REALAVG">
       Pace
     </string> 
     <string key="PROJECTEDDISTANCE">
-      Projected distance
+      Прогнозована відстань
     </string> 
     <string key="PROJECTEDDISTANCEFORMAT">
-      Only number, format: x.xx (for example 7.95)
+      Тільки номер, формат: x.xx (наприклад 7.95)
     </string> 
     <string key="CLIMBING">
-      Climbing
+      Набір висоти
     </string> 
     <string key="CLIMBINGFORMAT">
-      Only number: xxx (for example 395)
+      Тільки номер: xxx (наприклад 395)
     </string> 
     <string key="FIXDISTANCE">
-      Value in field Projected distance does not fit to requested format. Format: x.xx (for example 7.95) - decimal dot requested
+      Значення в полі Прогнозована відстань не вписується в необхідний формат . Формат: x.xx (наприклад 7.95) - десяткова крапка обовязкова
     </string> 
     <string key="FIXCLIMBING">
-      Value in field Climbing does not fit to requested format. Format: xxx (for example 395)
+      Значення в полі Набір висоти не вписується в необхідний формат . Формат: xxx (наприклад 395)
     </string> 
 
     <!--  topbar ****************************************************************************************************** --> 
     <string key="DOMA_FOR_X">
-      Digital Orienteering Map Archive for %s
+      Архів спортивних карти. Користувач: %s
     </string> 
     <string key="ALL_USERS">
-      All users
+      Всі користувачі
     </string> 
     <string key="ADMIN_LOGIN">
-      Administrator log in
+      Війти адміністратору
     </string> 
     <string key="ADMIN_LOGOUT">
-      Administrator log out
+      Вийти адміністратору
     </string> 
 
     <!--  index.php ****************************************************************************************************** --> 
     <string key="NO_MAPS">
-      No maps are published.
+      Немає опублікованих карт.
     </string> 
     <string key="SELECT_YEAR">
-      Year
+      Рік
     </string> 
     <string key="SELECT_CATEGORY">
-      Category
+      Категорія
     </string> 
     <string key="ALL_YEARS">
-      [all years]
+      [всі роки]
     </string> 
     <string key="ALL_CATEGORIES">
-      [all categories]
+      [всі категорії]
     </string> 
     <string key="NO_MATCHING_MAPS">
-      There are no maps that match the search critera.
+      По заданому критерію карт не знайдено.
     </string> 
     <string key="VIEWS">
-      views
+      переглядів
     </string> 
 
     <!--  show_map.php ****************************************************************************************************** --> 
     <string key="BACK">
-      Back
+      назад
     </string> 
     <string key="PREVIOUS">
-      Previous
+      Назад
     </string> 
     <string key="NEXT">
-      Next
+      Вперед
     </string> 
 
     <!--  edit_map.php ****************************************************************************************************** --> 
     <string key="ADD_MAP">
-      Add map
+      Добавити карту
     </string> 
     <string key="EDIT_MAP">
-      Edit map
+      Редагувати карту
     </string> 
     <string key="EDIT_MAP_X">
-      Edit map: %s
+      Редактовані карти: %s
     </string> 
     <string key="MAP_DATE_FORMAT">
-      dd/mm/yyyy, and optionally hh:mm:ss
+      дд/мм/рррр, і додатково гг:хх:сс
     </string> 
     <string key="LINK_TO_RESULT_LIST">
-      Link to result list
+      Силка на лист результатів
     </string> 
     <string key="MAP_IMAGE_FILE">
-      Map image file
+      Файл карти зі шляхом (jpeg, png і gif)
     </string> 
     <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
-      Leave empty to keep existing map.
+      Залиште поле пустим, щоб осталась карта, введена раніше.
     </string> 
     <string key="THUMBNAIL_IMAGE_FILE">
-      Thumbnail image file
+      Файл іконки карти
     </string> 
     <string key="THUMBNAIL_INFO">
-      Size %d x %d pixels, leave empty for automatic generation. Large map images may not be thumbnailed due to server memory restrictions.
+      Розмір %d x %d пікселів, залиште поле пустим, щоб іконка створилася автоматично. Великі карти можуть не оброблятися коректно через ліміти сервера.
     </string> 
     <string key="CONFIRM_DELETION">
-      Confirm deletion
+      Пітвердіть видалення
     </string> 
     <string key="SAVE">
-      Save
+      Зберегти
     </string> 
     <string key="DELETE">
-      Delete
+      Видалити
     </string> 
     <string key="CANCEL">
-      Cancel
+      Відмінити
     </string> 
     <string key="NO_MAP_FILE_ENTERED">
-      No map image file was specified.
+      Файли зображень не відмічені.
     </string> 
     <string key="INVALID_MAP_IMAGE_FORMAT">
-      The format of the map image file &lt;em&gt;%s&lt;/em&gt; is invalid. Only jpeg, png and gif formats are supported.
+      Формат файла зображення карти &lt;em&gt;%s&lt;/em&gt; не підтримується. Підтримуються тільки jpeg, png і gif формати.
     </string> 
     <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
-      The format of the thumbnail image file &lt;em&gt;%s&lt;/em&gt; is invalid. Only jpeg, png and gif formats are supported.
+       Формат файла іконки карти &lt;em&gt;%s&lt;/em&gt; не підтримується. Підтримуються тільки jpeg, png і gif формати.
     </string> 
     <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
-      The map image file &lt;em&gt;%s&lt;/em&gt; could not be uploaded.
+      Файл карти &lt;em&gt;%s&lt;/em&gt; не може бути завантеженим.
     </string> 
     <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
-      The thumbnail image file &lt;em&gt;%s&lt;/em&gt; could not be uploaded.
+      Файл іконки &lt;em&gt;%s&lt;/em&gt; не може бути завантеженим.
     </string> 
     <string key="NO_MAP_NAME_ENTERED">
-      No map name has been entered.
+      Не введене імя карти.
     </string> 
     <string key="NO_DATE_ENTERED">
-      No date has been entered.
+      Не введена дата.
     </string> 
     <string key="INVALID_DATE">
-      The date is invalid. Please enter a date in the yyyy-mm-dd format.
+      Дата не коректна. Будьласка введіть дату в фоматі дд/мм/рррр.
     </string> 
     <string key="CATEGORY">
-      Category
+      Категорія
     </string> 
     <string key="CATEGORY_TOOLTIP">
-      The category the map belongs to. You can create new categories in your user profile.
+      Ви можете створювати нові категорії в профілі користувача.
     </string> 
     <string key="THUMBNAIL_CREATION_FAILURE">
-      The thumbnail image could not be created. The reason might be that there was not enough server memory available. On this server, thumbnails can't be auto-generated for images larger than approximately %s pixels. Please increase the value of the memory_limit parameter in php.ini.&lt;br /&gt;A standard thumbnail image was created instead. Try use a smaller map image or manually upload a thumbnail image.
+      Іконка не створена. Причиною може бути недостатність памяті сервера. На цьому сервері, іконки не можуть бути автоматично створені для зображень розмір яких більше, ніж %s пікселів. Замість цього створена зменшена карта. Спробуйте використовувати файл меншого розширення або створіть іконку самі та загрузіть її. Можна змінити параметри  memory_limit в php.ini. 
     </string> 
 
     <!--  users.php ****************************************************************************************************** --> 
     <string key="NO_OF_MAPS">
-      Maps
+      Карти
     </string> 
     <string key="EDIT">
-      Edit
+      Редагувати
     </string> 
     <string key="ADMIN_LOGIN_INFO">
-      User name and password refer to the settings in the config.php file.
+      Імя і пароль згідно з установками в config.php.
     </string> 
     <string key="VISIBLE">
-      Visible
+      Видно для всіх
     </string> 
     <string key="LOGIN_AS">
-      Log in as
+      Ввійти як 
     </string> 
     <string key="LOGIN_AS_X">
-      Log in as %s
+      Ввійти як %s
     </string> 
     <string key="LAST_MAP">
-      Last map
+      Остання карта
     </string> 
     <string key="NO_USERS_CREATED">
-      There are no users created yet.
+      Користувачів не створено.
     </string> 
     <string key="CREATE_THE_FIRST_USER">
-      Click here to create the first user.
+      Нажміть для створення першого користувача.
     </string> 
     <string key="MAP">
-      Map
+      Карта
     </string> 
     <string key="UPDATED">
-      Updated
+      Завантажено
     </string> 
     <string key="USERS">
-      Users
+      Користувачі
     </string> 
     <string key="LAST_MAPS">
-      Last maps
+      Останні карти
     </string> 
     <string key="PUBLIC_CREATE_USER_INFO">
-      You can &lt;a href=&quot;enter_public_creation_code.php&quot;&gt;create your own digital orienteering map archive&lt;/a&gt; by entering the access code provided by the &lt;a href=&quot;mailto:%adminEmail%&quot;&gt;administrator&lt;/a&gt;.
+      Ви можете &lt;a href=&quot;enter_public_creation_code.php&quot;&gt;створити свій архів карт &lt;/a&gt; ввівши код, получений від &lt;a href=&quot;mailto:%adminEmail%&quot;&gt;адміністратора&lt;/a&gt;.
     </string> 
 
     <!--  edit_user.php ****************************************************************************************************** --> 
     <string key="ADD_USER">
-      Create new user
+      Створити нового користувача
     </string> 
     <string key="EDIT_USER_X">
-      Edit user: %s
+      Редагувати користувача: %s
     </string> 
     <string key="FIRST_NAME">
-      First name
+      Імя
     </string> 
     <string key="LAST_NAME">
-      Last name
+      Прізвище
     </string> 
     <string key="EMAIL">
       Email
@@ -443,67 +443,67 @@
       Edit the details for the user.
     </string> 
     <string key="EDIT_USER_PROFILE_TITLE">
-      Edit your user profile
+      Редагувати Ваш профіль користувача
     </string> 
     <string key="ADD_USER_PROFILE_TITLE">
-      Create new user profile
+      Створити новий профіль користувача
     </string> 
     <string key="PERSONAL_DETAILS_TITLE">
-      Personal details
+      Персональні дані
     </string> 
     <string key="PERSONAL_DETAILS_INFO">
-      Enter your personal details.
+      Введіть Ваші персональні дані.
     </string> 
     <string key="ADMIN_PERSONAL_DETAILS_INFO">
-      Enter the user's personal details.
+      Введіть персональні дані користувача.
     </string> 
     <string key="MAP_CATEGORIES_TITLE">
-      Map categories
+      Категорії карт
     </string> 
     <string key="ADMIN_MAP_CATEGORIES_INFO">
-      Specify the categories that the user's maps will be divided into.
+      Вкажіть категорії, до яких повинні належати користувацькі карти.
     </string> 
     <string key="MAP_CATEGORIES_INFO">
-      Specify the categories that your maps will be divided into.
+      Вкажіть категорії, до яких повинні належати Ваші карти.
     </string> 
     <string key="TEXTS_AND_SETTINGS_TITLE">
-      Texts and settings
+      Тексти і установки
     </string> 
     <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
-      The text displayed on the user's pages, and settings for which data to associate with each map.
+      Тексти, які відображаються на сторінці користувача, і установки які відносяться до карт.
     </string> 
     <string key="TEXTS_AND_SETTINGS_INFO">
-      The text displayed on your pages, and settings for which data to associate with each map.
+      Тексти, які відображаються на вашій сторінці, і установки які відносяться до карт.
     </string> 
     <string key="USER_PROFILE">
-      User profile
+      Профіль користувача
     </string> 
     <string key="REQUIRED_FIELDS_INFO">
-      Required fields are marked with %s.
+      Обовязково заповнити поля зі знаком %s.
     </string> 
     <string key="MAP_CATEGORIES">
-      Map categories
+      Категорії карт
     </string> 
     <string key="DEFAULT_CATEGORY_NAMES">
-      Competition;Training
+      Змагання;Тренування
     </string> 
     <string key="DEFAULT_CATEGORY">
-      default
+      За замовчуванням
     </string> 
     <string key="ADD_CATEGORY">
-      Create new category
+      Створити нову категорію
     </string> 
     <string key="DELETE_CATEGORY">
-      Delete category
+      Видалити категорію
     </string> 
     <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
-      Cannot delete the map category %s because it still contains %d maps. Please delete these maps first.
+      Неможна видалити категорію %s тому що до неї належать карти в кількості %d. Спочатку видаліть ці карти.
     </string> 
     <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
-      There must always exist at least one map category.
+      Повинна бути як мінімум одна категорія карт.
     </string> 
     <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
-      A name for the map category must be entered.
+      Імя категорії карт повинно бути введене.
     </string> 
 
     <!--  create.php ****************************************************************************************************** --> 
@@ -548,13 +548,13 @@
 
     <!--  email sending ****************************************************************************************************** --> 
     <string key="DOMA_ADMIN_EMAIL_NAME">
-      DOMA Administrator
+      Orienteering Archive DOMA Administrator
     </string> 
     <string key="NEW_USER_EMAIL_SUBJECT">
       Your digital orienteering map archive has been created!
     </string> 
     <string key="NEW_USER_EMAIL_BODY">
-      
+
 Hi %s, 
 
 This is an auto-generated email confirming that a digital orienteering map archive has been created for you at %s.
@@ -564,10 +564,21 @@ Your user name:  %s
 Your password:   %s
 
 Consider the password as being temporary. For security reasons, please change it to another password.
-    
+      
+Привіт %s, 
+
+Цей лист відправлено автоматично, і містить новий пароль до Вашого архіву карт зі спортивного орієнтування %s. 
+
+Ваша сторінка:   %s 
+Ваше імя:    %s 
+Ваш пароль: %s 
+
+Цей пароль тимчасовий, з точки зору безпеки змініть його особисто.
+
+   
     </string> 
     <string key="SEND_CONFIRMATION_EMAIL">
-      Email confirmation
+      Email підтвердження
     </string> 
     <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
       Send email with user account information to the new user
@@ -579,19 +590,19 @@ Consider the password as being temporary. For security reasons, please change it
       Send new password
     </string> 
     <string key="SEND_NEW_PASSWORD_INFO">
-      Forgot your password? Don't panic, a new one can be sent to the email address specified in your user profile: %s.
+      Забули пароль? Це не страшно, можна відправити пароль на ваш адрес: %s.
     </string> 
     <string key="SEND_NEW_PASSWORD">
-      Send a new password
+      Відправити новий пароль
     </string> 
     <string key="EMAIL_ERROR">
-      The email could not be sent. Please contact the administrator.
+      Повідомлення не відправлено. Звяжіться з адміністратором.
     </string> 
     <string key="NEW_PASSWORD_EMAIL_SUBJECT">
       New password for your digital orienteering map archive
     </string> 
     <string key="NEW_PASSWORD_EMAIL_BODY">
-      
+
 Hi %s, 
 
 This is an auto-generated email containing new password information for your digital orienteering map archive at %s. 
@@ -601,60 +612,73 @@ Your user name:    %s
 Your new password: %s 
 
 Consider the password as being temporary. For security reasons, please change it to another password.
+
+      
+Привіт %s, 
+
+Цей лист відправлено автоматично, і містить новий пароль до Вашого архіву карт зі спортивного орієнтування %s. 
+
+Ваша сторінка:   %s 
+Ваше імя:    %s 
+Ваш пароль: %s 
+
+Цей пароль тимчасовий, з точки зору безпеки змініть його особисто.
+
+
     
     </string> 
     <string key="NEW_PASSWORD_SENT">
-      A new password has been sent to %s.
+      Новий пароль був відправлений %s.
     </string> 
     <string key="FORGOT_PASSWORD">
-      I have forgotten my password
+      Я забув пароль
     </string>
     
     <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
     <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
-      The format of the blank map image file &lt;em&gt;%s&lt;/em&gt; is invalid. Only jpeg, png and gif formats are supported.
+      Формат файла карти без шляху &lt;em&gt;%s&lt;/em&gt; не сумісний. Підтримуються тільки такі формати jpeg, png і gif.
     </string> 
     <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
-      The blank map image file &lt;em&gt;%s&lt;/em&gt; could not be uploaded.
+      Файл карт без шляху &lt;em&gt;%s&lt;/em&gt; не завантажений .
     </string> 
     <string key="BLANK_MAP_IMAGE_FILE">
-      Blank map image file
+      Файл карт без шляху
     </string> 
     <string key="MAP_INFO">
-      The map where your route line is drawn.
+      Карта, де є трек вашого шляху.
     </string> 
     <string key="BLANK_MAP_INFO">
-      The map without any route lines. Not mandatory.
+      Карта без треку шляху. Не обовязково.
     </string> 
     <string key="SELECT_DISPLAY_MODE">
-      Display mode
+      Режим відображення
     </string> 
     <string key="DISPLAY_MODE_LIST">
-      List
+      Лист
     </string> 
     <string key="DISPLAY_MODE_OVERVIEW_MAP">
-      Overview map
+      Загальна карта
     </string> 
     <string key="INFORMATION">
-      Information
+      Інформація
     </string> 
     <string key="SHOW_ROUTE_ON_MAP">
-      Show routechoices
+      Показати шлях
     </string> 
     <string key="HIDE_ROUTE_ON_MAP">
-      Hide routechoices
+      Сховати шлях
     </string> 
     <string key="TOGGLE_IMAGE_CLICK">
-      Click on map to turn routechoices on/off
+      Нажміть на карту щоб включити/виключити Ваш шлях
     </string> 
     <string key="TOGGLE_IMAGE_TOOLTIP">
-      ...or just click somewhere on the map...
+      ...або просто клацніть по карті...
     </string> 
     <string key="SHOW_OVERVIEW_MAP">
-      Show overview map
+      Показати карту Google
     </string> 
     <string key="HIDE_OVERVIEW_MAP">
-      Hide overview map
+      Сховати карту Google
     </string> 
     <string key="KMZ_TOOLTIP">
       ...for Google Earth...
@@ -678,88 +702,87 @@ Consider the password as being temporary. For security reasons, please change it
       Whether to show comments collapsed as default on map page; 1 to collapse, 0 to show.
     </string> 
     <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
-      Whether new visitor comments should be sent by e-mail; 1 to send, 0 to not send.
+      Whether new vistor comments should be sent by e-mail; 1 to send, 0 to not send.
     </string> 
     <string key="ELAPSEDTIME">
-      Time
+      Час
     </string> 
     <string key="DISTANCE">
-      Distance
+      Довжина шляху
     </string> 
     <string key="AVGHR">
-      Average HR
+      Середній HR
     </string> 
     <string key="MAXHR">
-      Maximum HR
+      Максимальний HR
     </string> 
     <string key="LANGUAGE">
-      Language
+      Мова/Language
     </string> 
     <string key="SHOW_COMMENTS">
-      Show comments
+      Показати коментарі 
     </string> 
     <string key="HIDE_COMMENTS">
-      Hide comments
+      Сховати коментарі 
     </string> 
     <string key="POST_COMMENTS">
-      Post new comment
+      Відправити новий коментар 
     </string> 
     <string key="MISSING_COMMENT">
-      Name and comment must be entered!
+      Повинно бути введено імя і коментар!
     </string> 
     <string key="COMMENT_DELETE_CONFIRMATION">
-      Do you really want to delete this comment?
+      Ви точно хочете видалити цей коментар?
     </string> 
     <string key="NEW_COMMENT_EMAIL_SUBJECT">
-      DOMA - new comment
+      DOMA - Новий коментар
     </string> 
     <string key="NEW_COMMENT_EMAIL_BODY">
-Hi, 
+Привіт, 
 
-A new comment was created in your map archive.
+Новий архів створений.
 
-Map:  %s 
-Link: %s
+Карта:  %s 
+Посилання: %s
 
-Comment's content
-Name:   %s 
+Коментар
+Імя:   %s 
 Email:  %s
-Text:   %s
+Текст:   %s
     </string>     
     <string key="LAST_COMMENTS">
-      Last commented maps
+      Останні коментарі до карт
     </string> 
     <string key="COMMENTS_COUNT">
-      Comments
+      Коментарі
     </string> 
     <string key="COMMENT_FROM">
-      Last comment by
+      Останній коментар зробив 
     </string> 
     <string key="KMZ">
-      KML
+      Файл KML для Google Earth
     </string> 
     <string key="PROTECTED_UNTIL">
-      Hidden until
+      Сховати карти до вказаного строку
     </string>
     <string key="PROTECTED_UNTIL_INFO">
-      Time when the map will be available for other visitors than you, given in the dd/mm/yyyy hh:mm:ss format. Leave empty to not hide the map. This feature may be used to upload maps in advance to an event, and make them available to the participants immediately after the event is completed.
+      Час, коли карта повинна відображатися гостям, повинна бути в форматі дд/мм/рррр гг:хх:сс. Залиште поле пустим щоб не ховати карту. Ця функція використовується щоб загружати карти майбутніх подій, щоб робити перегляд карт доступним після закінчення змагань.
     </string>
     <string key="INVALID_PROTECTED_UNTIL">
-      The time to hide the map until is invalid. Enter a time in given in the dd/mm/yyyy hh:mm:ss format or leave the field empty.
+      Час відображення схованих карт неправильний. Введіть час в форматі дд/мм/рррр гг:хх:сс або оставте поле пустим.
     </string>
     <string key="MAP_IS_PROTECTED_UNTIL_X">
-      The map is hidden for others until %s.
+      Карта не доступна користувачам до  %s.
     </string>
     <string key="SHOW_ALL">
-      all
+      Всі
     </string>
     <string key="SELECT_FILTER">
-      Filter
+      Фільтр
     </string>
     <string key="3DRERUN">
       3D Rerun
     </string>
-
     <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
    </nonCustomizable>
 </strings>

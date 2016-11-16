@@ -53,6 +53,7 @@
   //   ru  (Russian, credits to Yuri Mikhaylovskiy)
   //   sv  (Swedish, credits to Mats Troeng)
   //   tr  (Turkish, credits to Guven Solmaz and Berkay Kılıcoglu)
+  //   ua  (Ukrainian, credits to Melnyk Taras)
   define('LANGUAGE_CODE', 'en');
 
   // The MySQL text sorting order, known as 'collation'.
@@ -104,7 +105,7 @@
   // The first value in each pair is the language name.
   // The second value is the language code, see the LANGUAGE_CODE setting above.
   // Example: "English;en|Svenska;sv" makes English and Swedish available, and shows English and Swedish flags in topbar.
-  define('LANGUAGES_AVAILABLE', 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr');
+  define('LANGUAGES_AVAILABLE', 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr|Український;ua');
 
   // The image resizing method to use when generating thumbnails for map images.
   // Select a suitable method depending on server configuration and available memory. If thumbnail generation fails, try to change this value.

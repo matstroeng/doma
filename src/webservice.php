@@ -155,7 +155,7 @@
             'Categories' => array('name' => 'Categories', 'type' => 'tns:CategoryArray')
         )
     );
-    
+
     $server->wsdl->addComplexType(
         'ConnectRequest',
         'complexType',
@@ -180,7 +180,7 @@
             'Version' => array('name' => 'Version', 'type' => 'xsd:string')
         )
     );
-    
+
     $server->wsdl->addComplexType(
         'MapInfo',
         'complexType',
@@ -219,7 +219,7 @@
             'Name' => array('name' => 'Name', 'type' => 'xsd:string')
         )
     );
-    
+
     $server->wsdl->addComplexType(
         'MapInfoArray',
         'complexType',
@@ -232,7 +232,7 @@
         ),
         'tns:MapInfo'
     );
-    
+
     $server->wsdl->addComplexType(
         'CategoryArray',
         'complexType',
@@ -244,7 +244,7 @@
             array('ref'=>'SOAP-ENC:arrayType','wsdl:arrayType'=>'tns:Category[]')
         ),
         'tns:Category'
-    );    
+    );
 
 
     // *************************************************************************************
@@ -329,7 +329,7 @@
       if(!$fileName) $fileName = rand(0, 1000000000) .".tmp";
       $fp = fopen(Helper::LocalPath(TEMP_FILE_PATH ."/". $fileName), "a");
       fwrite($fp, $request["Data"]);
-      fclose($fp);  
+      fclose($fp);
       $success = true;
     }
 
@@ -339,7 +339,7 @@
       'FileName' => $fileName
     );
   }
-  
+
   function GetAllMaps($request)
   {
     $success = false;
@@ -372,7 +372,7 @@
           "Comment" => $m->Comment
         );
       }
-      $errorMessage = mysql_error();
+      $errorMessage = mysqli_error($GLOBALS["dbCon"]);
       $success = ($errorMessage == "");
     }
     return array(
@@ -405,7 +405,7 @@
           "Name" => $c->Name
         );
       }
-      $errorMessage = mysql_error();
+      $errorMessage = mysqli_error($GLOBALS["dbCon"]);
       $success = ($errorMessage == "");
     }
     return array(
@@ -426,7 +426,7 @@
     }
     return array("Success" => $success, "ErrorMessage" => $errorMessage, "Version" => DOMA_VERSION);
   }
-  
+
   /* helper functions */
   function PublishMapHelper($username, $password, $mapInfo, $mapImageFileName, $blankMapImageFileName, $thumbnailImageFileName)
   {
@@ -454,7 +454,7 @@
       $map->Comment = $mapInfo["Comment"];
       $map->LastChangedTime = gmdate("Y-m-d H:i:s");
       if(!$mapInfo["ID"]) $map->CreatedTime = gmdate("Y-m-d H:i:s");
-      
+
       $thumbnailCreatedSuccessfully = false;
       $error = null;
       DataAccess::SaveMapAndThumbnailImage($map, $mapImageFileName, $blankMapImageFileName, $thumbnailImageFileName, $error, $thumbnailCreatedSuccessfully);
@@ -462,7 +462,7 @@
       if($blankMapImageFileName) unlink($blankMapImageFileName);
       if($thumbnailImageFileName) unlink($thumbnailImageFileName);
       if(!$mapInfo["ID"]) Helper::LogUsage("addMapWS", "user=". urlencode($user->Username) ."&map=". $map->ID);
-      $errorMessage = mysql_error();
+      $errorMessage = mysqli_error($GLOBALS["dbCon"]);
       $success = ($errorMessage == "");
       $url = Helper::GlobalPath("show_map.php?user=". urlencode($user->Username) ."&map=". $map->ID);
     }
@@ -472,8 +472,8 @@
       'ErrorMessage' => $errorMessage,
       'URL' => $url
     );
-  }  
-  
-  
+  }
+
+
 
 ?>

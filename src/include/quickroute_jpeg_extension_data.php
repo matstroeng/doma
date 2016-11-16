@@ -444,7 +444,7 @@
 
       $sign = (ord($data[7]) >> 7 == 0 ? 1 : -1);
       $exponent=-1023;
-      $exponent += (ord($data[7]) % 128) << 4;
+      $exponent += (ord($data[7]) % 64) << 4;
       $exponent += ord($data[6]) >> 4;
 
       $base=1.0;
