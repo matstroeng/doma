@@ -221,6 +221,12 @@
       return $geocodedMap->saveToString($title, $format);
     }
     
+    public function CreateJsonString($localMapImagePath, $globalMapImagePath)
+    {
+      if(!$this->IsGeocoded) return null;
+      return json_encode($this->GetQuickRouteJpegExtensionData());
+    }
+    
     public function GetMapImageSize()
     {
       $size = getimagesize(Helper::LocalPath(MAP_IMAGE_PATH ."/" . $this->MapImage));

@@ -225,6 +225,7 @@
               for($j=0; $j<$waypointCount; $j++)
               {
                 $waypoint = new QRWaypoint();
+                $waypoint->PixelPosition = new QRPoint();
                 // position
                 if($attributes & $waypointAttributes["Position"])
                 {
@@ -292,6 +293,7 @@
               $handle->ParameterizedLocation->Value = self::ReadDouble(substr($tagData, $subPos, 8));
               $subPos += 8;
               // pixel location
+
               $handle->PixelLocation = new QRPoint();
               $handle->PixelLocation->X = self::ReadDouble(substr($tagData, $subPos, 8));
               $subPos += 8;
@@ -300,6 +302,7 @@
               // type
               $handle->Type = self::ReadInt16(substr($tagData, $subPos, 2));
               $subPos += 2;
+
               $session->Handles[] = $handle;
             }
             break;
@@ -444,7 +447,7 @@
 
       $sign = (ord($data[7]) >> 7 == 0 ? 1 : -1);
       $exponent=-1023;
-      $exponent += (ord($data[7]) % 64) << 4;
+      $exponent += (ord($data[7]) % 128) << 4; // TODO: should the mod divisor be 64?
       $exponent += ord($data[6]) >> 4;
 
       $base=1.0;
@@ -649,10 +652,12 @@
     {
       $this->Route->CalculateParameters();
       $this->CalculateLaps();
+      $this->CalculateRoutePixelPositions();
     }
 
     private function CalculateLaps()
     {
+      $handles = new QRHandles($this->Handles);
       $this->StraightLineDistance = 0;
       for($i=0; $i<count($this->Laps); $i++)
       {
@@ -674,9 +679,71 @@
 		  }
           $this->StraightLineDistance += $lap->StraightLineDistance;
         }
+        
+        // PixelPosition of each lap start point
+        $segmentIndex = $this->Route->GetSegmentFromTime($lap->Time);
+        $transformationMatrix = $handles->TransformationMatrix( $segmentIndex, $lap->Time - $this->Laps[0]->Time );
+        $lap->PixelPosition = $lap->Position->PixelPosition( $this->ProjectionOrigin, $transformationMatrix );
+        
         $lastDistance = $distance;
         $lastLap = $lap;
       }
+    }
+
+    private function CalculateRoutePixelPositions()
+    {
+    	$handles = new QRHandles($this->Handles);
+      foreach($this->Route->Segments as $segmentIndex => $s)
+      {
+        foreach($s->Waypoints as $w)
+        {
+          $w->PixelPosition = $w->Position->PixelPosition($this->ProjectionOrigin,$handles->TransformationMatrix($segmentIndex,$w->ElapsedTime));
+        }
+      }      
+    }
+    
+  }
+
+  class QRHandles
+  // This class implements searching for the handle that corresponds to a certain segment and time
+  {
+  	 public $handles;
+  	 private $index = 0;
+  	 private $segments = array();
+  	 function __construct($handles)
+  	 {
+  	   $this->handles = $handles;
+  	   // an array of indices is built, using the segment index and the time-value of the handles to find the handle index
+  	   foreach($handles as $handleIndex => $handle) 
+  	   {
+  	     $segmentIndex = $handle->ParameterizedLocation->SegmentIndex;
+  	     if(!array_key_exists($segmentIndex,$this->segments))
+  	     {
+  	       $this->segments[$segmentIndex][0] = array(0,$handleIndex);
+  	     } 
+  	     $this->segments[$segmentIndex][] = array($handle->ParameterizedLocation->Value,$handleIndex);
+  	   }
+  	 }
+  	 public function get($segmentIndex,$time)
+  	 // returns the handle with the index that matches a segment/time combination
+  	 {
+  	 	while(($this->index >= count($this->segments[$segmentIndex])) || (($this->index > 0) && ($this->segments[$segmentIndex][$this->index][0] > $time)))
+  	 	// earlier index?
+  	 	{
+  	 	  $this->index--;
+  	 	}
+  	 	while(($this->index < count($this->segments[$segmentIndex])-1) && ($this->segments[$segmentIndex][$this->index+1][0] < $time))
+  	 	// later index?
+  	 	{
+  	 	  $this->index++;
+  	 	}
+  	 	return $this->handles[$this->segments[$segmentIndex][$this->index][1]];
+    }
+    public function TransformationMatrix($segmentIndex,$time)
+    // return the transormation matrix of a certain handle that matches with segment/time combination
+    {
+    	$handle = $this->get($segmentIndex,$time);
+    	return ($handle->TransformationMatrix);
     }
   }
 
@@ -721,6 +788,12 @@
           $distance += $distances[$i];
           $s->Waypoints[$i]->Distance = $this->Distance + $distance;
           $s->Waypoints[$i]->ElapsedTime = $this->ElapsedTime + $s->Waypoints[$i]->Time - $s->Waypoints[0]->Time;
+          // calculate speed based on distance and time between successive waypoints
+          if (($i > 0) && ($s->Waypoints[$i]->Time-$s->Waypoints[$i-1]->Time != 0)) {
+            $s->Waypoints[$i]->Speed = $distances[$i] / ($s->Waypoints[$i]->Time-$s->Waypoints[$i-1]->Time) * 3600.0 / 1000.0;
+          } else {
+            $s->Waypoints[$i]->Speed = 0.0;
+          }
         }
         // update distance sum
         $this->Distance += $distance;
@@ -729,7 +802,7 @@
       }
     }
 
-    public function GetParameterizedLocationFromTime($time)
+    public function GetSegmentFromTime($time)
     {
       // which segment?
       $segmentIndex = -1;
@@ -743,6 +816,13 @@
           break;
         }
       }
+    	return $segmentIndex;
+    }
+
+    public function GetParameterizedLocationFromTime($time)
+    {
+      // which segment?
+      $segmentIndex = $this->GetSegmentFromTime($time);
       if($segmentIndex == -1) return null; // outside the session
 
       // perform binary search in this segment index
@@ -849,6 +929,7 @@
     public $Speed;
     public $Distance;
     public $ElapsedTime;
+    public $PixelPosition;
   }
 
   class QRLongLat
@@ -872,6 +953,13 @@
       $phi = $this->Latitude * M_PI / 180;
       return new QRPoint(self::rho * cos($phi) * sin($lambda - $lambda0),
                        self::rho * (cos($phi0) * sin($phi) - sin($phi0) * cos($phi) * cos($lambda - $lambda0)));
+    }
+
+    public function PixelPosition($projectionOrigin,$transformationMatrix)
+    {
+      $xy0 = $this->Project($projectionOrigin);
+      $point = $transformationMatrix->Multiply($xy0->_3x1());
+    	return new QRPoint($point->GetElement(0,0), $point->GetElement(1,0));
     }
 
     public function DistanceTo($other)
@@ -958,6 +1046,14 @@
       $this->X = $x;
       $this->Y = $y;
     }
+    public function _3x1()
+    {
+      $vec = new QRMatrix(3, 1);
+      $vec->SetElement(0, 0, $this->X);
+      $vec->SetElement(1, 0, $this->Y);
+      $vec->SetElement(2, 0, 1.0);
+    	return $vec;
+    }
   }
 
   class QRRectangle
@@ -984,6 +1080,7 @@
     public $Position;
     public $Distance;
     public $StraightLineDistance;
+    public $PixelPosition;
   }
 
   class QRParameterizedLocation
