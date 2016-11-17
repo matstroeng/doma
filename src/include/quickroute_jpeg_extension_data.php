@@ -683,6 +683,9 @@
         // PixelPosition of each lap start point
         $segmentIndex = $this->Route->GetSegmentFromTime($lap->Time);
         $transformationMatrix = $handles->TransformationMatrix( $segmentIndex, $lap->Time - $this->Laps[0]->Time );
+        //echo $segmentIndex;
+        //print_r($this->Route);
+        //exit;
         $lap->PixelPosition = $lap->Position->PixelPosition( $this->ProjectionOrigin, $transformationMatrix );
         
         $lastDistance = $distance;
@@ -697,6 +700,7 @@
       {
         foreach($s->Waypoints as $w)
         {
+        	//print_r($handles->TransformationMatrix($segmentIndex,$w->ElapsedTime));
           $w->PixelPosition = $w->Position->PixelPosition($this->ProjectionOrigin,$handles->TransformationMatrix($segmentIndex,$w->ElapsedTime));
         }
       }      
@@ -722,6 +726,17 @@
   	       $this->segments[$segmentIndex][0] = array(0,$handleIndex);
   	     } 
   	     $this->segments[$segmentIndex][] = array($handle->ParameterizedLocation->Value,$handleIndex);
+  	   }
+  	   // fill in the empty segments if they have no handles within them
+  	   $handleIndex = 0;
+  	   for($segmentIndex = 0; $segmentIndex < count($this->segments); $segmentIndex++)
+  	   {
+  	     if(!array_key_exists($segmentIndex,$this->segments))
+  	     {
+  	     	 $this->segments[$segmentIndex][0] = array(0,$handleIndex);
+  	     } else {
+  	     	 $handleIndex = $this->segments[$segmentIndex][count($this->segments[$segmentIndex])-1][1];
+  	     }
   	   }
   	 }
   	 public function get($segmentIndex,$time)
@@ -958,8 +973,13 @@
     public function PixelPosition($projectionOrigin,$transformationMatrix)
     {
       $xy0 = $this->Project($projectionOrigin);
-      $point = $transformationMatrix->Multiply($xy0->_3x1());
-    	return new QRPoint($point->GetElement(0,0), $point->GetElement(1,0));
+      if ($transformationMatrix != NULL) 
+      {
+        $point = $transformationMatrix->Multiply($xy0->_3x1());
+        return new QRPoint($point->GetElement(0,0), $point->GetElement(1,0));
+      } else {
+        return new QRPoint($xy0->X,$xy0->Y);
+      }
     }
 
     public function DistanceTo($other)
