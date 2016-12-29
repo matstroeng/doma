@@ -106,9 +106,16 @@
     public static function ServerPath($path)
     {
       if(substr($path, 0, 1) == "/") $path = substr($path, 1);
-      return PROJECT_DIRECTORY . $path;
+      return ROOT_URL . PROJECT_DIRECTORY . $path;
     }
 
+    /**
+     * Creates a php[self] url 
+     */
+    public static function SelfPath() 
+    {
+      return ROOT_URL . $_SERVER['PHP_SELF'];
+    }
     /**
     * Creates a rooted path on the local machine e g c:\inetpub\wwwroot\subdir/index.php.
     *

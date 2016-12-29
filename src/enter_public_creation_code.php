@@ -20,7 +20,7 @@
 <div id="wrapper">
 <?php Helper::CreateUserListTopbar() ?>
 <div id="content">
-<form class="wide" method="post" action="<?php print $_SERVER["PHP_SELF"]?>">
+<form class="wide" method="post" action="<?php print Helper::SelfPath()?>">
 
 <h1><?php print __("ADD_USER_PROFILE_TITLE")?></h1>
 
