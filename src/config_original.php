@@ -72,6 +72,11 @@
   // Leave the code empty ('') to prevent people to create user accounts theirselves.
   define('PUBLIC_USER_CREATION_CODE', '');
 
+  //Specifies the root url that the Doma server is running behind if doma is behind a revers proxy.
+  //Example Doma frontend running on mydomain.com/ol/ specify the root_url to '/ol'
+  //this ensures that correct paths are given back to the users browser
+  define('ROOT_URL', '');
+
   // *********************************************************************************************************
   //   APPEARANCE SETTINGS
   // *********************************************************************************************************

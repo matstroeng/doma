@@ -20,7 +20,7 @@
 <div id="wrapper">
 <?php Helper::CreateTopbar() ?>
 <div id="content">
-<form class="wide" method="post" action="<?php print $_SERVER["PHP_SELF"]?>?<?php print Helper::CreateQuerystring(getCurrentUser())?>">
+<form class="wide" method="post" action="<?php print Helper::SelfPath()?>?<?php print Helper::CreateQuerystring(getCurrentUser())?>">
 
 <h1><?php print __("LOGIN")?></h1>
 

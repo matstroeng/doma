@@ -22,7 +22,7 @@
 <div id="wrapper">
 <?php Helper::CreateTopbar() ?>
 <div id="content">
-<form class="wide" method="post" action="<?php print $_SERVER["PHP_SELF"]; ?>?<?php print Helper::CreateQuerystring(getCurrentUser(), isset($vd["MapID"]) ? $vd["MapID"] : null); ?>" enctype="multipart/form-data">
+<form class="wide" method="post" action="<?php print Helper::SelfPath(); ?>?<?php print Helper::CreateQuerystring(getCurrentUser(), isset($vd["MapID"]) ? $vd["MapID"] : null); ?>" enctype="multipart/form-data">
 
 <h1><?php print $vd["Title"]; ?></h1>
 

@@ -31,7 +31,7 @@
 <div id="wrapper">
 <?php Helper::CreateUserListTopbar(); ?>
 <div id="content">
-<form method="post" action="<?php print $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php print Helper::SelfPath(); ?>">
 
 <div id="rssIcon"><a href="rss.php"><img src="gfx/feed-icon-28x28.png" alt="<?php print __("RSS_FEED")?>" title="<?php print __("RSS_FEED")?>" /></a></div>
 
