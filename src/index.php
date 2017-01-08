@@ -36,7 +36,7 @@
 <div id="wrapper">
 <?php Helper::CreateTopbar() ?>
 <div id="content">
-<form method="get" action="<?php print $_SERVER["PHP_SELF"]?>?<?php print Helper::CreateQuerystring(getCurrentUser())?>">
+<form method="get" action="<?php print Helper::SelfPath()?>?<?php print Helper::CreateQuerystring(getCurrentUser())?>">
 <input type="hidden" name="user" value="<?php print getCurrentUser()->Username;?>"/>
 <?php if(count($vd["Errors"]) > 0) { ?>
 <ul class="error">

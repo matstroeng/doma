@@ -84,7 +84,7 @@
 </div>
 
 <div id="content">
-<form id="frm" method="post" action="<?php print $_SERVER['PHP_SELF']; ?>">
+<form id="frm" method="post" action="<?php print Helper::SelfPath(); ?>">
 <?php if(isset($vd["ProcessRerun"]) && $vd["RerunMaps"]!="") {?>
   <input id="rerun_maps" type="hidden" value="<?php print $vd["RerunMaps"]; ?>" />
   <input id="base_url" type="hidden" value="<?php print BASE_URL; ?>" />

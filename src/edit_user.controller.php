@@ -273,7 +273,7 @@
       if($isAdmin) $atoms[] = "mode=admin";
       if($user->ID) $atoms[] = Helper::CreateQuerystring($user);
 
-      $viewData["FormActionURL"] = $_SERVER["PHP_SELF"] . (count($atoms) > 0 ? "?". join("&amp;", $atoms) : "");
+      $viewData["FormActionURL"] = Helper::SelfPath() . (count($atoms) > 0 ? "?". join("&amp;", $atoms) : "");
 
       $viewData["Errors"] = $errors;
       $viewData["IsAdmin"] = $isAdmin;

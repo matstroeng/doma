@@ -18,7 +18,7 @@
 <body id="createBody">
 <div id="wrapper">
 <div id="content">
-<form method="post" action="<?php print $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php print Helper::SelfPath(); ?>">
 
 <?php if(count($vd["Errors"]) == 0) { ?>
 <h1><?php print __("SITE_SUCCESSFULLY_CREATED_TITLE")?></h1>
