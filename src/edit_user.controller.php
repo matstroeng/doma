@@ -1,22 +1,26 @@
 <?php
   include_once(dirname(__FILE__) ."/include/main.php");
-  
+
   class EditUserController
   {
     public function Execute()
     {
-      $viewData = array();  
+      $viewData = array();
 
       $isAdmin = (isset($_GET["mode"]) && $_GET["mode"] == "admin" && Helper::IsLoggedInAdmin());
+      $user = getCurrentUser();
+      $userIsLoggedInUser = $user && Helper::GetLoggedInUser()->ID == $user->ID;
+      $isNewUser = !isset($user) || !$user->ID;
 
       // no user specified and not admin mode - redirect to user list page
-      if(!$isAdmin && !getCurrentUser() && !Session::GetPublicCreationCodeEntered()) Helper::Redirect("users.php");
-      
+      if(!($isAdmin || $userIsLoggedInUser || ($isNewUser && Session::GetPublicCreationCodeEntered())))
+      {
+        Helper::Redirect("users.php");
+      }
+
       $errors = array();
-      $user = getCurrentUser();
-      $isNewUser = !isset($user) || !$user->ID;
       if($isNewUser) $user = new User();
-      
+
       if(isset($_POST["cancel"]))
       {
         Helper::Redirect($isAdmin ? "users.php" : "index.php?". Helper::CreateQuerystring($user));
@@ -27,7 +31,7 @@
         DataAccess::DeleteUserByID($user->ID);
         Helper::Redirect($isAdmin ? "users.php" : "index.php?". Helper::CreateQuerystring($user));
       }
-      
+
       // any category handling button clicked?
       $addCategory = null;
       $deleteCategory = null;
@@ -44,7 +48,7 @@
           break;
         }
       }
-      
+
       if(isset($_POST["save"]) || isset($_POST["delete"]) || $deleteCategory || $addCategory)
       {
         // populate user object with data from form elements
@@ -78,9 +82,9 @@
             $categories[$id]->UserID = $user->ID;
             $categories[$id]->ID = substr($key, 13);
           }
-        }    
+        }
         ksort($categories);
-        
+
         // shall we delete a category?
         if($deleteCategory)
         {
@@ -109,10 +113,10 @@
               {
                 unset($categories[$id]);
               }
-            } 
+            }
           }
         }
-        
+
         if($addCategory)
         {
           $id = "1_". sprintf("%08d", $noOfCategoriesAdded);
@@ -124,7 +128,7 @@
       else
       {
         // first page visit
-        if($isNewUser) 
+        if($isNewUser)
         {
           $noOfCategoriesAdded = 0;
           if($isAdmin) $_POST["sendEmail"] = 1;
@@ -143,7 +147,7 @@
         else
         {
           $categories = $user->GetCategories();
-          $defaultCategory = $user->DefaultCategoryID;  
+          $defaultCategory = $user->DefaultCategoryID;
         }
 
         $customizableSettings = Helper::GetCustomizableStrings();
@@ -152,7 +156,7 @@
           $_POST["CV_$key"] = __($key);
         }
       }
-      
+
       // create category data for output and make sure that there is a default category
       $categoryData = array();
       $defaultCategoryIndex = -1;
@@ -178,7 +182,7 @@
         $categoryData[] = $d;
       }
       $defaultCategory = $defaultCategoryIndex == -1 ? 0 : $categoryData[$defaultCategoryIndex]["defaultValue"];
-      
+
       if(isset($_POST["save"]))
       {
         // validate
@@ -202,11 +206,11 @@
         {
           $errors[] = __("NO_LAST_NAME_ENTERED");
         }
-        if($user->Email == "") 
+        if($user->Email == "")
         {
           $errors[] = __("NO_EMAIL_ENTERED");
         }
-        if($user->Email != "" && !Helper::IsValidEmailAddress($user->Email)) 
+        if($user->Email != "" && !Helper::IsValidEmailAddress($user->Email))
         {
           $errors[] = __("INVALID_EMAIL");
         }
@@ -215,7 +219,7 @@
           if(trim($c->Name) == "") $emptyCategoryNameFound = true;
         }
         if(isset($emptyCategoryNameFound)) $errors[] = __("CATEGORY_NAME_CANNOT_BE_EMPTY");
-        
+
         if(count($errors) == 0)
         {
           $userSettings = array();
@@ -225,10 +229,10 @@
             {
               $key = substr($key, 3);
               $userSettings[$key] = stripslashes($value);
-            }  
+            }
           }
           DataAccess::SaveUser($user, $categories, $defaultCategoryIndex, $userSettings);
-          
+
           // send welcome email
           if($isNewUser && !($isAdmin && !$_POST["sendEmail"]))
           {
@@ -236,14 +240,14 @@
             $subject = __("NEW_USER_EMAIL_SUBJECT");
             $baseAddress = Helper::GlobalPath("");
             $userAddress = Helper::GlobalPath("index.php?user=". $user->Username);
-            $body = sprintf(__("NEW_USER_EMAIL_BODY"), $user->FirstName, $baseAddress, $userAddress, $user->Username, $password);  
+            $body = sprintf(__("NEW_USER_EMAIL_BODY"), $user->FirstName, $baseAddress, $userAddress, $user->Username, $password);
             $emailSent = true;
             $emailSentSuccessfully = Helper::SendEmail($fromName, $user->Email, $subject, $body);
           }
-          
+
           // clear language cache
           Session::SetLanguageStrings(null);
-          
+
           if($isAdmin)
           {
             Helper::Redirect("users.php". ($emailSent && !$emailSentSuccessfully ? "?error=email" : ""));
@@ -254,8 +258,8 @@
           }
         }
       }
-      
-      if($isAdmin) 
+
+      if($isAdmin)
       {
         $viewData["Title"] = ($user->ID ? sprintf(__("EDIT_USER_X"), $user->FirstName ." ". $user->LastName) : __("ADD_USER"));
         $viewData["Info"] = ($user->ID ? __("ADMIN_EDIT_USER_INFO") : __("ADMIN_ADD_USER_INFO")) ." ". sprintf(__("REQUIRED_FIELDS_INFO"), '<span class="required">*</span>');
@@ -268,9 +272,9 @@
       $atoms = array();
       if($isAdmin) $atoms[] = "mode=admin";
       if($user->ID) $atoms[] = Helper::CreateQuerystring($user);
-      
+
       $viewData["FormActionURL"] = $_SERVER["PHP_SELF"] . (count($atoms) > 0 ? "?". join("&amp;", $atoms) : "");
-      
+
       $viewData["Errors"] = $errors;
       $viewData["IsAdmin"] = $isAdmin;
       $viewData["IsNewUser"] = $isNewUser;

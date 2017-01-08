@@ -141,7 +141,7 @@
 
     public static function IsLoggedInAdmin()
     {
-       return Session::GetIsLoggedInAdmin(true);
+       return Session::GetIsLoggedInAdmin();
     }
 
     public static function LogoutAdmin()
@@ -814,7 +814,7 @@
       }
       return $data;
     }
-     
+
     public static function GoogleAnalytics()
     {
       if(USE_GA == "1")
@@ -848,7 +848,7 @@
           {
             $user = new User();
             $user->Load($map->UserID);
-            $ret[]=$map->ID.";".$user->Username; 
+            $ret[]=$map->ID.";".$user->Username;
           }
         }
         if(count($ret)>0)
@@ -859,10 +859,10 @@
         {
           return null;
         }
-    
+
       }
     }
-    
+
   }
 
 ?>
