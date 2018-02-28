@@ -114,7 +114,7 @@
      */
     public static function SelfPath() 
     {
-      return ROOT_URL . $_SERVER['PHP_SELF'];
+      return ROOT_URL . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
     /**
     * Creates a rooted path on the local machine e g c:\inetpub\wwwroot\subdir/index.php.
