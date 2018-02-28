@@ -106,7 +106,7 @@
          *  @uses   SimpleUnzip::ReadFile() Opens file on new if specified
          *  @since  1.0
          */
-        function SimpleUnzip($in_FileName = '')
+        function __construct($in_FileName = '')
         {
             if ($in_FileName !== '') {
                 SimpleUnzip::ReadFile($in_FileName);
@@ -479,7 +479,7 @@
          *  @access public
          *  @since  1.0
          */
-        function SimpleUnzipEntry($in_Entry)
+        function __construct($in_Entry)
         {
             $this->Data     = $in_Entry['D'];
             $this->Error    = $in_Entry['E'];
