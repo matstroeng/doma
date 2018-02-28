@@ -16,7 +16,7 @@
   <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
   <script src="js/common.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
   <?php if($vd["OverviewMapData"] != null) { ?>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;language=<?php print Session::GetLanguageCode(); ?>" type="text/javascript"></script>
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false&amp;language=<?php print Session::GetLanguageCode(); ?>" type="text/javascript"></script>
     <script src="js/overview_map.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
     <script type="text/javascript">
       <!--

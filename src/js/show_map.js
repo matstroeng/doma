@@ -166,7 +166,7 @@ function reloadGM()
 {
   if($("#gmap").size())
   {
-    $("#gmap").html("<a href='"+$("#gmap_url").val()+"' target='_blank'><img src='http://maps.googleapis.com/maps/api/staticmap?center="+$("#gmap_coordinates").val()+"&amp;zoom=6&amp;size=174x"+$("#wrapper").height()+"&amp;maptype=terrain&amp;markers=color:red%7C"+$("#gmap_coordinates").val()+"&amp;sensor=false&amp;language="+$("#gmap_lang").val()+"'></a>");
+    $("#gmap").html("<a href='"+$("#gmap_url").val()+"' target='_blank'><img src='//maps.googleapis.com/maps/api/staticmap?center="+$("#gmap_coordinates").val()+"&amp;zoom=6&amp;size=174x"+$("#wrapper").height()+"&amp;maptype=terrain&amp;markers=color:red%7C"+$("#gmap_coordinates").val()+"&amp;sensor=false&amp;language="+$("#gmap_lang").val()+"'></a>");
   }
 }
 
