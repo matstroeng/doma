@@ -165,7 +165,7 @@
              "WHERE UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')".
              ($categoryID ? "AND CategoryID='$categoryID'" : "").
-             "ORDER BY Date ASC";
+             "ORDER BY YEAR(Date) ASC";
       $rs = self::Query($sql);
 
       $years = array();
@@ -590,10 +590,22 @@
       }
 
       $ret = array();
-      $sql = "SELECT * FROM `". DB_MAP_TABLE ."` a ".
-             "INNER JOIN `". DB_MAP_TABLE ."` b ".
-             "ON a.ID=b.ID ".
-             "WHERE a.`$field`=(SELECT MAX(`$field`) FROM `". DB_MAP_TABLE ."` WHERE UserID=b.UserID AND (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID'))";
+
+      $sql = "SELECT a.* 
+        FROM
+        `". DB_MAP_TABLE ."` a
+          JOIN
+        (SELECT 
+          UserID, MAX($field) AS Date
+        FROM
+          `". DB_MAP_TABLE ."`
+        WHERE
+          ProtectedUntil IS NULL
+          OR ProtectedUntil <= '$now'
+          OR UserID = '$requestingUserID'
+        GROUP BY UserID) AS b ON a.UserID = b.UserID AND a.`$field` = b.Date
+        ORDER BY a.UserID, a.LastChangedTime;";
+
       $rs = self::Query($sql);
       while($r = mysqli_fetch_assoc($rs))
       {
