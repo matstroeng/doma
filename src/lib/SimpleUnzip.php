@@ -326,14 +326,6 @@
 
                             case 12: // BZIP2
 // 2003-12-02 - HB >
-                                if (! extension_loaded('bz2')) {
-                                    if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
-                                      @dl('php_bz2.dll');
-                                    } else {
-                                      @dl('bz2.so');
-                                    }
-                                }
-
                                 if (extension_loaded('bz2')) {
 // 2003-12-02 - HB <
                                     $vZ = bzdecompress($vZ);
