@@ -234,7 +234,6 @@
              "UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID') ".
              "ORDER BY Date ASC, ID ASC";
-      $r = mysqli_fetch_assoc(self::Query($sql));
       if($r = mysqli_fetch_assoc(self::Query($sql)))
       {
         $map = new Map();
