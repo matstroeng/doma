@@ -34,7 +34,7 @@
     'RERUN_APIURL' => 'http://omaps.worldofo.com/apicall.php?apikey={0}&link={1}'
   );
 
-  while(list($key, $value) = each($newConfigurationSettings))
+  foreach ($newConfigurationSettings as $key => $value)
   {
     if(!defined($key)) define($key, $value);
   }

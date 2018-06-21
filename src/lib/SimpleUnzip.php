@@ -106,7 +106,7 @@
          *  @uses   SimpleUnzip::ReadFile() Opens file on new if specified
          *  @since  1.0
          */
-        function SimpleUnzip($in_FileName = '')
+        function __construct($in_FileName = '')
         {
             if ($in_FileName !== '') {
                 SimpleUnzip::ReadFile($in_FileName);
@@ -326,14 +326,6 @@
 
                             case 12: // BZIP2
 // 2003-12-02 - HB >
-                                if (! extension_loaded('bz2')) {
-                                    if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
-                                      @dl('php_bz2.dll');
-                                    } else {
-                                      @dl('bz2.so');
-                                    }
-                                }
-
                                 if (extension_loaded('bz2')) {
 // 2003-12-02 - HB <
                                     $vZ = bzdecompress($vZ);
@@ -479,7 +471,7 @@
          *  @access public
          *  @since  1.0
          */
-        function SimpleUnzipEntry($in_Entry)
+        function __construct($in_Entry)
         {
             $this->Data     = $in_Entry['D'];
             $this->Error    = $in_Entry['E'];
