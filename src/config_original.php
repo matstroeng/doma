@@ -25,6 +25,9 @@
   define('DB_USER_SETTING_TABLE', 'doma_userSettings');
   define('DB_CATEGORY_TABLE', 'doma_categories');
 
+  // The Google API key. Get yours here: https://developers.google.com/maps/documentation/javascript/get-api-key
+  define('GOOGLE_MAPS_API_KEY', 'your-google-maps-api-key');
+
   // The user name and password for administration (e g adding and editing users).
   define('ADMIN_USERNAME', 'yourAdminUsername');
   define('ADMIN_PASSWORD', 'yourAdminPassword');
