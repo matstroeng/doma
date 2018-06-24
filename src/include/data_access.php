@@ -165,7 +165,7 @@
              "WHERE UserID='$userID' AND ".
              "(ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')".
              ($categoryID ? "AND CategoryID='$categoryID'" : "").
-             "ORDER BY Date ASC";
+             "ORDER BY Year ASC";
       $rs = self::Query($sql);
 
       $years = array();
