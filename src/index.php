@@ -2,7 +2,7 @@
   include_once(dirname(__FILE__) ."/include/main.php");
   include_once(dirname(__FILE__) ."/index.controller.php");
   include_once(dirname(__FILE__) ."/include/json.php");
-  
+
   $controller = new IndexController();
   $vd = $controller->Execute();
 ?>
@@ -21,8 +21,8 @@
   <?php if($vd["DisplayMode"] == "overviewMap") { ?>
     <script type="text/javascript">
       <!--
-      $(function() { 
-        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;        
+      $(function() {
+        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;
         $("#overviewMap").overviewMap({ data: overviewMapData });
       });
       -->
@@ -60,14 +60,14 @@
 <p><?php print nl2br(__("INTRO"))?></p>
 
 <div id="selectCategoryAndYear">
-<?php 
+<?php
   if(count($vd["YearsWithText"]) < 2)
   {
     print __("NO_MAPS");
   }
   else
   {
-  ?>  
+  ?>
   <label for="categoryID"><?php print __("SELECT_CATEGORY")?>:</label>
   <select name="categoryID" id="categoryID">
   <?php
@@ -111,8 +111,8 @@
 <?php } ?>
 
 <?php
-  if($vd["DisplayMode"] == "list") include("index_list.php");  
-  if($vd["DisplayMode"] == "overviewMap") include("index_overview_map.php");  
+  if($vd["DisplayMode"] == "list") include("index_list.php");
+  if($vd["DisplayMode"] == "overviewMap") include("index_overview_map.php");
 ?>
   </div>
 <div class="clear"></div>

@@ -1,6 +1,6 @@
 <?php
   include_once(dirname(__FILE__) ."/users.controller.php");
-  
+
   $controller = new UsersController();
   $vd = $controller->Execute();
 ?>
@@ -20,10 +20,10 @@
     <script src="js/overview_map.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
     <script type="text/javascript">
       <!--
-        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;        
+        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;
       -->
     </script>
-  <?php } ?>  
+  <?php } ?>
   <script type="text/javascript" src="js/users.js?v=<?php print DOMA_VERSION; ?>"></script>
 </head>
 
@@ -48,8 +48,8 @@
         print "<li>$e</li>";
       }
     ?>
-    </ul>  
-  <?php  
+    </ul>
+  <?php
   }
 ?>
 
@@ -62,13 +62,13 @@
     if(Helper::IsLoggedInAdmin()) print ' <a href="edit_user.php?mode=admin">'. __("CREATE_THE_FIRST_USER") .'</a>';
     print '</p>';
   }
-  
+
   if(!Helper::IsLoggedInAdmin() && PUBLIC_USER_CREATION_CODE) print '<p>'. __("PUBLIC_CREATE_USER_INFO") .'</p>';
 
   if(count($vd["Users"]) > 0)
   {
 ?>
-<h2><?php print __("USERS")?></h2>      
+<h2><?php print __("USERS")?></h2>
 <table class="fullWidth">
 <thead>
   <tr>
@@ -99,26 +99,26 @@
     $loginAsUserLink = "";
     $thumbnailImage = "";
     $url = ($u->Visible ? "index.php?". Helper::CreateQuerystring($u) : "");
-    $nameLink = Helper::EncapsulateLink(hsc($u->FirstName ." ". $u->LastName), $url);    
+    $nameLink = Helper::EncapsulateLink(hsc($u->FirstName ." ". $u->LastName), $url);
 
 	  if(isset($vd["LastMapForEachUser"][$u->ID]))
     {
       $lastMap = $vd["LastMapForEachUser"][$u->ID];
-      if($lastMap) 
+      if($lastMap)
       {
-        $lastMapLink = '<a href="show_map.php?'. Helper::CreateQuerystring($u, $lastMap->ID) .'" class="thumbnailHoverLink">'. 
+        $lastMapLink = '<a href="show_map.php?'. Helper::CreateQuerystring($u, $lastMap->ID) .'" class="thumbnailHoverLink">'.
                        hsc($lastMap->Name).
-                       '</a>'; 
+                       '</a>';
 
         $lastMapDate = date(__("DATE_FORMAT"), Helper::StringToTime($lastMap->Date, true));
         $lastMapUpdated = date(__("DATETIME_FORMAT"), Helper::StringToTime($lastMap->LastChangedTime, true));
         $thumbnailImage = '<img src="'. Helper::GetThumbnailImage($lastMap) .'" alt="'. hsc($lastMap->Name)  .'" height="'. THUMBNAIL_HEIGHT .'" width="'. THUMBNAIL_WIDTH .'" />';
       }
     }
-    
+
     $url = ($u->Visible ? "users.php?loginAsUser=". urlencode($u->Username) : "");
     $loginAsUserLink = Helper::EncapsulateLink(sprintf(__("LOGIN_AS_X"), hsc($u->FirstName)), $url);
-    
+
     ?>
     <tr class="<?php print ($count % 2 == 1 ? "odd" : "even")?>">
       <?php if(Helper::IsLoggedInAdmin()) { ?>
@@ -140,10 +140,10 @@
       <td><?php print ($u->Visible ? __("YES") : __("NO"))?></td>
       <td><a href="edit_user.php?mode=admin&amp;<?php print Helper::CreateQuerystring($u)?>"><?php print __("EDIT")?></a></td>
       <td><?php print $loginAsUserLink?></td>
-      
+
       <?php } ?>
     </tr>
-    <?php  
+    <?php
     }
   ?>
 </tbody>
@@ -163,7 +163,7 @@
     <span class="separator">|</span>
     <a href="users.php?lastMaps=all"><?php print __("SHOW_ALL")?></a>
   </span>
-</h2>      
+</h2>
 <table class="fullWidth">
 <thead>
   <tr>
@@ -181,16 +181,16 @@
       {
         $count++;
         $url = "index.php?". Helper::CreateQuerystring($map->GetUser());
-        $nameLink = Helper::EncapsulateLink(hsc($map->GetUser()->FirstName ." ". $map->GetUser()->LastName), $url);    
-        $mapLink = '<a href="show_map.php?'. Helper::CreateQuerystring($map->GetUser(), $map->ID) .'" class="thumbnailHoverLink">'. 
+        $nameLink = Helper::EncapsulateLink(hsc($map->GetUser()->FirstName ." ". $map->GetUser()->LastName), $url);
+        $mapLink = '<a href="show_map.php?'. Helper::CreateQuerystring($map->GetUser(), $map->ID) .'" class="thumbnailHoverLink">'.
                    hsc($map->Name).
-                   '</a>'; 
-        
+                   '</a>';
+
         $date = date(__("DATE_FORMAT"), Helper::StringToTime($map->Date, true));
         $updated = date(__("DATETIME_FORMAT"), Helper::StringToTime($map->LastChangedTime, true));
 
         $thumbnailImage = '<img src="'. Helper::GetThumbnailImage($map) .'" alt="'. hsc($map->Name)  .'" height="'. THUMBNAIL_HEIGHT .'" width="'. THUMBNAIL_WIDTH .'" />';
-        
+
         ?>
         <tr class="<?php print ($count % 2 == 1 ? "odd" : "even")?>">
           <td><?php print $nameLink?></td>
@@ -206,7 +206,7 @@
           <td><?php print $map->getCategory()->Name?></td>
           <td><?php print $updated?></td>
         </tr>
-        <?php          
+        <?php
       }
     }
     ?>
@@ -235,7 +235,7 @@
     <span class="separator">|</span>
     <a href="users.php?lastComments=all"><?php print __("SHOW_ALL")?></a>
   </span>
-</h2>      
+</h2>
 <table class="fullWidth">
 <thead>
   <tr>
@@ -253,14 +253,14 @@
       {
         $count++;
         $url = "index.php?user=". $last_comment["UserName"];
-        $nameLink = Helper::EncapsulateLink(hsc($last_comment["UserFLName"]), $url);    
-        $mapLink = '<a href="show_map.php?user='. $last_comment["UserName"] .'&map='. $last_comment["ID"] .'&showComments=true" class="thumbnailHoverLink">'. 
+        $nameLink = Helper::EncapsulateLink(hsc($last_comment["UserFLName"]), $url);
+        $mapLink = '<a href="show_map.php?user='. $last_comment["UserName"] .'&map='. $last_comment["ID"] .'&showComments=true" class="thumbnailHoverLink">'.
                    hsc($last_comment["Name"]).
-                   '</a>'; 
-        
+                   '</a>';
+
         $updated = date(__("DATETIME_FORMAT"), Helper::StringToTime($last_comment["CommentDate"], true));
 
-       
+
         ?>
         <tr class="<?php print ($count % 2 == 1 ? "odd" : "even")?>">
           <td><?php print $nameLink?></td>
@@ -271,7 +271,7 @@
           <td><?php print $last_comment["CommentName"]?></td>
           <td><?php print $updated?></td>
         </tr>
-        <?php          
+        <?php
       }
     }
     ?>

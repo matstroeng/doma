@@ -36,7 +36,7 @@
   // The directory is created during creation. Write access to the directory for the server user account under which PHP runs is required.
   define('MAP_IMAGE_PATH', 'map_images');
 
-  // The default language code of the site according to ISO 639-1 language codes: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes 
+  // The default language code of the site according to ISO 639-1 language codes: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
   // Language files are in xml format, named [language code].xml (e.g. en.xml) and located in the 'languages' directory.
   // Language flag icons are in png format, named [language code].png (e.g. en.png) and located in the 'gfx/flags' directory.
   // You may create your own language file by copying and modifying one of the existing files.
@@ -121,25 +121,25 @@
   // 1. Use file_get_contents() to dynamically check if an image is resizable using the GD library, and if successful resize using GD.
   // 2. Always treat the image as resizable, and resize using GD. If memory problems occur, the upload will probably hang or crash.
   define('IMAGE_RESIZING_METHOD', '1');
-  
+
   // Include Google Analytics script (1 = yes, 0 = no) / creates in index.php, users.php, show_map.php
   define('USE_GA', '0');
   define('GA_TRACKER', 'UA-1234567-8');
-  
+
   // If you want a different time zone than the server's time zone, specify it here. An empty string means that the server's default time zone is used.
   // see http://www.php.net/manual/en/timezones.php for available time zones.
   define('TIME_ZONE', '');
-  
+
   // Define usage of 3DRERUN (1 = yes, 0 = no)
   define('USE_3DRERUN','0');
   // Maximal number of tries to get id from 3DRerun - keep low to avoid worldofo.com high load
   define('RERUN_MAX_TRIES','5');
-  // Frequency of retry to get 3DRerun id - in hours 
+  // Frequency of retry to get 3DRerun id - in hours
   // Keep 6 hours since worldofo.com grab data from DOMA archives in the same interval
   define('RERUN_FREQUENCY','6');
   // Worldofo.com api url
   define('RERUN_APIURL','http://omaps.worldofo.com/apicall.php?apikey={0}&link={1}');
-  // Worldofo.com api key - please ask Jan Kocbach jan.kocbach@gmail.com to get it 
+  // Worldofo.com api key - please ask Jan Kocbach jan.kocbach@gmail.com to get it
   // By this procedure you also recheck that your maps are collected
   define('RERUN_APIKEY','xxxxxx');
 ?>

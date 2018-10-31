@@ -31,7 +31,9 @@
     'RERUN_MAX_TRIES' => '5',
     'RERUN_FREQUENCY' => '6',
     'RERUN_APIKEY' => 'xxxxxx',
-    'RERUN_APIURL' => 'http://omaps.worldofo.com/apicall.php?apikey={0}&link={1}'
+    'RERUN_APIURL' => 'http://omaps.worldofo.com/apicall.php?apikey={0}&link={1}',
+    'GOOGLE_MAPS_API_KEY' => '',
+    'ROOT_URL' => ''
   );
 
   foreach ($newConfigurationSettings as $key => $value)

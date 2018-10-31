@@ -1,10 +1,10 @@
 <?php
   include_once(dirname(__FILE__) ."/show_map.controller.php");
   include_once("./include/quickroute_jpeg_extension_data.php");
-  
+
   $controller = new ShowMapController();
   $vd = $controller->Execute();
-  $map = $vd["Map"];  
+  $map = $vd["Map"];
   $QR = $map->GetQuickRouteJpegExtensionData();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="style.css?v=<?php print DOMA_VERSION; ?>" type="text/css" />
   <link rel="icon" type="image/png" href="gfx/favicon.png" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php?<?php print Helper::CreateQuerystring(getCurrentUser())?>" />
-  <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>  
+  <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="js/show_map.js?v=<?php print DOMA_VERSION; ?>"></script>
   <script type="text/javascript" src="js/jquery/jquery.timeago.js"></script>
-  <?php 
+  <?php
     $lang = Session::GetLanguageCode();
     if($lang != "" && $lang != "en")
     {
@@ -33,13 +33,13 @@
     <script src="js/overview_map.js" type="text/javascript"></script>
     <script type="text/javascript">
       <!--
-      $(function() { 
-        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;        
+      $(function() {
+        var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;
         $("#overviewMap").overviewMap({ data: overviewMapData });
       });
       -->
     </script>
-  <?php } ?> 
+  <?php } ?>
   <?php if(isset($vd["ProcessRerun"])) {?>
     <?php if($vd["RerunMaps"]!="") {?>
       <script type="text/javascript" src="js/rerun.js?v=<?php print DOMA_VERSION; ?>"></script>
@@ -49,7 +49,7 @@
       </script>
     <?php }?>
   <?php }?>
-  
+
 
 </head>
 <body id="showMapBody">
@@ -77,7 +77,7 @@
   <div class="right">
   <?php if($vd["Previous"]) { ?><a href="show_map.php?<?php print Helper::CreateQuerystring(getCurrentUser(), $vd["Previous"]->ID)?>"><?php print "&lt;&lt; ". $vd["PreviousName"]; ?></a><?php } ?>
   <?php if($vd["Next"]) { ?><span class="separator">|</span><a href="show_map.php?<?php print Helper::CreateQuerystring(getCurrentUser(), $vd["Next"]->ID)?>"><?php print $vd["NextName"] ." &gt;&gt;"; ?></a>
-  
+
   <?php } ?>
   </div>
   <div class="clear"></div>
@@ -89,7 +89,7 @@
   <input id="rerun_maps" type="hidden" value="<?php print $vd["RerunMaps"]; ?>" />
   <input id="base_url" type="hidden" value="<?php print BASE_URL; ?>" />
   <input id="rerun_apikey" type="hidden" value="<?php print RERUN_APIKEY; ?>" />
-  <input id="rerun_apiurl" type="hidden" value="<?php print RERUN_APIURL; ?>" />  
+  <input id="rerun_apiurl" type="hidden" value="<?php print RERUN_APIURL; ?>" />
   <input id="total_rerun_maps" type="hidden" value="<?php print $vd["TotalRerunMaps"]; ?>" />
   <input id="processed_rerun_maps" type="hidden" value="0" />
 <?php }?>
@@ -103,7 +103,7 @@
 
 <div id="propertyContainer">
 <?php
-  print '<div class="property"><span class="caption">'. __("CATEGORY") .":</span> ". $map->GetCategory()->Name .'</div>'; 
+  print '<div class="property"><span class="caption">'. __("CATEGORY") .":</span> ". $map->GetCategory()->Name .'</div>';
   if(__("SHOW_MAP_AREA_NAME") && $map->MapName != "") print '<div class="property"><span class="caption">'. __("MAP_AREA_NAME") .':</span> '. $map->MapName .'</div>';
   if(__("SHOW_ORGANISER") && $map->Organiser != "") print '<div class="property"><span class="caption">'. __("ORGANISER") .':</span> '. $map->Organiser .'</div>';
   if(__("SHOW_COUNTRY") && $map->Country != "") print '<div class="property"><span class="caption">'. __("COUNTRY") .':</span> '. $map->Country .'</div>';
@@ -121,19 +121,19 @@ if(isset($QR) && $QR->IsValid)
 	for ($i = 0; $i < $val; $i++) {
 		$c1 += $waypoints[$i]->HeartRate;
 		$c2 += 1;
-		if ($waypoints[$i]->HeartRate > $max1) 
+		if ($waypoints[$i]->HeartRate > $max1)
 		{
 			$max1 = $waypoints[$i]->HeartRate;
 		}
 	}
-	
-  if((__("SHOW_DISTANCE"))||(__("SHOW_ELAPSEDTIME"))) 
+
+  if((__("SHOW_DISTANCE"))||(__("SHOW_ELAPSEDTIME")))
 	{
 		if(__("SHOW_DISTANCE") && $map->Distance != "") print '<div class="property"><span class="caption">'. __("DISTANCE") .':</span> '. round(($map->Distance)/1000,2) .' km</div>';
 		if(__("SHOW_ELAPSEDTIME") && $map->ElapsedTime != "") print '<div class="property"><span class="caption">'. __("ELAPSEDTIME") .':</span> '. Helper::ConvertToTime($map->ElapsedTime,"MM:SS").'</div>';
 	}
-	
-  if (($c1 != 0)&&((__("SHOW_MAXHR"))||(__("SHOW_AVGHR")))) 
+
+  if (($c1 != 0)&&((__("SHOW_MAXHR"))||(__("SHOW_AVGHR"))))
   {
 		if(__("SHOW_AVGHR")) print '<div class="property"><span class="caption">'. __("AVGHR") .':</span> '. round($c1/$c2,0).'</div>';
 		if(__("SHOW_MAXHR")) print '<div class="property"><span class="caption">'. __("MAXHR") .':</span> '. round($max1,0).'</div>';
@@ -156,20 +156,20 @@ if(isset($QR) && $QR->IsValid)
 </div>
 
 <div id="postedComments"<?php if(!$vd["ShowComments"]) print ' class="hidden"'; ?>">
-  <?php 
-    foreach($vd["Comments"] as $comment) 
+  <?php
+    foreach($vd["Comments"] as $comment)
     {
       include(dirname(__FILE__) ."/show_comment.php");
     }
   ?>
 </div>
-  
+
 <div class="commentBox<?php if(!$vd["ShowComments"]) print " hidden"; ?>" id="commentBox">
   <div id="commentBoxHeader"><?php print __("POST_COMMENTS") ?></a></div>
   <div id="userDetails">
     <input type="hidden" id="map_user" value="<?php print getCurrentUser()->Username ?>">
     <label for="user_name"><?php print __("NAME") ?>:</label>
-    <input type="text" id="user_name"<?php if(Helper::IsLoggedInUser()) print " value='" . hsc(Helper::GetLoggedInUser()->FirstName. " " .Helper::GetLoggedInUser()->LastName) ."'"; ?> /> 
+    <input type="text" id="user_name"<?php if(Helper::IsLoggedInUser()) print " value='" . hsc(Helper::GetLoggedInUser()->FirstName. " " .Helper::GetLoggedInUser()->LastName) ."'"; ?> />
     <label id="userEmailLabel" for="user_email"><?php print __("EMAIL") ?>:</label>
     <input type="text" id="user_email"<?php if(Helper::IsLoggedInUser()) print "value='". hsc(Helper::GetLoggedInUser()->Email) ."'"; ?> />
   </div>
@@ -180,7 +180,7 @@ if(isset($QR) && $QR->IsValid)
   <input type="hidden" id="commentDeleteConfirmationText" value="<?php print hsc(__("COMMENT_DELETE_CONFIRMATION")); ?>"/>
   </div>
 
-<?php 
+<?php
 }
 ?>
 
