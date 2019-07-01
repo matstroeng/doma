@@ -248,6 +248,7 @@
       $uploadDir = Helper::LocalPath(MAP_IMAGE_PATH ."/");
       self::DeleteMapImage($map);
       self::DeleteThumbnailImage($map);
+      self::DeleteBlankMapImage($map);
       $map->Delete();
     }
 
