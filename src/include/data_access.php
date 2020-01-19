@@ -568,6 +568,7 @@
       {
         self::DeleteMapImage($m);
         self::DeleteThumbnailImage($m);
+        self::DeleteBlankMapImage($map);
       }
       $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "DELETE FROM `". DB_MAP_TABLE ."` WHERE UserID='$id'";
