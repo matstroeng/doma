@@ -80,6 +80,11 @@
               // 3drerun.worldofo.com ID
               "ALTER TABLE `". DB_MAP_TABLE ."` ADD `RerunID` INT ",
               "ALTER TABLE `". DB_MAP_TABLE ."` ADD `RerunTries` INT ")
+            ),
+      array("version" => "3.0.9",
+            "scripts" => array(
+              // index for speeding up users.php
+              "ALTER TABLE `". DB_COMMENT_TABLE ."` ADD INDEX `Comments_MapID` (`MapID`)")
            )
     );
     return array_filter($allScripts, "filter");
