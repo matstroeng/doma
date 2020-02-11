@@ -198,6 +198,7 @@ if($map->IsGeocoded)
   print '<input id="gmap_coordinates" type="hidden" value="'.$coordinates.'" />';
   print '<input id="gmap_url" type="hidden" value="'.$vd["GoogleMapsUrl"].'" />';
   print '<input id="gmap_lang" type="hidden" value="'.Session::GetLanguageCode().'" />';
+  print '<input id="gmap_key" type="hidden" value="'.GOOGLE_MAPS_API_KEY.'" />';
   print '<div id="gmap">';
   print '</div>';
 }
