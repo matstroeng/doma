@@ -718,7 +718,7 @@
   class QRHandles
   // This class implements searching for the handle that corresponds to a certain segment and time
   {
-    public $handles;
+    public $handles = [];
     private $index = 0;
     private $segments = array();
     function __construct($handles)
