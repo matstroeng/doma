@@ -29,7 +29,7 @@
   ?>
   <script src="js/common.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
   <?php if(isset($vd["OverviewMapData"])) { ?>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?php print GOOGLE_MAPS_API_KEY; ?>&amp;sensor=false&amp;language=<?php print $lang; ?>" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php print GOOGLE_MAPS_API_KEY; ?>&amp;language=<?php print $lang; ?>" type="text/javascript"></script>
     <script src="js/overview_map.js" type="text/javascript"></script>
     <script type="text/javascript">
       <!--
@@ -198,6 +198,7 @@ if($map->IsGeocoded)
   print '<input id="gmap_coordinates" type="hidden" value="'.$coordinates.'" />';
   print '<input id="gmap_url" type="hidden" value="'.$vd["GoogleMapsUrl"].'" />';
   print '<input id="gmap_lang" type="hidden" value="'.Session::GetLanguageCode().'" />';
+  print '<input id="gmap_key" type="hidden" value="'.GOOGLE_MAPS_API_KEY.'" />';
   print '<div id="gmap">';
   print '</div>';
 }
