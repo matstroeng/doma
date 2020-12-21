@@ -1,5 +1,5 @@
 <?php
 /*
-For information about the digital orienteering map archive: http://www.matstroeng.se/doma.
+For information about the digital orienteering map archive: https://www.matstroeng.se/doma.
 */
  ?>

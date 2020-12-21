@@ -26,9 +26,6 @@ There is a need to define events (i e trainings/competitions). An event is a con
   * Further integration with QuickRoute jpeg metadata: calculate speed, heart rate, etc at a certain time.
   * ~~Maps might be encrypted before a certain time, which makes it possible to publish maps for a traning in advance without them being revealed to the public.~~
 
-==Replay using javascript/SVG==
-Use the experimental replay from http://www.matstroeng.se/tracking/replay.php?eventId=4. Source code available on demand. Might be used for live tracking as well as post-race replay.
-
 ==Language translations==
   * ~~Place language selection to the top bar (every page)~~
   * ~~Define available languages in config.php~~

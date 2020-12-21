@@ -38,7 +38,7 @@
 
   // The default language code of the site according to ISO 639-1 language codes: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
   // Language files are in xml format, named [language code].xml (e.g. en.xml) and located in the 'languages' directory.
-  // Language flag icons are in png format, named [language code].png (e.g. en.png) and located in the 'gfx/flags' directory.
+  // Language flag icons are in png format, named [language code].png (e.g. en.png) and located in the 'gfx/flag' directory.
   // You may create your own language file by copying and modifying one of the existing files.
   // Current languages include
   //   cs  (Czech, credits to Michal Besta)
@@ -61,7 +61,7 @@
   define('LANGUAGE_CODE', 'en');
 
   // The MySQL text sorting order, known as 'collation'.
-  // Use utf8_general_ci for English, utf8_swedish_ci for Swedish, and utf8_danish_ci for Norwegian BokmÃ¥l.
+  // Use utf8_general_ci for English, utf8_swedish_ci for Swedish, and utf8_danish_ci for Norwegian Bokmål.
   // Other collations can be found at the MySQL website, http://dev.mysql.com
   // NOTE: this setting only has effect when creating the site. Changing this setting after the site has been created will not have any effect.
   define('DB_COLLATION', 'utf8_general_ci');
@@ -114,7 +114,7 @@
   // The first value in each pair is the language name.
   // The second value is the language code, see the LANGUAGE_CODE setting above.
   // Example: "English;en|Svenska;sv" makes English and Swedish available, and shows English and Swedish flags in topbar.
-  define('LANGUAGES_AVAILABLE', 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr|Український;ua');
+  define('LANGUAGES_AVAILABLE', 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Lietuvių kalba;lt|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr|Український;ua');
 
   // The image resizing method to use when generating thumbnails for map images.
   // Select a suitable method depending on server configuration and available memory. If thumbnail generation fails, try to change this value.

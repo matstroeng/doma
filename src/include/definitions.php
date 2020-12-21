@@ -1,6 +1,6 @@
 <?php
-  define('DOMA_VERSION', '3.0.8');
-  define('DOMA_SERVER', 'http://www.matstroeng.se/doma/domaserver.php');
+  define('DOMA_VERSION', '3.0.9');
+  define('DOMA_SERVER', 'https://www.matstroeng.se/doma/domaserver.php');
 
   $rootPath =  dirname(dirname(__FILE__));
   if ($rootPath[strlen($rootPath)-1] != '/')
@@ -22,7 +22,7 @@
     'DB_COMMENT_TABLE' => 'doma_comments',
     'TEMP_FILE_PATH' => 'temp',
     'SHOW_LANGUAGES_IN_TOPBAR' => '1',
-    'LANGUAGES_AVAILABLE' => 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr|Український;ua',
+    'LANGUAGES_AVAILABLE' => 'Česky;cs|Dansk;da|Deutsch;de|Eesti;et|English;en|Español;es|Français;fr|Italiano;it|Lietuvių kalba;lt|Magyar;hu|Norsk;nb|Polski;pl|Português;pt|Русский;ru|Svenska;sv|Türkçe;tr|Український;ua',
     'IMAGE_RESIZING_METHOD' => '1',
     'USE_GA' => '0',
     'GA_TRACKER' => '',
