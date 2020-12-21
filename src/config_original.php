@@ -50,6 +50,7 @@
   //   fr  (French, credits to François Coulier)
   //   it  (Italian, credits to Davide Miori)
   //   hu  (Hungarian, credits to Csaba Gösswein)
+  //   lt  (Lithuanian, credits to Gytis Nakvosas)
   //   nb  (Norwegian Bokmål, credits to Bjørge Solli)
   //   pl  (Polish, credits to Sławomir Cygler)
   //   pt  (Portugese, credits to Rui Tavares)

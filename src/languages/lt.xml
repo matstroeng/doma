@@ -1,0 +1,765 @@
+<strings>
+  <customizable>
+    <string key="PAGE_TITLE" description="PAGE_TITLE_DESCRIPTION">
+      Mano skaitmeninis orientavimosi žemėlapių archyvas
+    </string> 
+    <string key="CAPTION" description="CAPTION_DESCRIPTION">
+      Sveiki atvykę į mano skaitmeninį orientavimosi žemėlapių archyvą!
+    </string> 
+    <string key="INTRO" description="INTRO_DESCRIPTION">
+      Šiame puslapyje dalinuosi žemėlapiais, trasomis, kelio pasirinkimasi iš varžybų, kuriose dalyvavau.
+    </string> 
+    <string key="FOOTER" description="FOOTER_DESCRIPTION">
+      Ar jūs esate teisių savininkas į šį žemėlapį, kuris neturėtų būti publikujojamas? &lt;a href=&quot;mailto:%userEmail%&quot;&gt;Email me&lt;/a&gt;.
+    </string> 
+    <string key="RSS_DESCRIPTION" description="RSS_DESCRIPTION_DESCRIPTION">
+      Žemėlapiai, trasos, kelio pasirinkimai iš varžybų, kuriose dalyvavau.
+    </string> 
+    <string key="SHOW_ORGANISER" description="SHOW_ORGANISER_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COUNTRY" description="SHOW_COUNTRY_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_DISCIPLINE" description="SHOW_DISCIPLINE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RELAY_LEG" description="SHOW_RELAY_LEG_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME" description="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL" description="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_COMMENT" description="SHOW_COMMENT_DESCRIPTION">
+      1
+    </string>
+    <!-- BEGIN new customizable strings in version 3.0 ******************************************************************* -->
+    <string key="SHOW_DISTANCE" description="SHOW_DISTANCE_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_ELAPSEDTIME" description="SHOW_ELAPSEDTIME_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_MAXHR" description="SHOW_MAXHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_AVGHR" description="SHOW_AVGHR_DESCRIPTION">
+      1
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS" description="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS" description="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS" description="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      1
+    </string> 
+    <!-- END new customizable strings in version 3.0 ********************************************************************* -->
+</customizable>
+
+  <nonCustomizable>
+    <!--  general ****************************************************************************************************** --> 
+    <!--  date format to use, PHP format string --> 
+    <string key="DATE_FORMAT">
+      Y-m-d
+    </string> 
+    <!--  date and time format to use, PHP format string --> 
+    <string key="DATETIME_FORMAT">
+     Y-m-d H:i
+    </string> 
+    <!--  day names, semi-colon separated --> 
+    <string key="DAY_NAMES">
+      Sekmadienis;Pirmadienis;Antradienis;Trečiadienis;Ketvirtadienis;Penktadienis;Šeštadienis
+    </string> 
+    <!--  month names, semi-colon separated --> 
+    <string key="MONTH_NAMES">
+      sausis;vasaris;kovas;balandis;gegužė;birželis;liepa;rugpjūtis;rugsėjis;spalis;lapkritis;gruodis
+    </string> 
+    <string key="RSS_FEED">
+      RSS kanalas
+    </string> 
+    <string key="DOMA_VERSION_X">
+      DOMA %s
+    </string> 
+    <string key="NAME">
+      Pavadinimas
+    </string> 
+    <string key="DATE">
+      Data
+    </string> 
+    <string key="ORGANISER">
+      Organizatorius
+    </string> 
+    <string key="COUNTRY">
+      Šalis
+    </string> 
+    <string key="DISCIPLINE">
+      Rungtis
+    </string> 
+    <string key="RELAY_LEG">
+      Etapas
+    </string> 
+    <string key="RELAY_LEG_LONG">
+      Estafetės etapas
+    </string> 
+    <string key="RELAY_LEG_LOWERCASE">
+      etapas
+    </string> 
+    <string key="MAP_AREA_NAME">
+      Žemėlapis/vietovė
+    </string> 
+    <string key="RESULTS">
+      Rezultatai
+    </string> 
+    <string key="COMMENT">
+      Komentaras
+    </string> 
+    <string key="LOGIN">
+      Prisijungti
+    </string> 
+    <string key="LOGOUT">
+      Atsijungti
+    </string> 
+    <string key="INVALID_USERNAME_OR_PASSWORD">
+      Neteisingas vartotojo vardas arba slaptažodis.
+    </string> 
+    <string key="USERNAME">
+      Vartotojo vardas
+    </string> 
+    <string key="PASSWORD">
+      Pavadininmas
+    </string> 
+    <string key="YES">
+      Taip
+    </string> 
+    <string key="NO">
+      Ne
+    </string> 
+    <string key="REALAVG">
+      Greitis
+    </string> 
+    <string key="PROJECTEDDISTANCE">
+      Atstumas
+    </string> 
+    <string key="PROJECTEDDISTANCEFORMAT">
+      Tik skaičiai, formatu: x.xx (pavyzdžiui 7.95)
+    </string> 
+    <string key="CLIMBING">
+      Pakilimas
+    </string> 
+    <string key="CLIMBINGFORMAT">
+      Tik skaičius: xxx (pavyzdžiui 395)
+    </string> 
+    <string key="FIXDISTANCE">
+      Reikšmė laukelyje Atstumas neatitinka reikiamo formato. Formatas: x.xx (pavyzdžiui 7.95) - reikalingas dešimtosios dalies taškas
+    </string> 
+    <string key="FIXCLIMBING">
+      Reikšmė laukelyje Pakilimas neatitinka reikiamo formato. Formatas: xxx (pavyzdžiui 395)
+    </string> 
+
+    <!--  topbar ****************************************************************************************************** --> 
+    <string key="DOMA_FOR_X">
+      Skaitmeninis %s orientavimosi žemėlapių archyvas
+    </string> 
+    <string key="ALL_USERS">
+      Visi naudotojai
+    </string> 
+    <string key="ADMIN_LOGIN">
+      Administratoriaus prisijungimas
+    </string> 
+    <string key="ADMIN_LOGOUT">
+      Administratoriaus atsijungimas
+    </string> 
+
+    <!--  index.php ****************************************************************************************************** --> 
+    <string key="NO_MAPS">
+      Nėra publikuotų žemėlapių
+    </string> 
+    <string key="SELECT_YEAR">
+      Metai
+    </string> 
+    <string key="SELECT_CATEGORY">
+      Kategorija
+    </string> 
+    <string key="ALL_YEARS">
+      [visi]
+    </string> 
+    <string key="ALL_CATEGORIES">
+      [visos]
+    </string> 
+    <string key="NO_MATCHING_MAPS">
+      Nėra žemėlapių, atitinkančių nurodytus kriterijus.
+    </string> 
+    <string key="VIEWS">
+      peržiūros
+    </string> 
+
+    <!--  show_map.php ****************************************************************************************************** --> 
+    <string key="BACK">
+      Atgal
+    </string> 
+    <string key="PREVIOUS">
+      Praeitas
+    </string> 
+    <string key="NEXT">
+      Kitas
+    </string> 
+
+    <!--  edit_map.php ****************************************************************************************************** --> 
+    <string key="ADD_MAP">
+      Pridėti žemėlapį
+    </string> 
+    <string key="EDIT_MAP">
+      Redaguoti žemėlapį
+    </string> 
+    <string key="EDIT_MAP_X">
+      Redaguoti žemėlapį: %s
+    </string> 
+    <string key="MAP_DATE_FORMAT">
+      yyyy-mm-dd, pasirinktinai hh:mm:ss
+    </string> 
+    <string key="LINK_TO_RESULT_LIST">
+      Nuoroda į rezultatus
+    </string> 
+    <string key="MAP_IMAGE_FILE">
+      Žemėlapio failas
+    </string> 
+    <string key="LEAVE_EMPTY_TO_KEEP_EXISTING_MAP">
+      Palikite tuščią, kad esamas žemėlapius būtų nepakeistas.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_FILE">
+      Miniatūros paveikslėlis
+    </string> 
+    <string key="THUMBNAIL_INFO">
+      Dydis %d x %d pikselių, palikite tuščią automatiniam sugeneravimui. Dideliems žemėlapių failams gali nepavykti sukurti miniatūros dėl serverio atminties apribojimų.
+    </string> 
+    <string key="CONFIRM_DELETION">
+      Patvirkinkite ištrynimą
+    </string> 
+    <string key="SAVE">
+      Išsaugoti
+    </string> 
+    <string key="DELETE">
+      Ištrinti
+    </string> 
+    <string key="CANCEL">
+      Atšaukti
+    </string> 
+    <string key="NO_MAP_FILE_ENTERED">
+      Nėra įkelta žemėlapio failo.
+    </string> 
+    <string key="INVALID_MAP_IMAGE_FORMAT">
+      Žemėlapio failo formatas &lt;em&gt;%s&lt;/em&gt; yra netinkamas. Tik jpeg, png ir gif formatai yra palaikomi.
+    </string> 
+    <string key="INVALID_THUMBNAIL_IMAGE_FORMAT">
+      Miniatūros failo formatas &lt;em&gt;%s&lt;/em&gt; is invalid. yra netinkamas. Tik jpeg, png ir gif formatai yra palaikomi.
+    </string> 
+    <string key="MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Žemėlapio failo &lt;em&gt;%s&lt;/em&gt; negalima įkelti.
+    </string> 
+    <string key="THUMBNAIL_IMAGE_COULD_NOT_BE_UPLOADED">
+      Miniatūros failo &lt;em&gt;%s&lt;/em&gt; negalima įkelti.
+    </string> 
+    <string key="NO_MAP_NAME_ENTERED">
+      Neįrašytas žemėlapio pavadinimas.
+    </string> 
+    <string key="NO_DATE_ENTERED">
+      Neįrašyta data.
+    </string> 
+    <string key="INVALID_DATE">
+      Data netinkama. Įrašykite datą yyyy-mm-dd formatu.
+    </string> 
+    <string key="CATEGORY">
+      Kategorija
+    </string> 
+    <string key="CATEGORY_TOOLTIP">
+      Kategorija, kuriai priklauso žemėlapis. Savo naudotojo profilyje galite sukurti naujas kategorijas.
+    </string> 
+    <string key="THUMBNAIL_CREATION_FAILURE">
+      Miniatūros paveikslėlis negali būti sukurtas. Galima priežastis yra tai, jog nėra pakankamai atminties serveryje. Šiame serveryje, miniatūros negali būti sukurtos vaizdiniams failams didesniems nei apie %s pikselių. Padidinkite memory_limit parametro reikšmę php.ini.&lt;br /&gt;A standartinė miniatūra buvo sukurta. Pabandykite naudoti mažesnį žemėlapio failą arba įkelkite miniatūros paveikslėlį.
+    </string> 
+
+    <!--  users.php ****************************************************************************************************** --> 
+    <string key="NO_OF_MAPS">
+      Žemėlapiai
+    </string> 
+    <string key="EDIT">
+      Redaguoti
+    </string> 
+    <string key="ADMIN_LOGIN_INFO">
+      Naudotojo vardas ir slaptažodis atitinka nustatymus config.php faile.
+    </string> 
+    <string key="VISIBLE">
+      Matoma
+    </string> 
+    <string key="LOGIN_AS">
+      Prisijungti kaip
+    </string> 
+    <string key="LOGIN_AS_X">
+      Prisijungti kaip %s
+    </string> 
+    <string key="LAST_MAP">
+      Paskutinis žemėlapis
+    </string> 
+    <string key="NO_USERS_CREATED">
+      Nėra sukurtų naudotojų.
+    </string> 
+    <string key="CREATE_THE_FIRST_USER">
+      Paspaukite, kad sukurtumėte pirmą naudotoją.
+    </string> 
+    <string key="MAP">
+      Žemėlapis
+    </string> 
+    <string key="UPDATED">
+      Atnaujinta
+    </string> 
+    <string key="USERS">
+      Naudotojai
+    </string> 
+    <string key="LAST_MAPS">
+      Paskutiniai žemėlapisi
+    </string> 
+    <string key="PUBLIC_CREATE_USER_INFO">
+      Galite &lt;a href=&quot;enter_public_creation_code.php&quot;&gt;sukurti savo skaitmeninį orientavimosi žemėlapių archyvą&lt;/a&gt; įrašydami prieigos kodą suteiktą &lt;a href=&quot;mailto:%adminEmail%&quot;&gt;administrator&lt;/a&gt;.
+    </string> 
+
+    <!--  edit_user.php ****************************************************************************************************** --> 
+    <string key="ADD_USER">
+      Sukurti naują naudotoją
+    </string> 
+    <string key="EDIT_USER_X">
+      Redaguoti naudotoją: %s
+    </string> 
+    <string key="FIRST_NAME">
+      Vardas
+    </string> 
+    <string key="LAST_NAME">
+      Pavardė
+    </string> 
+    <string key="EMAIL">
+      Elektroninis paštas
+    </string> 
+    <string key="USERNAME_EXISTS">
+      Jau egzistuoja naudotojas su nurodytu naudotojo vardu. Pasirinkite kitą naudotojo vardą.
+    </string> 
+    <string key="NO_USERNAME_ENTERED">
+      Neįrašytas joks naudotojo vardas.
+    </string> 
+    <string key="NO_FIRST_NAME_ENTERED">
+      Neįrašytas vardas.
+    </string> 
+    <string key="NO_LAST_NAME_ENTERED">
+      Neįrašyta pavardė.
+    </string> 
+    <string key="NO_EMAIL_ENTERED">
+      Neįrašytas elektroninis paštas.
+    </string> 
+    <string key="INVALID_EMAIL">
+      Elektroninis paštas negalioja.
+    </string> 
+    <string key="NO_PASSWORD_ENTERED">
+      Turi būti įvestas slaptažodis.
+    </string> 
+    <string key="SHOW_ORGANISER_DESCRIPTION">
+      Ar susieti organizatorių su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_COUNTRY_DESCRIPTION">
+      Ar susieti šalį su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_DISCIPLINE_DESCRIPTION">
+      Ar susieti varžybų rungtį su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_RELAY_LEG_DESCRIPTION">
+      Ar susieti estafetės etapą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_MAP_AREA_NAME_DESCRIPTION">
+      Ar susieti žemėlapio ar vietovės pavadinimą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_RESULT_LIST_URL_DESCRIPTION">
+      Ar susieti rezultatų sąrašą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_COMMENT_DESCRIPTION">
+      Ar susieti komentarą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="PAGE_TITLE_DESCRIPTION">
+      Jūsų puslapio pavadinimas. Jis bus parodomas naršyklės antraštės lange ir RSS kanale.
+    </string> 
+    <string key="CAPTION_DESCRIPTION">
+      Pradiniame puslapyje rodoma antraštė.
+    </string> 
+    <string key="INTRO_DESCRIPTION">
+      Puslapio aprašymas, rodomas po antrašte.
+    </string> 
+    <string key="FOOTER_DESCRIPTION">
+      Puslapio apačioje rodomas tekstas.
+    </string> 
+    <string key="RSS_DESCRIPTION_DESCRIPTION">
+      RSS kanale rodomas puslapio aprašymas.
+    </string> 
+    <string key="USERNAME_DESCRIPTION">
+      Jūsų naudotojo vardas, kartu su slaptažodžiu naudojamas identifikacijai.
+    </string> 
+    <string key="ADMIN_USERNAME_DESCRIPTION">
+      Naudotojo vardas turi būti unikalus.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_NEW_USER">
+      Įveskite laikiną pradinį slaptažodį.
+    </string> 
+    <string key="ADMIN_PASSWORD_DESCRIPTION_EXISTING_USER">
+      Palikte tuščią, kad dabar esantis slaptažodis nebūtų pakeistas.
+    </string> 
+    <string key="PASSWORD_DESCRIPTION">
+     Jūsų slaptažodis, kartu su naudotojo vardu naudojamas identifikacijai. Palikite tuščią, kad dabar esantis slaptažodis nebūtų pakeistas.
+    </string> 
+    <string key="FIRST_NAME_DESCRIPTION">
+      Jūsų vardas.
+    </string> 
+    <string key="ADMIN_FIRST_NAME_DESCRIPTION">
+      Naudotojo vardas.
+    </string> 
+    <string key="LAST_NAME_DESCRIPTION">
+      Pavardė.
+    </string> 
+    <string key="ADMIN_LAST_NAME_DESCRIPTION">
+      Naudotojo pavardė.
+    </string> 
+    <string key="EMAIL_DESCRIPTION">
+      El. pašto adresas.
+    </string> 
+    <string key="ADMIN_EMAIL_DESCRIPTION">
+      Naudotojo el.paštas.
+    </string> 
+    <string key="ADMIN_VISIBLE_DESCRIPTION">
+      Make this archive publicly visible and accessible.
+    </string> 
+    <string key="ADMIN_ADD_USER_INFO">
+      Įrašykite naujo naudotojo detales.
+    </string> 
+    <string key="ADMIN_EDIT_USER_INFO">
+      Pakeiskite naudotojo detales.
+    </string> 
+    <string key="EDIT_USER_PROFILE_TITLE">
+      Pakeiskite naudotojo profilį
+    </string> 
+    <string key="ADD_USER_PROFILE_TITLE">
+      Sukurkite naują naudotojo profilį
+    </string> 
+    <string key="PERSONAL_DETAILS_TITLE">
+      Asmeninės detalės
+    </string> 
+    <string key="PERSONAL_DETAILS_INFO">
+      Įrašykite asmenines detales.
+    </string> 
+    <string key="ADMIN_PERSONAL_DETAILS_INFO">
+      Įrašykite naudotojo asmenines detales.
+    </string> 
+    <string key="MAP_CATEGORIES_TITLE">
+      Žemėlapių kategorijos
+    </string> 
+    <string key="ADMIN_MAP_CATEGORIES_INFO">
+      Nurodykite kategorijas, į kurias bus suskirstomi naudotojo žemėlapiai.
+    </string> 
+    <string key="MAP_CATEGORIES_INFO">
+       Nurodykite kategorijas, į kurias bus suskirstomi naudotojo žemėlapiai.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_TITLE">
+      Tekstai ir nustatymai
+    </string> 
+    <string key="ADMIN_TEXTS_AND_SETTINGS_INFO">
+      Tekstas, nurodomas naudotojo puslapiuose, ir nustatymai, kuriuos duomenis susieti su kiekvienu žemėlapiu.
+    </string> 
+    <string key="TEXTS_AND_SETTINGS_INFO">
+      Tekstas, nurodomas naudotojo puslapiuose, ir nustatymai, kuriuos duomenis susieti su kiekvienu žemėlapiu.
+    </string> 
+    <string key="USER_PROFILE">
+      Naudotojo profilis
+    </string> 
+    <string key="REQUIRED_FIELDS_INFO">
+      Privalomi laukeliai pažymėti %s.
+    </string> 
+    <string key="MAP_CATEGORIES">
+      Žemėlapių kategorijos
+    </string> 
+    <string key="DEFAULT_CATEGORY_NAMES">
+      Varžybos;Treniruotės
+    </string> 
+    <string key="DEFAULT_CATEGORY">
+      bazinis
+    </string> 
+    <string key="ADD_CATEGORY">
+      Pridėti naują kategoriją
+    </string> 
+    <string key="DELETE_CATEGORY">
+      Ištrinti kategoriją
+    </string> 
+    <string key="CAN_NOT_DELETE_NONEMPTY_CATEGORY">
+      Negalima ištrinti žemėlapio kategoriją %s nes joje dar yra %d žemėlapių. Prieš tai ištrinkite žemėlapius.
+    </string> 
+    <string key="CAN_NOT_DELETE_ALL_CATEGORIES">
+      Turi būti bent viena žemėlapio kategorija.
+    </string> 
+    <string key="CATEGORY_NAME_CANNOT_BE_EMPTY">
+      Žemėlapių kategorijai turi būti duotas pavadinimas.
+    </string> 
+
+    <!--  create.php ****************************************************************************************************** --> 
+    <string key="SITE_ALREADY_CREATED">
+      Puslapis jau yra sukurtas.
+    </string> 
+    <string key="TOO_OLD_PHP_VERSION">
+      Jums reikalinga PHP versija 5.0.0 ir naujesnė. Dabartinė versija yra %s.
+    </string> 
+    <string key="MYSQL_ERROR_X">
+      MySQL klaida: %s
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_TITLE">
+      Puslapis sėkmingai sukurtas!
+    </string> 
+    <string key="SITE_SUCCESSFULLY_CREATED_MESSAGE">
+      Puslapis sėkmingai sukurtas. Pakeiskite config.php failą, kad pakeistumėte puslapio konfigūraciją.
+    </string> 
+    <string key="GOTO_START_PAGE">
+      Eiti į pradžios puslapį
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_TITLE">
+      Klaida kuriant puslapį
+    </string> 
+    <string key="ERRORS_WHEN_CREATING_SITE_MESSAGE">
+      Puslapis negali būti sukurtas. Patikrinkite pranešimus apie klaidas ir padarykite reikalingus pataisymus config.php faile ir/ar duombazėje.
+    </string> 
+    <string key="ERRORS_TRY_AGAIN">
+      Bandykite dar kartą
+    </string> 
+
+    <!--  enter_public_creation_code.php ******************************************************************************************** --> 
+    <string key="PUBLIC_CREATION_CODE">
+      Įveskite prieigos kodą
+    </string> 
+    <string key="PROCEED">
+      Tęsti
+    </string> 
+    <string key="INVALID_CODE">
+      Netinkamas kodas.
+    </string> 
+
+    <!--  email sending ****************************************************************************************************** --> 
+    <string key="DOMA_ADMIN_EMAIL_NAME">
+      DOMA administratorius
+    </string> 
+    <string key="NEW_USER_EMAIL_SUBJECT">
+     Jūsų skaitmeninis orientavimosi žemėlapių archyvas buvo sukurtas!
+    </string> 
+    <string key="NEW_USER_EMAIL_BODY">
+      
+Sveiki %s, 
+
+Tai yra automatiškai sugeneruotas laiškas, patvirtinantis, kad skaitmeninis orientavimosi žemėlapių archyvas buvo sukurtas %s.
+
+Jūsų pradinis puslapis: %s 
+Jūsų naudotojo vardas:  %s 
+Jūsų slaptažodis:   %s
+
+Šis slaptažodis yra laikinas. Dėl saugumo priežasčių, pakeiskite jį kitu slaptažodžiu.
+    
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL">
+      Patvirtinimo el. laiškas
+    </string> 
+    <string key="SEND_CONFIRMATION_EMAIL_DESCRIPTION">
+      nusiųsti laišką su naudotojo paskyros informacija naujam naudotojui
+    </string> 
+    <string key="ADMIN_EMAIL_ERROR">
+      Laiškas negali būtų išsiųstas. Patikrinkite el. pašto SMTP nustatymus php.ini ir administratoriaus el. pašto adresą config.php (dabartinis adresas yra %s).
+    </string> 
+    <string key="SEND_NEW_PASSWORD_TITLE">
+      Siųsti naują slaptažodį
+    </string> 
+    <string key="SEND_NEW_PASSWORD_INFO">
+      Pamiršote slaptažodį? epanikuokite, galime atsiųsti naują slaptažodį naudotojo profilyje nurodytu el. pašto adresu: %s.
+    </string> 
+    <string key="SEND_NEW_PASSWORD">
+      Siųsti naują slaptažodį
+    </string> 
+    <string key="EMAIL_ERROR">
+      El. laiškas negali būti išsiųstas. Susisiekite su administratoriumi.
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_SUBJECT">
+      Naujas slaptažodis jūsų skaitmeniniam orientavimosi žemėlapių archyvui
+    </string> 
+    <string key="NEW_PASSWORD_EMAIL_BODY">
+      
+Sveiki %s, 
+
+Tai yra automatiškai sugeneruotas laiškas, patvirtinantis, kad skaitmeninis orientavimosi žemėlapių archyvas buvo sukurtas %s.
+
+Jūsų pradinis puslapis: %s 
+Jūsų naudotojo vardas:  %s 
+Jūsų slaptažodis:   %s
+
+Šis slaptažodis yra laikinas. Dėl saugumo priežasčių, pakeiskite jį kitu slaptažodžiu.
+    
+    </string> 
+    <string key="NEW_PASSWORD_SENT">
+      Naujas slaptažodis nusiųstas %s.
+    </string> 
+    <string key="FORGOT_PASSWORD">
+      Pamiršau savo slaptažodį
+    </string>
+    
+    <!-- BEGIN new nonCustomizable strings in version 3.0 ******************************************************************* -->
+    <string key="INVALID_BLANK_MAP_IMAGE_FORMAT">
+      Tuščio žemėlapio failas &lt;em&gt;%s&lt;/em&gt; yra netinkamas. Tinka tik jpeg, png and gif formatai.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_COULD_NOT_BE_UPLOADED">
+      Tuščio žemėlapio failas &lt;em&gt;%s&lt;/em&gt; negali būti įkeltas.
+    </string> 
+    <string key="BLANK_MAP_IMAGE_FILE">
+      Tuščio žemėlapio failas
+    </string> 
+    <string key="MAP_INFO">
+      Žemėlapis su jūsų prabėgimo linija
+    </string> 
+    <string key="BLANK_MAP_INFO">
+      Žemėlapis be prabėgimų. Nebūtinas.
+    </string> 
+    <string key="SELECT_DISPLAY_MODE">
+      Atvaizdas
+    </string> 
+    <string key="DISPLAY_MODE_LIST">
+      Sąrašas
+    </string> 
+    <string key="DISPLAY_MODE_OVERVIEW_MAP">
+      Žemėlapio apžvalga
+    </string> 
+    <string key="INFORMATION">
+      Informacija
+    </string> 
+    <string key="SHOW_ROUTE_ON_MAP">
+      Rodyti prabėgimus
+    </string> 
+    <string key="HIDE_ROUTE_ON_MAP">
+      Paslėpti prabėgimus
+    </string> 
+    <string key="TOGGLE_IMAGE_CLICK">
+      Paspauskite ant žemėlapio, kad prabėgimai būtų rodomi/nerodomi
+    </string> 
+    <string key="TOGGLE_IMAGE_TOOLTIP">
+      ...ar paspauskite bet kurioje žemėlapio vietoje...
+    </string> 
+    <string key="SHOW_OVERVIEW_MAP">
+      Parodyti aplinkinį žemėlapį
+    </string> 
+    <string key="HIDE_OVERVIEW_MAP">
+      Paslėpti aplinkinį žemėlapį
+    </string> 
+    <string key="KMZ_TOOLTIP">
+      ...Google Earth...
+    </string> 
+    <string key="SHOW_DISTANCE_DESCRIPTION">
+      Ar susieti atstumą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_ELAPSEDTIME_DESCRIPTION">
+      Ar susieti laiką su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_MAXHR_DESCRIPTION">
+      Ar susieti maksimalų pulsą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_AVGHR_DESCRIPTION">
+      Ar susieti vidutinį pulsą su žemėlapiu; 1 susieti, 0 praleisti.
+    </string> 
+    <string key="SHOW_VISITOR_COMMENTS_DESCRIPTION">
+      Ar leisti lankytojams komentuoti žemėlapį; 1 leisti, 0 neleisti
+    </string> 
+    <string key="COLLAPSE_VISITOR_COMMENTS_DESCRIPTION">
+      Ar rodyti komentarus paslėptus žemėlapio puslapyje; 1 to paslėpti, 0 rodyti.
+    </string> 
+    <string key="EMAIL_VISITOR_COMMENTS_DESCRIPTION">
+      Ar apie naujus komentarus pranešti el. paštu; 1 išsiųsti, 0 nesiųsti.
+    </string> 
+    <string key="ELAPSEDTIME">
+      Laikas
+    </string> 
+    <string key="DISTANCE">
+      Atstumas
+    </string> 
+    <string key="AVGHR">
+      Vidutinis pulsas
+    </string> 
+    <string key="MAXHR">
+      Maksimalus pulsas
+    </string> 
+    <string key="LANGUAGE">
+      Kalba
+    </string> 
+    <string key="SHOW_COMMENTS">
+      Rodyti komentarus
+    </string> 
+    <string key="HIDE_COMMENTS">
+      Slėpti komentarus
+    </string> 
+    <string key="POST_COMMENTS">
+      Paskelbti komentarus
+    </string> 
+    <string key="MISSING_COMMENT">
+      Įrašykite vardą ir komentarą!
+    </string> 
+    <string key="COMMENT_DELETE_CONFIRMATION">
+      Ar norite ištrinti komentarą?
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_SUBJECT">
+      DOMA - naujas komentaras
+    </string> 
+    <string key="NEW_COMMENT_EMAIL_BODY">
+Sveiki,
+
+Jūsų žemėlapio archyve paskelbtas naujas komentaras.
+
+Žemėlapis:  %s 
+Nuoroda: %s
+
+Komentaro turinys
+Pavadinimas:   %s 
+El. paštas:  %s
+Tekstas:   %s
+    </string>     
+    <string key="LAST_COMMENTS">
+      Paskutiniai pakomentuoti žemėlapiai
+    </string> 
+    <string key="COMMENTS_COUNT">
+      Komentarai
+    </string> 
+    <string key="COMMENT_FROM">
+      Paskutinis komentavo
+    </string> 
+    <string key="KMZ">
+      KML
+    </string> 
+    <string key="PROTECTED_UNTIL">
+      Paslėpta iki
+    </string>
+    <string key="PROTECTED_UNTIL_INFO">
+      Laikas, kada žemėlapis bus viešinamas kitiems lankytojams (ne tik tau), nurodyta yyyy/mm/dd hh:mm:ss formatu. Palikite tuščią, kad žemėlapis nebūtų paslėptas. Šią funkciją galima naudoti įkelti žemėlapius prieš varžybas, ir jį paviešinti dalyviams iš karto po varžybų pabaigos.
+    </string>
+    <string key="INVALID_PROTECTED_UNTIL">
+      Laikas, iki kurio slėpti žemėlapį, yra netinkamasd. Nurodykite laiką yyyy/mm/dd hh:mm:ss formatu arba palikite laukelį tuščią.
+    </string>
+    <string key="MAP_IS_PROTECTED_UNTIL_X">
+      Žemėlapis paslėptas kitiems lankytojams iki %s.
+    </string>
+    <string key="SHOW_ALL">
+      visi
+    </string>
+    <string key="SELECT_FILTER">
+      filtras
+    </string>
+    <string key="3DRERUN">
+      3D Rerun
+    </string>
+
+    <!-- END new nonCustomizable strings in version 3.0 ********************************************************** -->
+   </nonCustomizable>
+</strings>
