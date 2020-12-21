@@ -248,6 +248,7 @@
       $uploadDir = Helper::LocalPath(MAP_IMAGE_PATH ."/");
       self::DeleteMapImage($map);
       self::DeleteThumbnailImage($map);
+      self::DeleteBlankMapImage($map);
       $map->Delete();
     }
 
@@ -567,6 +568,7 @@
       {
         self::DeleteMapImage($m);
         self::DeleteThumbnailImage($m);
+        self::DeleteBlankMapImage($map);
       }
       $id = mysqli_real_escape_string($GLOBALS["dbCon"], $id);
       $sql = "DELETE FROM `". DB_MAP_TABLE ."` WHERE UserID='$id'";
@@ -589,10 +591,13 @@
       }
 
       $ret = array();
-      $sql = "SELECT * FROM `". DB_MAP_TABLE ."` a ".
-             "INNER JOIN `". DB_MAP_TABLE ."` b ".
-             "ON a.ID=b.ID ".
-             "WHERE a.`$field`=(SELECT MAX(`$field`) FROM `". DB_MAP_TABLE ."` WHERE UserID=b.UserID AND (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID'))";
+      $sql = "SELECT maps.* FROM `". DB_MAP_TABLE ."` maps " .
+             "INNER JOIN (".
+             "    SELECT UserID, MAX(`$field`) AS value" .
+             "    FROM `". DB_MAP_TABLE ."`" .
+             "    WHERE (ProtectedUntil IS NULL OR ProtectedUntil<='$now' OR UserID='$requestingUserID')" .
+             "    GROUP BY UserID" .
+             ") VI ON maps.UserID = VI.UserID AND maps.`$field` = VI.value";
       $rs = self::Query($sql);
       while($r = mysqli_fetch_assoc($rs))
       {
