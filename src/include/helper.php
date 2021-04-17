@@ -817,10 +817,17 @@
             $info.
           '</div>';
 
-        $data["Url"] = $map->MapImage ? 'show_map.php?'. self::CreateQuerystring($map->GetUser(), $map->ID) : "";
+        $data["Url"] = $map->MapImage ? self::GetShowMapUrl($map) : "";
       }
       return $data;
     }
+
+	public static function GetShowMapUrl(Map $map)
+	{
+	  if (($map->GetUser()->Username == 'medvekoma') && ($map->ID)) return $map->ID;
+
+	  return 'show_map.php?'. self::CreateQuerystring($map->GetUser(), $map->ID);
+	}
 
     public static function GoogleAnalytics()
     {

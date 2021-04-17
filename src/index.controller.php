@@ -91,7 +91,7 @@
       foreach($viewData["Maps"] as $map)
       {
         $mapInfo = array();
-        $mapInfo["URL"] = ($map->MapImage ? 'show_map.php?'. Helper::CreateQuerystring(getCurrentUser(), $map->ID) : "");
+        $mapInfo["URL"] = ($map->MapImage ?  Helper::GetShowMapUrl($map) : "");
         $mapInfo["Name"] = $map->Name .' ('. date(__("DATE_FORMAT"), Helper::StringToTime($map->Date, true)) .')';
         $mapInfo["MapThumbnailHtml"] = Helper::EncapsulateLink('<img src="'. Helper::GetThumbnailImage($map) .'" alt="'. $mapInfo["Name"] .'" height="'. THUMBNAIL_HEIGHT .'" width="'. THUMBNAIL_WIDTH .'" />', $mapInfo["URL"]);
 
