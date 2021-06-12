@@ -5,7 +5,7 @@
   if(file_exists($filename))
   {
     $image = Helper::ImageCreateFromGeneral($filename);
-    if(is_resource($image))
+    if(is_resource($image) || $image instanceof \GdImage)
     {
       ImageDestroy($image);
       $result = 1;
