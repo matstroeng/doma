@@ -457,9 +457,9 @@
       }
       for($i=5; $i>=0; $i--)
       {
-        for($j=0; $j<8; $j++) 
+        for($j=0; $j<8; $j++)
         {
-          $base += ((ord($data[$i]) >> (7-$j)) % 2) * pow(0.5, (5-$i)*8+$j+5);  
+          $base += ((ord($data[$i]) >> (7-$j)) % 2) * pow(0.5, (5-$i)*8+$j+5);
         }
       }
 
@@ -723,6 +723,10 @@
     private $segments = array();
     function __construct($handles)
     {
+      if($handles == null)
+      {
+        $handles = array();
+      }
       $this->handles = $handles;
       // an array of indices is built, using the segment index and the time-value of the handles to find the handle index
       foreach($handles as $handleIndex => $handle)
@@ -747,10 +751,10 @@
       }
     }
 
-    public function get($segmentIndex,$time)
+    public function get($segmentIndex, $time)
     // returns the handle with the index that matches a segment/time combination
     {
-      if(!is_array($this->segments[$segmentIndex]))
+      if(count($this->segments) <= $segmentIndex || !is_array($this->segments[$segmentIndex]))
       {
         return null;
       }
@@ -767,11 +771,13 @@
       return $this->handles[$this->segments[$segmentIndex][$this->index][1]];
     }
 
-    public function TransformationMatrix($segmentIndex,$time)
+    public function TransformationMatrix($segmentIndex, $time)
     // return the transformation matrix of a certain handle that matches with segment/time combination
     {
-      $handle = $this->get($segmentIndex,$time);
-      return ($handle->TransformationMatrix);
+      $handle = $this->get($segmentIndex, $time);
+      return $handle == null
+        ? null
+        : $handle->TransformationMatrix;
     }
   }
 
@@ -817,11 +823,11 @@
           $s->Waypoints[$i]->Distance = $this->Distance + $distance;
           $s->Waypoints[$i]->ElapsedTime = $this->ElapsedTime + $s->Waypoints[$i]->Time - $s->Waypoints[0]->Time;
           // calculate speed based on distance and time between successive waypoints
-          if (($i > 0) && ($s->Waypoints[$i]->Time-$s->Waypoints[$i-1]->Time != 0)) 
+          if (($i > 0) && ($s->Waypoints[$i]->Time-$s->Waypoints[$i-1]->Time != 0))
           {
             $s->Waypoints[$i]->Speed = $distances[$i] / ($s->Waypoints[$i]->Time-$s->Waypoints[$i-1]->Time) * 3600.0 / 1000.0;
-          } 
-          else 
+          }
+          else
           {
             $s->Waypoints[$i]->Speed = 0.0;
           }
@@ -920,16 +926,16 @@
       $segment = $this->Segments[$parameterizedLocation->SegmentIndex];
       if(!$segment)
       {
-        return null;  
+        return null;
       }
       $waypoints = $segment->Waypoints;
 
       $i = (int)$parameterizedLocation->Value;
-      if($i >= count($waypoints) - 1) 
+      if($i >= count($waypoints) - 1)
       {
         $i = count($waypoints) - 2;
       }
-      if(count($waypoints) < 2) 
+      if(count($waypoints) < 2)
       {
         return array($waypoints[0], $waypoints[0], 0);
       }
@@ -957,8 +963,8 @@
              $i == count($s->Waypoints) -1 ||
              $w->Time >= $lastWaypoint->Time + $samplingInterval)
           {
-            $longLat = ($positionDecimalPlaces == -1 
-              ? array($w->Position->Longitude, $w->Position->Latitude) 
+            $longLat = ($positionDecimalPlaces == -1
+              ? array($w->Position->Longitude, $w->Position->Latitude)
               : array(round($w->Position->Longitude, $positionDecimalPlaces), round($w->Position->Latitude, $positionDecimalPlaces)));
             $segment[] = $longLat;
             $lastWaypoint = $w;
@@ -1020,8 +1026,8 @@
       {
         $point = $transformationMatrix->Multiply($xy0->_3x1());
         return new QRPoint($point->GetElement(0, 0), $point->GetElement(1, 0));
-      } 
-      else 
+      }
+      else
       {
         return new QRPoint($xy0->X, $xy0->Y);
       }

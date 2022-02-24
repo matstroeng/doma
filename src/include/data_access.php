@@ -40,7 +40,7 @@
       $endDateString = mysqli_real_escape_string($GLOBALS["dbCon"], date("Y-m-d", $endDate));
       $categoryID = mysqli_real_escape_string($GLOBALS["dbCon"], $categoryID);
       $now = mysqli_real_escape_string($GLOBALS["dbCon"], gmdate("Y-m-d H:i:s"));
-      $filter = mysqli_real_escape_string($GLOBALS["dbCon"], $filter);
+      $filter = $filter ? mysqli_real_escape_string($GLOBALS["dbCon"], $filter) : null;
       $count = (int)$count;
 
       switch($orderBy)

@@ -29,7 +29,9 @@
 
     public static function Hsc($string)
     {
-      return htmlspecialchars($string, ENT_QUOTES, "UTF-8");
+      return $string
+        ? htmlspecialchars($string, ENT_QUOTES, "UTF-8")
+        : null;
     }
 
     // creates language strings for a certain user
@@ -425,7 +427,7 @@
       else
       {
         // make thumbnail displaying standard 64x64 image icon
-        $sourceImage = ImageCreateFromPng("gfx/imageFileIcon.png");
+        $sourceImage = @ImageCreateFromPng("gfx/imageFileIcon.png");
 
         $sourceWidth = ImageSX($sourceImage);
         $sourceHeight = ImageSY($sourceImage);
@@ -675,23 +677,24 @@
     public static function ConvertToTime($value, $format)
     {
       $leading = "";
-      if($format=="MM:SS")
+      $intValue = is_numeric($value)
+        ? (int)floatval($value)
+        : null;
+      if($intValue != null)
       {
-        if(is_numeric($value))
+        if($format=="MM:SS")
         {
-          if($value%60<10) $leading = "0";
-          return intval($value/60).":".$leading.$value%60;
+          if($intValue%60<10) $leading = "0";
+          return floor($intValue/60).":".$leading.$intValue%60;
+        }
+        if($format=="HH:MM:SS")
+        {
+          if($intValue%60<10) $leading = "0";
+          if(((int)(floor($intValue/60))%60)<10) $leading1 = "0";
+          return floor($intValue/3600) .":". $leading1 . ((int)floor($intValue/60))%60 .":". $leading . $intValue%60 ; //result as HH:MM:SS
         }
       }
-      if($format=="HH:MM:SS")
-      {
-        if(is_numeric($value))
-        {
-          if($value%60<10) $leading = "0";
-          if((intval($value/60)%60)<10) $leading1 = "0";
-          return intval($value/3600) .":". $leading1 . intval($value/60)%60 .":". $leading . $value%60 ; //result as HH:MM:SS
-        }
-      }
+      return "";
     }
 
     public static function ClickableLink($text = '')

@@ -9,7 +9,7 @@
 
       $isAdmin = (isset($_GET["mode"]) && $_GET["mode"] == "admin" && Helper::IsLoggedInAdmin());
       $user = getCurrentUser();
-      $userIsLoggedInUser = $user && Helper::GetLoggedInUser()->ID == $user->ID;
+      $userIsLoggedInUser = $user && Helper::GetLoggedInUser() && Helper::GetLoggedInUser()->ID == $user->ID;
       $isNewUser = !isset($user) || !$user->ID;
 
       // no user specified and not admin mode - redirect to user list page
@@ -234,6 +234,7 @@
           DataAccess::SaveUser($user, $categories, $defaultCategoryIndex, $userSettings);
 
           // send welcome email
+          $emailSent = false;
           if($isNewUser && !($isAdmin && !$_POST["sendEmail"]))
           {
             $fromName = __("DOMA_ADMIN_EMAIL_NAME");
