@@ -16,7 +16,9 @@
 
       // the requested map
       $map = new Map();
-      $map->Load($_GET["map"]);
+      //Solves https://github.com/matstroeng/doma/issues/28
+      $map_id = $_GET["map"] ?: $_GET["amp;map"];
+      $map->Load($map_id);
       
       if(!$map->ID) die("The map has been removed.");
       
