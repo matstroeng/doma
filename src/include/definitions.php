@@ -1,5 +1,5 @@
 <?php
-  define('DOMA_VERSION', '3.0.10');
+  define('DOMA_VERSION', '3.0.11');
   define('DOMA_SERVER', 'https://www.matstroeng.se/doma/domaserver.php');
 
   $rootPath =  dirname(dirname(__FILE__));

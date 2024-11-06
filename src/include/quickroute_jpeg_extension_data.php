@@ -487,7 +487,7 @@
 
     private static function ReadUtf8String($data)
     {
-      return utf8_decode($data);
+      return mb_convert_encoding($data, "ISO-8859-1", "UTF-8");
     }
 
     private static function WriteIntegerValue($fp, $value, $byteCount, $signed)

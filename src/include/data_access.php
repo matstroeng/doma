@@ -260,6 +260,7 @@
       $isNewMap = !($map->ID);
       $uploadDir = Helper::LocalPath(MAP_IMAGE_PATH ."/");
       $thumbnailCreatedSuccessfully = true;
+      $thumbnailImageName = null;
       $map->Save();
       $id = $map->ID;
 

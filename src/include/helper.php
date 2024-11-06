@@ -528,9 +528,9 @@
     public static function SendEmail($fromName, $toEmail, $subject, $body)
     {
       if(ADMIN_EMAIL == "email@yourdomain.com") return false; // the address is the default one, don't send
-      $header = "From: ". utf8_decode($fromName) . " <" . ADMIN_EMAIL . ">\r\n";
+      $header = "From: ". mb_convert_encoding($fromName, "ISO-8859-1", "UTF-8") . " <" . ADMIN_EMAIL . ">\r\n";
       ini_set('sendmail_from', ADMIN_EMAIL);
-      $result = @mail($toEmail, utf8_decode($subject), utf8_decode($body), $header);
+      $result = @mail($toEmail, mb_convert_encoding($subject, "ISO-8859-1", "UTF-8"), mb_convert_encoding($$body, "ISO-8859-1", "UTF-8"), $header);
       return $result;
     }
 
