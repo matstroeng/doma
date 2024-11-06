@@ -483,7 +483,7 @@
             Helper::ShowLanguages();?>
             <span class="separator">|</span>
           <?php } ?>
-          <a href="https://www.matstroeng.se/doma/?version=<?php print DOMA_VERSION; ?>"><?php printf(__("DOMA_VERSION_X"), DOMA_VERSION); ?></a>
+          <a href="https://www.matstroeng.se/doma/?version=<?php print DOMA_VERSION; ?>" data-phpversion="<?php print PHP_VERSION; ?>"><?php printf(__("DOMA_VERSION_X"), DOMA_VERSION); ?></a>
         </div>
         <div class="clear"></div>
       </div>
